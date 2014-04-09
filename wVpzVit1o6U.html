@@ -3,16 +3,40 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="418"/>
+<meta name="version" content="851"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$wVpzVit1o6U</title>
 </head>
 <body><h1>道路 tagging</h1><p>kcwu: 末完成</p><h2>資料搜集</h2><p><b>過去的討論</b></p><ul><li>2013/05 <a href="https://lists.openstreetmap.org/pipermail/talk-tw/2013-May/000924.html"></a>https://lists.openstreetmap.org/pipermail/talk-tw/2013-May/000924.html</li>
 <li>2014/04 <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/660567644008708/?stream_ref=2"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/660567644008708/?stream_ref=2</li></ul>
-<p><b>之前的 proposal/guideline</b></p><ul><li><br/></li></ul>
-<p><b>各種路的 tag</b></p><p>此處列出各種相關的 tag, 避免有些少見的 tag 在討論時被忘了</p><ul><li><br/></li></ul>
-<p><b>mapnik 畫出來的 style</b></p><p>雖然說不要為了 renderer 來 tagging, 但還是可以參考. 譬如支援哪些 tag, 各自的大小關係為何</p><p></p><h2>一般的討論</h2><p>希望設計出來的 proposal, 能盡量考慮到這些問題</p><ul><li>都市/郊區/鄉下</li>
+<p><b>之前的 proposal/guideline</b></p><ul><li><a href="http://wiki.openstreetmap.org/wiki/WikiProject_Taiwan/Taiwan_tagging#Road_types"></a>http://wiki.openstreetmap.org/wiki/WikiProject_Taiwan/Taiwan_tagging#Road_types</li>
+<li>Shi-Xun Hong 的 <a href="https://lists.openstreetmap.org/pipermail/talk-tw/2013-May/000928.html"></a>https://lists.openstreetmap.org/pipermail/talk-tw/2013-May/000928.html</li></ul>
+<p><b>各種路的 tag</b></p><p>此處列出各種相關的 tag, 避免有些少見的 tag 在討論時被忘了</p><ul><li>highway=motorway</li>
+<li>highway=trunk</li>
+<li>highway=primary</li>
+<li>highway=secondary</li>
+<li>highway=tertiary</li>
+<li>highway=residential</li>
+<li>highway=unclassified</li>
+<li>highway=service, service=alley</li>
+<li>highway=track</li>
+<li>highway=footway</li>
+<li>highway=path</li></ul>
+<p><b>mapnik 畫出來的 style</b></p><p>雖然說不要為了 renderer 來 tagging, 但還是可以參考. 譬如支援哪些 tag, 各自的大小關係為何</p><p></p><h2>一般的討論</h2><p>希望設計出來的 proposal, 能盡量考慮到這些問題</p><ul><li>都市/郊區/鄉下/舊城市</li>
 <li>繪圖的容易性: 譬如也提供只用空照圖的人容易遵循的原則</li>
 <li>希望 proposal 有辦法表示各 rule 的優先順序或有 decision tree, 畢竟有時好幾個條件都符合, 不知道要怎麼選</li></ul>
 
-<p></p><h2>方案討論?</h2><p>TODO</p><p></p></body>
+<h2>目前比較有共識的</h2><ul><li>國道、省道、縣道、鄉道沒什麼爭議</li>
+<li>(貼自 wiki)<ul><li>四線以上道路（雙向各有雙線以上），就算沒有縣市道路編號，均標示為 highway=tertiary。</li>
+<li>居住區內的道路（緊鄰房屋、行人、機車、自行車、車輛共用路面，通常行車車速較慢），應標示為 highway=residential。地圖上繪製的樣式與 highway=unclassified 相同，但是導航系統在計算路徑時，必須將這些巷道視為低優先權、盡量避免穿越的路線。這些道路雙向各應擁有單線道。例如：雙方向各一線道。</li>
+<li>路幅太窄，同一時刻（雙向）僅容單一車輛通過的街弄，應標示為 highway=service, service=alley。如果是通往景點的山路，則標示為 highway=unclassified。</li>
+<li>其他道路均設為 highway=unclassified。</li></ul>
+</li></ul>
+<h2>討論</h2><ul><li>什麼時候用 highway=track?<ul><li>kcwu: 我覺得 highway=track 譯成「產業道路」不太好, 容易造成誤用。</li></ul>
+</li>
+<li>區分 highway=footway 跟 highway=path?<ul><li>kcwu: 登山路徑很多標成 highway=footway, 我自己也是這麼標, 不過我後來覺得有些用 highway=path 更正確</li></ul>
+</li>
+<li>登山步道常有階梯, 怎麼樣的算 highway=steps 怎麼樣的算 footway 或 path?</li>
+<li>除了一些社區內的封閉道路，一般巷弄不應標成 highway=living_street</li></ul>
+
+</body>
 </html>
