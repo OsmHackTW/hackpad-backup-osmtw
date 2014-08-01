@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="989"/>
+<meta name="version" content="1364"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$2boCak3UTTm</title>
 </head>
-<body><h1>高雄氣爆 crisis mapping</h1><p></p><p><b>目標</b></p><p>呈現災難範圍與程度</p><h2>Tagging schema</h2><ul><li>建築物<ul><li>確定沒有毀損 building = yes, explode:reviewed=yes</li>
+<body><h1>高雄氣爆 crisis mapping</h1><p><a href="http://wiki.openstreetmap.org/wiki/Kaohsiung/2014GasExplosion"></a>http://wiki.openstreetmap.org/wiki/Kaohsiung/2014GasExplosion&nbsp;</p><p><b>目標</b></p><ul><li>呈現災難範圍與程度</li>
+<li>建立未來 crisis mapping 的 infrastructure 及流程</li></ul>
+<h2>Tagging schema</h2><ul><li>建築物<ul><li>確定沒有毀損 building = yes, explode:reviewed=yes</li>
 <li>部分毀損 building = damaged, explode:damage=yes</li>
 <li>完全毀損 building = collapsed, explode:damage=yes</li></ul>
 </li>
@@ -19,39 +21,53 @@
 </li>
 <li>一大片毀損 landuse=brownfield, explode:damage=yes</li>
 <li>醫療站</li>
-<li>庇護所</li></ul>
+<li>庇護所 <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/Humanitarian_Data_Model#Internally_Displaced_People_.28IDPs.29_camp_site"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/Humanitarian_Data_Model#Internally_Displaced_People_.28IDPs.29_camp_site 敘述很長</li>
+<li>管路 <a href="http://wiki.openstreetmap.org/wiki/Pipeline"></a>http://wiki.openstreetmap.org/wiki/Pipeline</li>
+<li>人孔蓋 <a href="http://wiki.openstreetmap.org/wiki/Tag:pipeline%3Dvalve"></a>http://wiki.openstreetmap.org/wiki/Tag:pipeline%3Dvalve</li>
+<li>消防栓 <a href="http://wiki.openstreetmap.org/wiki/Tag:emergency%3Dfire_hydrant"></a>http://wiki.openstreetmap.org/wiki/Tag:emergency%3Dfire_hydrant</li></ul>
 <h2>Mapping</h2><p><b>資料收集</b></p><ul><li>親自跑一趟？</li></ul>
 <ul class="comment"><li>我應該進不去重災區，去看熱鬧好像會被趕走 <s>(今天先去外圍繞繞)</s></li>
-<li>Bing 的圖很冏</li></ul>
+<li>Bing 的圖很冏</li>
+<li>我看到有幾個朋友剛好住在災區，如果有需要應該可以徒步勘災</li></ul>
 <ul><li>UAV</li></ul>
 <ul class="comment"><li>有人可以飛ㄧ下UAV嗎?&nbsp;</li>
 <li>上空不知道給不給飛也是問題</li>
 <li>沒人管制</li>
-<li>Task manager2 可以openstreetmap.tw，我架過問題不大</li>
+<li>蘋果都飛了.....</li>
 <li>逢甲大學uav團隊應該有有初步的圖檔 但不確定是否願意供應</li>
 <li><a href="https://www.facebook.com/birdgraphics/photos/a.431978193488145.102582.413234058695892/820151674670793/?type=1&theater"></a>https://www.facebook.com/birdgraphics/photos/a.431978193488145.102582.413234058695892/820151674670793/?type=1&amp;theater</li>
 <li>有人可以牽線嗎？</li></ul>
 <ul><li>Fieldpapers (Bing and Mapbox 皆冏)</li>
-<li>空照圖？</li></ul>
+<li>空照圖？<ul><li>福衛災前 (FormoSAT-2 before explosion)&nbsp;<ul><li>tms[23]:<a href="http://gis.sinica.edu.tw/googlemap/Formosat_Taiwan_2013/"></a>http://gis.sinica.edu.tw/googlemap/Formosat_Taiwan_2013/{17-zoom}/{x}/IMG_{x}_{y}_{17-zoom}.png</li></ul>
+</li>
+<li>農航所災前 (Arial photo before explosion)<ul><li>tms:<a href="http://maps.nlsc.gov.tw/S_Maps/wmts?SERVICE=WMTS&REQUEST=GetTile&VERSION=1.0.0&FORMAT=image/png&STYLE=_null&LAYER=PHOTO2&TILEMATRIXSET=EPSG:3857&TileMatrix="></a>http://maps.nlsc.gov.tw/S_Maps/wmts?SERVICE=WMTS&amp;REQUEST=GetTile&amp;VERSION=1.0.0&amp;FORMAT=image/png&amp;STYLE=_null&amp;LAYER=PHOTO2&amp;TILEMATRIXSET=EPSG:3857&amp;TileMatrix={zoom}&amp;TileCol={x}&amp;TileRow={y}</li></ul>
+</ul>
+</ul>
 <ul class="comment"><li>福衛二號有機會嗎</li>
-<li>福衛有。但解析度不夠，用航照圖。上次在埔里用的那個。</li>
+<li>福衛有。但解析度不夠，用農航所的航照圖。</li>
 <li>行照圖資料不夠新？</li>
+<li>建物應該足夠</li>
 <li>&nbsp;國土測繪中心 圖資 <a href="http://maps.nlsc.gov.tw/"></a>http://maps.nlsc.gov.tw/ 目前該區域應該有軍事管制區圖層解析度被降低</li>
 <li>農航所圖資 <a href="http://ngis.afasi.gov.tw/"></a>http://ngis.afasi.gov.tw/&nbsp; 圖資由於也在管制區內 影像解析度被降低</li>
 <li>水利署地理資訊倉儲中心 內的高解析照（衛星影像）有較高的影像資料內容</li>
-<li><a href="http://gic.wra.gov.tw/gic/GIS/FX/Main.aspx"></a>http://gic.wra.gov.tw/gic/GIS/FX/Main.aspx</li></ul>
+<li><a href="http://gic.wra.gov.tw/gic/GIS/FX/Main.aspx"></a>http://gic.wra.gov.tw/gic/GIS/FX/Main.aspx</li>
+<li>要有釋放WMS或WMTS的。水利署地理資訊倉儲中心也是農航所的，福衛來源也一樣，高解析度的是Richi的，系統是ArcGIS server。</li></ul>
 
-<p></p><p><b>繪圖工具　</b></p><ul><li>task manager&nbsp; (測試中) <a href="http://nyampire.info/job/5"></a><a href='http://nyampire.info/job/5'/>http://nyampire.info/job/5</a></li>
-<li>JOSM&nbsp; + HOT presets<ul><li>英文 <a href="https://raw.githubusercontent.com/hotosm/presets/master/HDM.xml"></a>https://raw.githubusercontent.com/hotosm/presets/master/HDM.xml</li><ul class="task"><li>需要翻譯成中文 (並加上這次的 tagging)，才有機會推廣到消防隊 or 其他 NGO</li></ul>
+<p></p><p><b>繪圖工具　</b></p><ul><li>task manager&nbsp; (測試中) <a href="http://nyampire.info/job/5"></a><a href='http://nyampire.info/job/5'/>http://nyampire.info/job/5</a></li></ul>
+<ul class="comment"><li>Task manager2 可以架在openstreetmap.tw嗎？我架過問題不大</li></ul>
+<ul><li>JOSM&nbsp; + HOT presets<ul><li>英文 <a href="https://raw.githubusercontent.com/hotosm/presets/master/HDM.xml"></a>https://raw.githubusercontent.com/hotosm/presets/master/HDM.xml</li><ul class="task"><li>需要翻譯成中文 (並加上這次的 tagging)，才有機會推廣到消防隊 or 其他 NGO</li></ul>
 </ul>
 </ul>
-<p><b>遠距繪圖</b></p><ul><li>描事發前的空照圖<ul><li>building</li>
+<p><b>遠距繪圖</b></p><ul class="comment"><li>目前沒有合適的 task manager ，很容易打架</li></ul>
+<ul><li>描事發前的空照圖<ul><li>building</li>
 <li>highway</li></ul>
 </li>
 <li>描管線？</li></ul>
-<ul class="comment"><li><a href="https://ngasgis.cpc.com.tw/mapindex.htm"></a><a href='https://ngasgis.cpc.com.tw/mapindex.htm'/>https://ngasgis.cpc.com.tw/mapindex.htm</a> 需帳號密碼</li></ul>
+<ul class="comment"><li><a href="https://ngasgis.cpc.com.tw/mapindex.htm"></a><a href='https://ngasgis.cpc.com.tw/mapindex.htm'/>https://ngasgis.cpc.com.tw/mapindex.htm</a> 需帳號密碼</li>
+<li>我有把附近的管線描出來了（用定位過的圖），相關的資料放在 <a href="https://github.com/mutolisp/kh_pplines"></a>https://github.com/mutolisp/kh_pplines ，有些管線看起來沒有接在一起，可能需要檢查一下。</li></ul>
 <ul><li>將有庇護所功能學校標上</li>
-<li>事發後的空照圖<ul><li>building damage 狀況</li></ul>
+<li>事發後的空照圖</li></ul>
+<ul class="comment"><li>發信去問太空中心了!</li><ul><li>building damage 狀況</li></ul>
 </ul>
 <p><b>Render</b></p><ul><li>uMap <a href="http://umap.fluv.io/en/"></a><a href='http://umap.fluv.io/en/'/>http://umap.fluv.io/en/</a></li>
 <li>osm-bright <a href="https://github.com/mapbox/osm-bright"></a><a href='https://github.com/mapbox/osm-bright'/>https://github.com/mapbox/osm-bright</a></li></ul>
@@ -59,6 +75,10 @@
 <ul><li>麻瓜的 renderer Overpass turbo <a href="http://overpass-turbo.eu/s/4qd"></a>http://overpass-turbo.eu/s/4qd</li></ul>
 <h2>Tutorial</h2><p></p><h2>Issue</h2><ul><li>缺乏資料收集能力</li>
 <li>缺乏 renderer</li></ul>
+<ul class="comment"><li>有針對HOT的renderer嗎？</li></ul>
+<ul><li>對不起我來亂的，我有在瑞芳標過庇護所，但是一般圖面好像看不出來？</li></ul>
+<ul class="comment"><li>這是 renderer 沒有針對這些設計的緣故</li></ul>
+<ul><li>跟 Google mapsengine 或 uMap 區別的必要性？</li></ul>
 <h2>Reference</h2><ul><li><a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset"></a><a href='http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset'/>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset</a></li>
 <li><a href="http://wiki.openstreetmap.org/wiki/Damaged_buildings_crisis_mapping"></a>http://wiki.openstreetmap.org/wiki/Damaged_buildings_crisis_mapping (海燕颱風 tagging)</li>
 <li>一些舊資料<ul><li><a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/Humanitarian_Data_Background"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/Humanitarian_Data_Background</li>
