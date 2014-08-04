@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3501"/>
+<meta name="version" content="3757"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$RmL5fQsiMGp</title>
 </head>
 <body><h1>tag討論</h1><h2>前言</h2><p>無論是資深圖客還是新手菜鳥，相信在tagging的時候多少都有「阿勒！這個要標啥？（囧）」的情況出現過。如果「直接參考地圖上現有的標籤」、「搜尋OSM wiki」或者「參考搜尋引擎的搜尋結果」都找不到解答，那請把惱人的東西列出來讓大家一起來討論什麼東西要標什麼tag吧！</p><p></p><h2>本案運作方式</h2><p><b>發問</b></p><ol><li>往下拉到「討論中」，或點擊右方大綱的「討論中」（下圖）<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_RmL5fQsiMGp_p.192101_1407143789988_2014-08-04_17-14-08.png'/></li>
@@ -46,27 +46,36 @@
 <li>便利商店內的廁所與ATM，直接標POI？ATM 的話直接加 <a href='http://wiki.openstreetmap.org/wiki/Atm'/>atm=yes</a> 或是獨立分開標 amenity=atm 都可以(感覺wiki是推薦後者, 我自己是偏好前者)</li>
 <li>公用電話，電話卡式與投幣式備註在note? <a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtelephone'/>amenity=telephone</a> 加上像是 payment:coins=yes, payment:telephone_cards=yes 不過舊式電話卡, 要再想一下怎麼標</li></ol>
 <ul class="comment"><li><a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/</li></ul>
-<ol><li>彩券行？</li>
-<li>桌遊店？</li>
-<li>鹽酥雞？</li></ol>
+<ol><li>彩券行？</li></ol>
+<ul class="comment"><li>彩券行 <a href='http://wiki.openstreetmap.org/wiki/Tag:shop%3Dlottery'/>shop=lottery</a>&nbsp; ，運彩行 <a href='http://wiki.openstreetmap.org/wiki/Tag:shop%3Dbookmaker'/>shop=bookmaker</a>&nbsp;</li>
+<li>我比較擔心以上皆是的狀況 囧</li></ul>
+<ol><li>桌遊店？</li></ol>
+<ul class="comment"><li>&nbsp;「賣」桌遊的店還是「玩」桌遊的店？</li></ul>
+<ol><li>鹽酥雞？</li></ol>
 <ul class="comment"><li>可以分有店面、攤販兩種，加take_out=only</li></ul>
 <ol><li>外勞商店？Shop=convenience？</li></ol>
 <ul class="comment"><li>可以再加tag標示賣那一國為主</li></ul>
 <ol><li>同位置有兩個同街道的門牌號碼？</li>
 <li>同位置有兩個不同街道的門牌號碼？</li>
 <li>五十嵐？<ol><li>看過shop=drink，wiki上有shop=<a href='https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbeverages'/>beverages</a></li></ol>
-<ul class="comment"><li>可惜不會rendering</li></ul>
+<ul class="comment"><li>可惜不會rendering</li>
+<li>amenity=cafe, cuisine=bubble_tea,&nbsp; takeaway=only ?</li></ul>
 </ol>
-<ol><li>甜點店(只有賣豆花、紅豆湯之類的)</li>
-<li>名為咖啡店但根本就是餐廳的店？</li>
-<li>土地公廟？</li>
-<li>里長服務處？</li>
+<ol><li>甜點店(只有賣豆花、紅豆湯之類的)</li></ol>
+<ul class="comment"><li>&nbsp;amenity=cafe, cuisine=dessert ?</li></ul>
+<ol><li>名為咖啡店但根本就是餐廳的店？</li><ul class="comment"><li>既然實際上是餐廳，考慮 amenity=restaurant 就好？</li></ul>
+</ol>
+<ol><li>土地公廟？</li></ol>
+<ul class="comment"><li>&nbsp;還是算 place_of_worship 吧，只是宗教和教派要怎麼填？</li></ul>
+<ol><li>里長服務處？</li>
 <li>議員服務處？</li>
 <li>立法委員服務處？</li>
 <li>鐵工廠？</li>
-<li>公車站站點代碼（臺中市有）？</li>
-<li>實驗林（場）？</li>
-<li>專用垃圾袋販賣處？這個自己發明 tag 吧</li>
+<li>公車站站點代碼（臺中市有）？</li></ol>
+<ul class="comment"><li>&nbsp;直接加 ref=</li></ul>
+<ol><li>實驗林（場）？</li></ol>
+<ul class="comment"><li>&nbsp;landuse=forest ?（天然林用 natural=wood）</li></ul>
+<ol><li>專用垃圾袋販賣處？這個自己發明 tag 吧</li>
 <li>宮廟牌樓？</li>
 <li>宗祠？</li>
 <li>露天石桌椅？</li></ol>
@@ -89,9 +98,11 @@
 <ol><li>同鄉會？</li>
 <li>導護商店？這種應該就是照一般商店的標法, 再自己發明 tag 表示導護吧</li>
 <li>水電行？</li>
-<li>中醫？</li>
-<li>早餐店？</li>
-<li>公會？</li></ol>
+<li>中醫？</li><ul class="comment"><li>&nbsp;<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0"></a>http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0<a href='http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0'/> ?</a></li></ul>
+</ol>
+<ol><li>早餐店？</li></ol>
+<ul class="comment"><li>&nbsp;amenity=restaurant, cuisine=brunch? cuisine=chinese_breakfast?</li></ul>
+<ol><li>公會？</li></ol>
 
 <h2>已定案</h2><ol><li>古厝？<a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/655110511221088/'/>building=house</a></li>
 <li>寵物可攜？<a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/659990514066421/'/>pet=yes</a></li>
