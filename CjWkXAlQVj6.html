@@ -3,13 +3,58 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="86"/>
+<meta name="version" content="649"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$CjWkXAlQVj6</title>
 </head>
 <body><h1>土炮自製空照圖</h1><h2>Information (for speaker)</h2><p>時間: 2014-08-12&nbsp; 20:00</p><p>講者: LouisLiu&nbsp;&nbsp;&nbsp;&nbsp;</p><p>主題: 土炮自製空照圖&nbsp;</p><p>Hangout: <a href="https://plus.google.com/hangouts/_/hoaevent/AP36tYeNnWcSvfBHNrRF85NIyeFkrgDVA7c6kHl8nTN1cN0yRRuuAQ"></a>https://plus.google.com/hangouts/_/hoaevent/AP36tYeNnWcSvfBHNrRF85NIyeFkrgDVA7c6kHl8nTN1cN0yRRuuAQ</p><p>Youtube: <a href="https://www.youtube.com/watch?v=D1gHYhfcAao"></a>https://www.youtube.com/watch?v=D1gHYhfcAao</p><p>Q&amp;A session: ?&nbsp;</p><ul class="comment"><li>&nbsp;如果超過十個人的話？</li>
 <li>偷學 Pycon APAC 2014</li>
 <li>那是？</li>
-<li>大概長這樣 <a href="https://pyconapac2014.hackpad.com/-30-mtOJmQWnlEo"></a>https://pyconapac2014.hackpad.com/-30-mtOJmQWnlEo</li></ul>
+<li>大概長這樣 <a href="https://pyconapac2014.hackpad.com/-30-mtOJmQWnlEo"></a>https://pyconapac2014.hackpad.com/-30-mtOJmQWnlEo</li>
+<li>方便slides放上來嗎？</li></ul>
 
-<h2>FaQ </h2><p></p></body>
+<p></p><h2>FaQ </h2><ul class="comment"><li>JOSM - PicLayers 的變形是不是只有 zoom 和&nbsp; rotation</li>
+<li>還有梯形和平行四邊形，但會互相牽連</li></ul class="comment">
+<h2>Co-Note</h2><ul><li>器材<ul><li>氣球</li>
+<li>風箏 -&nbsp; All-in-One Balloon and Kite Mapping Kit&nbsp; <a href="http://store.publiclab.org/products/all-in-one-balloon-and-kite-mapping-kit"></a><a href='http://store.publiclab.org/products/all-in-one-balloon-and-kite-mapping-kit'/>http://store.publiclab.org/products/all-in-one-balloon-and-kite-mapping-kit</a></li></ul>
+<ul class="comment"><li>I used Balloon last year, but it is very difficult to control. And more, it is expensive to buy helium and manage gas cylinder. Maybe Kite is more easy way.</li></ul>
+<ul><li>四旋機</li>
+<li>定翼機</li></ul>
+</li>
+<li>JOSM - <a href='http://wiki.openstreetmap.org/wiki/JOSM/Plugins/PicLayer'/>PicLayers</a>&nbsp;</li><ul class="comment"><li>&nbsp;參數很難調</li></ul>
+</ul>
+<ul><li>QGIS - Georeferencer (產生 <a href='http://trac.osgeo.org/geotiff/'/>geotiff</a> )<ul><li>梯形演算比 PicLayers 容易</li>
+<li>JOSM 載入&nbsp; <a href='http://en.wikipedia.org/wiki/Geographic_coordinate_system'/>CRS(Coordinate Reference System)</a> 圖檔的外掛是 <b><a href='http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin'/>ImportImage</a></b><a href='http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin'/> </a><a href="http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin"></a>http://wiki.openstreetmap.org/wiki/JOSM/Plugins/ImportImagePlugin</li></ul>
+</ul>
+
+<ul><li>參考點：<ul><li>標線</li>
+<li>電線竿</li>
+<li>水溝蓋</li>
+<li>--<s>屋頂</s>--</li></ul>
+</li>
+<li>Hugin<ul><li>想要克服接圖醜陋的問題</li></ul>
+</ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_CjWkXAlQVj6_attachment-1407846606216_photo.jpg'/></p><p></p><ul><li>可以修正相機相差的問題<ul><li><a href='http://lensfun.sourceforge.net/'/>lensfun</a>&nbsp;</li></ul>
+</li>
+<li>特徵點/控制點的選擇<ul><li>因為我們要比對路，而且屋頂不是個好的參考點，所以通常不選擇屋頂。</li>
+<li>當然可以手動新增特徵點</li>
+<li>經驗法則：越多特徵點效果不一定會越好（但過少特徵點效果一定不好）</li></ul>
+</ul>
+
+<ul><li>視角<ul><li>一個觀察點看一個面</li>
+<li>不停變換觀察點</li></li>
+<li>正射比較接近這個吧????</li></li>
+<li>不一定符合正射定義</li></ul>
+</li>
+<li>投影<ul><li>適當的投影選擇可以比較接近平常使用 zoom in/out 的感覺</li></ul>
+</li>
+<li>TPS演算法</li></ul>
+
+<p><a href='https://www.facebook.com/coop.shen?fref=ufi'/>Jhih-Cyuan Shen</a> &gt; 如果要達到正射影像水準 處理流程還需要加入DEM資料進行修正 <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/724170524315086/?comment_id=724190530979752&offset=0&total_comments=5"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/724170524315086/?comment_id=724190530979752&amp;offset=0&amp;total_comments=5</p><p></p><p><b>延伸閱讀</b></p><undefined><li><b>入門教學</b></li></undefined>
+<ul><li>Quantum GIS (QGIS) Tutorials: Tutorial: Georeferencing Topo Sheets, Topo Maps, Satellite Image or Scanned Maps in QGIS <a href="http://qgis.spatialthoughts.com/2012/02/tutorial-georeferencing-topo-sheets.html"></a>http://qgis.spatialthoughts.com/2012/02/tutorial-georeferencing-topo-sheets.html</li>
+<li>&nbsp;Digital Geography <a href="http://www.digital-geography.com/qgis-tutorial-i-how-to-georeference-a-map/"></a>http://www.digital-geography.com/qgis-tutorial-i-how-to-georeference-a-map/</li></ul>
+<undefined><li><b>圖磚產生工具</b></li></undefined>
+<ul><li><b><a href='http://wiki.openstreetmap.org/wiki/GDAL2Tiles'/>GDAL2Tiles</a></b> to transform a georeferenced map into a <a href='http://wiki.openstreetmap.org/wiki/TMS'/>TMS</a>-map which can be used as background in JOSM or published as a web map.&nbsp; <a href="http://wiki.openstreetmap.org/wiki/GDAL2Tiles"></a>http://wiki.openstreetmap.org/wiki/GDAL2Tiles</li>
+<li>MapTiler - Map Tile Cutter. Overlay Generator for Google Maps, Google Earth (KML SuperOverlay). <a href="http://www.maptiler.org/"></a>http://www.maptiler.org/</li></ul>
+
+</body>
 </html>
