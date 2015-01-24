@@ -3,10 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="506"/>
+<meta name="version" content="529"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$19s3HpvIZrY</title>
 </head>
-<body><h1>台鐵營運路線Relation</h1><h2>前提</h2><p>這裡說的營運路線是站在鐵軌的觀點而非站在車次的觀點，所以談的是「縱貫線北段」、「集集線」而不是「146車次」、「278車次」</p><p></p><p><b>Relation標示的概念</b></p><p>route=railway：營運路線</p><p>route=train：車次</p><p></p><h2>目的</h2><p>用Relation標示台鐵營運路線</p><p></p><p><b>主線</b></p><p>依據營運路線，把縱貫線、宜蘭線、北迴線、花東線、南迴線、屏東線建立起來，用route=railway標示</p><p><b>支線</b></p><p>鐵路支線部分，平溪線有建了八堵到菁茼的班中route=train平溪線可以複製這條修改就好</p><p>基隆海生館線也要建</p><p><b>非台鐵</b></p><p>非台鐵有林務局的阿里山線，糖鐵一堆</p><p></p><h2>工作順序</h2><p><b>台鐵</b></p><ol><li>一邊將鐵路雙軌化一邊將鐵路包進relation中</li>
+<body><h1>台鐵營運路線Relation</h1><h2>前提</h2><p>這裡說的營運路線是站在鐵軌的觀點而非站在車次的觀點，所以談的是「縱貫線北段」、「集集線」而不是「146車次」、「278車次」</p><p></p><p><b>Relation標示的概念</b></p><p>route=railway：營運路線</p><p>route=train：車次</p><p></p><h2>目的</h2><p>用Relation標示台鐵營運路線</p><p></p><p><b>主線</b></p><p>依據營運路線，把縱貫線、宜蘭線、北迴線、花東線、南迴線、屏東線建立起來，用route=railway標示</p><p><b>支線</b></p><p>鐵路支線部分：</p><ul><li>平溪線：有建了八堵到菁茼的班中route=train平溪線可以複製這條修改就好</li>
+<li>基隆海生館線(深澳線)</li>
+<li>集集線</li>
+<li>沙崙線：已完工</li>
+<li>內灣線</li>
+<li>六家線</li></ul>
+<p><b>非台鐵</b></p><p>非台鐵有林務局的阿里山線，糖鐵一堆</p><p></p><h2>工作順序</h2><p><b>台鐵</b></p><ol><li>一邊將鐵路雙軌化一邊將鐵路包進relation中</li>
 <li>「個別」標示鐵路上的車站、車站建築物、月台、周邊公設</li>
 <li>將前項全部用relation包成車站（參考柏林）</li>
 <li>建議加上wikipedia=zh:XX車站</li></ol>
