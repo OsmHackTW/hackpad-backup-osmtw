@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4765"/>
+<meta name="version" content="5022"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$RmL5fQsiMGp</title>
 </head>
 <body><h1>tag討論</h1><h2>注意</h2><p>本頁面目前僅用於討論<u>未登錄在 OSM Wiki 上</u>的tag，發問前請先參閱 OSM Wiki ：</p><p><a href="https://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features"></a>https://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features</p><p></p><h2>前言</h2><p>無論是資深圖客還是新手菜鳥，相信在tagging的時候多少都有「阿勒！這個要標啥？（囧）」的情況出現過。如果「直接參考地圖上現有的標籤」、「搜尋OSM wiki」或者「參考搜尋引擎的搜尋結果」都找不到解答，那請把惱人的東西列出來讓大家一起來討論什麼東西要標什麼tag吧！</p><p></p><h2>本案運作方式</h2><p><b>發問</b></p><ol><li>往下拉到「討論中」，或點擊右方大綱的「討論中」（下圖）<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_RmL5fQsiMGp_p.192101_1407143789988_2014-08-04_17-14-08.png'/></li>
@@ -28,30 +28,57 @@
 <li>我個人原本的想法是整理出一個頁面，方便在查詢tag的時候只要搜尋這個頁面就好。</li></ul>
 </ol>
 
-<p><b>提供參考資料</b></p><p>如果有先前的討論內容或其他參考資料請列入「參考資料」段落</p><p></p><p><b>長遠目標</b></p><p>日本的五十音 JOSM presets</p><p>寫個直接點擊選項就會自動添加tag的app</p><p></p><h2>討論中</h2><p>本段落最新整理日期：2014/07/22 PM 08:50:12</p><p></p><ol><li>平房？ building=house</li>
-<li>三合院、四合院？ building=house</li>
-<li>農會？office=NGO</li>
-<li>復合式店家？，例：租車＋窯烤</li>
-<li>修車兼賣車的機車行？</li>
+<p><b>提供參考資料</b></p><p>如果有先前的討論內容或其他參考資料請列入「參考資料」段落</p><p></p><p><b>長遠目標</b></p><p>日本的五十音 JOSM presets</p><p>寫個直接點擊選項就會自動添加tag的app</p><p></p><h2>討論中</h2><p>本段落最新整理日期：2014/07/22 PM 08:50:12</p><p></p><p><b>大型組織, 政府單位, 公共單位</b></p><ol><li>農會？office=NGO</li>
 <li>衛生所</li>
 <li>清潔隊停車場？我想就用 amenity=parking 加上 access=no 或更適合的字(如果沒對外開放) 或 operator= (如果有對外開放)</li>
-<li>廢校？例：東勢高工？依狀況可能用 <a href='http://wiki.openstreetmap.org/wiki/Key:disused'/>disused</a>:amenity=school 或 <a href='http://wiki.openstreetmap.org/wiki/Key:abandoned'/>abandoned</a>:amenity=school, 另外請參考 <a href='http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts'/>life cycle 的標法討論</a><a href='http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts'/>.</a></li>
-<li>夜市？ amenity=marketplace area=yes highway=pedestrain</li></ol>
-<ul class="comment"><li>這個可能有爭議，臺灣夜市的地板不一定有鋪面，而且很多是在停車場或道路上，可能要加註opening_hours？</li></ul>
-<ol><li>夜市攤位？</li></ol>
-<ul class="comment"><li>夜市攤位流動性大應該不適宜標注在OSM上</li></ul>
-<ol><li>守望相助隊？</li>
-<li>觀賞魚池？也許 landuse=pond, 目前 OSM wiki 上對水池並沒有分得很細</li>
-<li>葬儀社 ？shop=funeral_directors</li></ol>
-<ul class="comment"><li><a href='https://shop = funeral_directors'/>shop = funeral_directors</a> ?</li>
-<li>修正連結<a href='https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfuneral_directors'/>shop=funeral_directors</a></li></ul>
-<ol><li>機車託運？</li>
-<li>殘障車位？如果是一整個停車場, 可以用 amenity=parking + <a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking'/>capacity:disabled</a> 來標殘障車位的數量, 如果要標單獨的殘障車位, 用 amenity=parking_space + <a href='http://wiki.openstreetmap.org/wiki/Proposed_features/parking'/>access:disabled=yes</a></li>
+<li>里長服務處？</li></ol>
+<ul class="comment"><li>也算<a href='http://wiki.openstreetmap.org/wiki/Tag:office%3Dgovernment'/>office=government</a>吧？里長好像沒有屬於公家建築的辦公機構？</li>
+<li>里長應該就是典型的「在家工作」XD</li></ul>
+<ol><li>議員服務處？</li>
+<li>立法委員服務處？</li>
+<li>避難處所？</li>
+<li>社區照顧關懷據點？</li>
+<li>醫療巡迴站？</li>
+<li>守望相助隊？</li>
+<li>宗親會？</li></ol>
+<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Dngo"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:office%3Dngo'/>http://wiki.openstreetmap.org/wiki/Tag:office%3Dngo</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Dquango"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:office%3Dquango'/>http://wiki.openstreetmap.org/wiki/Tag:office%3Dquango</a></li>
+<li>宗親會屬於人民團體不算法人，是嗎？＠＠</li></ul>
+<ol><li>同鄉會？</li>
+<li>同業公會？</li>
+<li>里民活動中心 amenity=community_centre</li>
+<li>監理站？</li>
+<li><br/></li></ol>
+<p><b>設施</b></p><ol><li>殘障車位？如果是一整個停車場, 可以用 amenity=parking + <a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking'/>capacity:disabled</a> 來標殘障車位的數量, 如果要標單獨的殘障車位, 用 amenity=parking_space + <a href='http://wiki.openstreetmap.org/wiki/Proposed_features/parking'/>access:disabled=yes</a></li>
 <li>殘障坡道？highway=pedestrian + wheelchair=yes</li>
 <li>便利商店內的廁所與ATM，直接標POI？ATM 的話直接加 <a href='http://wiki.openstreetmap.org/wiki/Atm'/>atm=yes</a> 或是獨立分開標 amenity=atm 都可以(感覺wiki是推薦後者, 我自己是偏好前者)</li></ol>
 <ul class="comment"><li>這個我有爬文，應該是兩者都有，因為加註atm=yes指示標示這個地方有atm，可是單獨的atm poi可以標示銀行、存款與百元鈔這種比較常用的資訊</li></ul>
 <ol><li>公用電話，電話卡式與投幣式備註在note? <a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dtelephone'/>amenity=telephone</a> 加上像是 payment:coins=yes, payment:telephone_cards=yes 不過舊式電話卡, 要再想一下怎麼標</li></ol>
-<ul class="comment"><li><a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/</li></ul>
+<ul class="comment"><li><a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/"></a><a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/'/>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/640291682702971/</a></li></ul>
+<ol><li>露天石桌椅？</li></ol>
+<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench'/>http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench</a>&nbsp; 椅子比較沒問題</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpicnic_table"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpicnic_table'/>http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpicnic_table</a> 桌子 好像不那麼貼切</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess'/>http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess</a></li>
+<li>就第三個範例「如何tag公園(西洋)棋盤桌」來看　戶外定點桌子似乎都可tag為leisure=picnic_table</li></ul>
+<ol><li>公園棋盤桌</li></ol>
+<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess'/>http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess</a></li>
+<li>wiki裡示範的為西洋棋 台灣常見為象棋 不知是否可共用同一種標示法?</li></ul>
+<ol><li>電線桿？ <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole'/>http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole</a> +&nbsp; <a href="http://wiki.openstreetmap.org/wiki/Key:ref"></a><a href='http://wiki.openstreetmap.org/wiki/Key:ref'/>http://wiki.openstreetmap.org/wiki/Key:ref</a></li>
+<li>汲水器&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_RmL5fQsiMGp_p.304255_1426357865705_undefined'/></li>
+<li>抽水站？build=office&nbsp; office=government？</li></ol>
+<ul class="comment"><li>好像看不出用途～</li>
+<li>是完全看不出用途...</li></ul>
+
+<p><b>各種店家/360行</b></p><ol><li>復合式店家？，例：租車＋窯烤</li>
+<li>修車兼賣車的機車行？</li>
+<li>葬儀社 ？shop=funeral_directors</li></ol>
+<ul class="comment"><li><a href='https://shop%20%3D%20funeral_directors/'/>shop = funeral_directors</a> ?</li>
+<li>修正連結<a href='https://wiki.openstreetmap.org/wiki/Tag:shop%3Dfuneral_directors'/>shop=funeral_directors</a></li></ul>
+<ol><li>機車託運？</li>
+<li>夜市？ amenity=marketplace area=yes highway=pedestrain</li></ol>
+<ul class="comment"><li>這個可能有爭議，臺灣夜市的地板不一定有鋪面，而且很多是在停車場或道路上，可能要加註opening_hours？</li></ul>
+<ol><li>夜市攤位？</li></ol>
+<ul class="comment"><li>夜市攤位流動性大應該不適宜標注在OSM上</li></ul>
 <ol><li>彩券行？</li></ol>
 <ul class="comment"><li>彩券行 <a href='http://wiki.openstreetmap.org/wiki/Tag:shop%3Dlottery'/>shop=lottery</a>&nbsp; ，運彩行 <a href='http://wiki.openstreetmap.org/wiki/Tag:shop%3Dbookmaker'/>shop=bookmaker</a>&nbsp;</li>
 <li>我比較擔心以上皆是的狀況 囧</li>
@@ -63,9 +90,7 @@
 <ul class="comment"><li>可以分有店面、攤販兩種，加take_out=only</li></ul>
 <ol><li>外勞商店？Shop=convenience？</li></ol>
 <ul class="comment"><li>可以再加tag標示賣那一國為主</li></ul>
-<ol><li>同位置有兩個同街道的門牌號碼？</li>
-<li>同位置有兩個不同街道的門牌號碼？</li>
-<li>五十嵐/飲料店？<ol><li>看過shop=drink，wiki上有shop=<a href='https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbeverages'/>beverages</a></li></ol>
+<ol><li>五十嵐/飲料店？<ol><li>看過shop=drink，wiki上有shop=<a href='https://wiki.openstreetmap.org/wiki/Tag:shop%3Dbeverages'/>beverages</a></li></ol>
 <ul class="comment"><li>可惜不會rendering</li>
 <li>amenity=cafe, cuisine=bubble_tea,&nbsp; takeaway=only ?</li>
 <li>萬一不一定有珍珠 似乎不適用 bubble tea (應該幾乎沒有, 這什麼多重否定呀)</li></ul>
@@ -76,74 +101,54 @@
 <li>++</li>
 <li>++</li></ul>
 </ol>
-<ol><li>土地公廟？</li></ol>
+<ol><li>鐵工廠？ building=industrial</li>
+<li>釣蝦場&nbsp;</li></ol>
+<ul class="comment"><li>leisure = shrimp_fishing ? landuse = aquaculture+shrimp?</li></ul>
+<ol><li><a href='https://osmtw.hackpad.com/jZu93kDDxqT#檳榔攤'/>檳榔攤</a>&nbsp;&nbsp; <a href='http://wiki.openstreetmap.org/wiki/Tag:shop=deli?uselang=zh-TW'/>shop=deli</a>&nbsp; ?</li></ol>
+<ul class="comment"><li>這個問題好麻煩...</li></ul>
+<ol><li>租書店？</li>
+<li>命相、算命、擇日館？</li>
+<li>加水站 <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine'/>http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine</a> + vending = water&nbsp;</li>
+<li>導護商店？</li></ol>
+<ul class="comment"><li>這種應該就是照一般商店的標法, 再自己發明 tag 表示導護吧</li></ul>
+<ol><li>水電行？</li></ol>
+<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware'/>http://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware</a></li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Key:craft"></a><a href='http://wiki.openstreetmap.org/wiki/Key:craft'/>http://wiki.openstreetmap.org/wiki/Key:craft</a></li></ul>
+<ol><li>中醫？</li><ul class="comment"><li>&nbsp;<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0"></a><a href='http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0'/>http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0</a><a href='http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0'/> ?</a></li></ul>
+</ol>
+<ol><li>早餐店？</li></ol>
+<ul class="comment"><li>&nbsp;amenity=restaurant, cuisine=brunch? cuisine=chinese_breakfast?</li>
+<li>這個好像比較合理了，一概都設定成餐廳，只是專賣早餐這樣</li></ul>
+<ol><li>專用垃圾袋販賣處？</li></ol>
+<ul class="comment"><li>這個自己發明 tag 吧</li>
+<li>整個哭哭不知道要用什麼單字...囧</li></ul>
+<ol><li>寵物用品店？</li>
+<li>製造生產並販售檜木精油、展售檜木藝品、設有檜木精油泡澡湯屋的店？</li>
+<li><br/></li></ol>
+<p><b>宗教相關</b></p><ol><li>土地公廟？</li></ol>
 <ul class="comment"><li>&nbsp;還是算 place_of_worship 吧，只是宗教和教派要怎麼填？</li>
 <li>&nbsp;amenity=place_of_worship+religion=taoist&nbsp;</li>
 <li>religion=taoist 道教,religion=buddhist佛教,religion=christian基督天主教,</li>
 <li>denomination=presbyterian長老宗</li>
 <li>樓上太有心了！！！</li></ul>
-<ol><li>里長服務處？</li></ol>
-<ul class="comment"><li>也算<a href='http://wiki.openstreetmap.org/wiki/Tag:office%3Dgovernment'/>office=government</a>吧？里長好像沒有屬於公家建築的辦公機構？</li>
-<li>里長應該就是典型的「在家工作」XD</li></ul>
-<ol><li>議員服務處？</li>
-<li>立法委員服務處？</li>
-<li>鐵工廠？ building=industrial</li>
+<ol><li>宮廟牌樓？</li>
+<li>宗祠？</li>
+<li>金爐？</li></ol>
+
+<p><b>各種「情況」要怎麼 tag</b></p><ol><li>廢校？例：東勢高工？依狀況可能用 <a href='http://wiki.openstreetmap.org/wiki/Key:disused'/>disused</a>:amenity=school 或 <a href='http://wiki.openstreetmap.org/wiki/Key:abandoned'/>abandoned</a>:amenity=school, 另外請參考 <a href='http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts'/>life cycle 的標法討論</a><a href='http://wiki.openstreetmap.org/wiki/Comparison_of_life_cycle_concepts'/>.</a></li>
+<li>同位置有兩個同街道的門牌號碼？</li>
+<li>同位置有兩個不同街道的門牌號碼？</li>
+<li>歷史建築活化，例：東勢舊火車站現爲客家文化館？</li></ol>
+
+<p><b>其他</b></p><ol><li>平房？ building=house</li>
+<li>三合院、四合院？ building=house</li>
+<li>觀賞魚池？也許 landuse=pond, 目前 OSM wiki 上對水池並沒有分得很細</li>
 <li>公車站站點代碼（臺中市有）？ref=站點代碼</li></ol>
 <ul class="comment"><li>&nbsp;直接加 ref=</li></ul>
 <ol><li>實驗林（場）？</li></ol>
 <ul class="comment"><li>&nbsp;landuse=forest ?（天然林用 natural=wood）</li></ul>
-<ol><li>專用垃圾袋販賣處？</li></ol>
-<ul class="comment"><li>這個自己發明 tag 吧</li>
-<li>整個哭哭不知道要用什麼單字...囧</li></ul>
-<ol><li>宮廟牌樓？</li>
-<li>宗祠？</li>
-<li>露天石桌椅？</li></ol>
-<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench'/>http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dbench</a>&nbsp; 椅子比較沒問題</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpicnic_table"></a>http://wiki.openstreetmap.org/wiki/Tag:leisure%3Dpicnic_table 桌子 好像不那麼貼切</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess"></a>http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess</li>
-<li>就第三個範例「如何tag公園(西洋)棋盤桌」來看　戶外定點桌子似乎都可tag為leisure=picnic_table</li></ul>
-<ol><li>歷史建築活化，例：東勢舊火車站現爲客家文化館？</li>
-<li>公園棋盤桌</li></ol>
-<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess'/>http://wiki.openstreetmap.org/wiki/Tag:sport%3Dchess</a></li>
-<li>wiki裡示範的為西洋棋 台灣常見為象棋 不知是否可共用同一種標示法?</li></ul>
-<ol><li>金爐？</li>
-<li>避難處所？</li>
-<li>社區照顧關懷據點？</li>
-<li>醫療巡迴站？</li>
-<li>記錄碑文？</li>
-<li>宗親會？</li></ol>
-<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Dngo"></a>http://wiki.openstreetmap.org/wiki/Tag:office%3Dngo</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Tag:office%3Dquango"></a>http://wiki.openstreetmap.org/wiki/Tag:office%3Dquango</li>
-<li>宗親會屬於人民團體不算法人，是嗎？＠＠</li></ul>
-<ol><li>同鄉會？</li>
-<li>導護商店？</li></ol>
-<ul class="comment"><li>這種應該就是照一般商店的標法, 再自己發明 tag 表示導護吧</li></ul>
-<ol><li>水電行？</li></ol>
-<ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware"></a>http://wiki.openstreetmap.org/wiki/Tag:shop%3Dhardware</li>
-<li><a href="http://wiki.openstreetmap.org/wiki/Key:craft"></a>http://wiki.openstreetmap.org/wiki/Key:craft</li></ul>
-<ol><li>中醫？</li><ul class="comment"><li>&nbsp;<a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0"></a>http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0<a href='http://wiki.openstreetmap.org/wiki/Proposed_features/Healthcare_2.0'/> ?</a></li></ul>
-</ol>
-<ol><li>早餐店？</li></ol>
-<ul class="comment"><li>&nbsp;amenity=restaurant, cuisine=brunch? cuisine=chinese_breakfast?</li>
-<li>這個好像比較合理了，一概都設定成餐廳，只是專賣早餐這樣</li></ul>
-<ol><li>同業公會？</li>
-<li>電線桿？ <a href="http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole'/>http://wiki.openstreetmap.org/wiki/Tag:power%3Dpole</a> +&nbsp; <a href="http://wiki.openstreetmap.org/wiki/Key:ref"></a><a href='http://wiki.openstreetmap.org/wiki/Key:ref'/>http://wiki.openstreetmap.org/wiki/Key:ref</a></li>
-<li>釣蝦場&nbsp;</li></ol>
-<ul class="comment"><li>leisure = shrimp_fishing ? landuse = aquaculture+shrimp?</li></ul>
-<ol><li><a href='/jZu93kDDxqT#檳榔攤'/>檳榔攤</a>&nbsp;&nbsp; <a href='http://wiki.openstreetmap.org/wiki/Tag:shop=deli?uselang=zh-TW'/>shop=deli</a>&nbsp; ?</li></ol>
-<ul class="comment"><li>這個問題好麻煩...</li></ul>
-<ol><li>里民活動中心 amenity=community_centre</li>
-<li>租書店？</li>
-<li>命相、算命、擇日館？</li>
-<li>加水站 <a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine"></a>http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dvending_machine + vending = water&nbsp;</li>
-<li>汲水器&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_RmL5fQsiMGp_attachment-1416825983426_photo.jpg'/></li>
-<li>抽水站？build=office&nbsp; office=government？</li></ol>
-<ul class="comment"><li>好像看不出用途～</li>
-<li>是完全看不出用途...</li></ul>
-<ol><li>監理站？</li>
-<li>寵物用品店？</li>
-<li>登山口？</li>
-<li>製造生產並販售檜木精油、展售檜木藝品、設有檜木精油泡澡湯屋的店？</li></ol>
+<ol><li>記錄碑文？</li>
+<li>登山口？ 目前用 entrance=yes name=xxx登山口; 找到更適合的前先這樣tag</li></ol>
 
 <h2>已定案</h2><p></p><ol><li>古厝？<a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/655110511221088/'/>building=house</a></li></ol>
 <ul class="comment"><li><a href="http://wiki.openstreetmap.org/wiki/Key:start_date"></a>http://wiki.openstreetmap.org/wiki/Key:start_date</li></ul>
