@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="946"/>
+<meta name="version" content="948"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$5e5JXlrBC9Q</title>
 </head>
 <body><h1>GNS 地名匯入計畫</h1><p></p><p>小B 把巨量的台灣 GNS 地名給初步處理好了，所有的 CSV 檔案都放在這個資料夾：</p><p><a href="https://github.com/littlebtc/osmtw-gns-data/tree/master/ppl"></a><b><u>https://github.com/littlebtc/osmtw-gns-data/tree/master/ppl</u></b></p><p>所使用的程式碼放在這個儲存庫的上層之中，歡迎取用。</p><p></p><p>GNS 指的是 <a href="http://wiki.openstreetmap.org/wiki/GEOnet_Names_Server"></a>http://wiki.openstreetmap.org/wiki/GEOnet_Names_Server</p><p>屬於美國聯邦政府資料，故沒有版權限制，可以安心服用</p><p>總計包含 16132 個地名，其中 920 個沒有中文名稱 QAQ</p><p>無中文地名狀況：請參照內政部地名檢索系統(<a href="http://placesearch.moi.gov.tw/search/)"></a><a href='http://placesearch.moi.gov.tw/search/'/>http://placesearch.moi.gov.tw/search/</a>)</p><p></p><p><b>匯入計畫</b></p><p></p><p>目前還沒有 囧，因為工程很大</p><p>可能要分縣市處理，最好需要當地人作基本校正和合併</p><p></p><p><b>匯入前的注意事項</b></p><p>簡單翻譯一下 <a href="http://wiki.openstreetmap.org/wiki/GEOnet_Names_Server"></a>http://wiki.openstreetmap.org/wiki/GEOnet_Names_Server 的 <b>Caveats</b> 一節：</p><ul><li>地名不會砍掉，所以可能會有超古早無意義地名（台灣的話，例如重劃區）</li></ul>
@@ -13,7 +13,7 @@
 <li>有少數不準確但錯誤資料，例如翻譯錯誤或標錯地區</li>
 <li><s>不同拼音的點可能會重複存在（這個我處理了）</s></li></ul>
 
-<p><b>匯入到 JOSM 的準備</b></p><p></p><p>先制作業，安裝 Plugin （流程待補）:</p><p></p><p>編輯 -&gt; 偏好設定 或 JOSM -&gt; Preferences，在左邊選擇外掛，把 opendata 跟 conflation 打勾之後按確定，下載後重開 JOSM</p><p>用opendata 時，有些檔案得有 geotools才能匯入</p><p></p><p>匯入台灣 GNS CSV：</p><p>opendata 裝好後把 CSV 拖進去按確定就有了（地理座標用預設的 WGS84 就好了），就是這麼簡單啦 :grin:&nbsp;&nbsp;</p><p></p><p><b>ADM 對應行政區一覽表</b></p><p></p><p>請注意並不是完全一致，例如台北市有不小心包到橋另外一邊的狀況 囧</p><p></p><ul><li>北北基：3 台北市 / 12 基隆市 / 23 新北市</li>
+<p><b>匯入到 JOSM 的準備</b></p><p></p><p>先制作業，安裝 Plugin （流程待補）:</p><p></p><p>編輯 -&gt; 偏好設定 或 JOSM -&gt; Preferences，在左邊選擇外掛，把 opendata 跟 conflation 打勾之後按確定，下載後重開 JOSM</p><p>用opendata 時，有些檔案格式得有 geotools才能匯入</p><p></p><p>匯入台灣 GNS CSV：</p><p>opendata 裝好後把 CSV 拖進去按確定就有了（地理座標用預設的 WGS84 就好了），就是這麼簡單啦 :grin:&nbsp;&nbsp;</p><p></p><p><b>ADM 對應行政區一覽表</b></p><p></p><p>請注意並不是完全一致，例如台北市有不小心包到橋另外一邊的狀況 囧</p><p></p><ul><li>北北基：3 台北市 / 12 基隆市 / 23 新北市</li>
 <li>桃竹苗：25 桃園市 / 8 新竹市 / 9 新竹縣 / 15 苗栗縣</li>
 <li>中彰投：19 台中市 / 5 彰化縣 / 16 南投縣</li>
 <li>雲嘉南：27 雲林縣 / 6 嘉義市 / 7 嘉義縣 / 21 台南市</li>
