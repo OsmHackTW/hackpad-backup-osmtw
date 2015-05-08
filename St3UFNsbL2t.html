@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="237"/>
+<meta name="version" content="552"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$St3UFNsbL2t</title>
 </head>
 <body><h1>圖資自動稽核系統</h1><p>透過電腦自動檢查機制，把常見的錯誤找出來並且列在報表上，幫助圖客省下找錯的時間</p><p>現在每天的凌晨 03:47，tacosync.com 主機會跑一次圖資測試</p><p></p><p>現有成果：<a href="http://tacosync.com/osm/report.html"></a>http://tacosync.com/osm/report.html</p><p>原始碼：<a href="https://github.com/OsmHackTW/integrality_check"></a>https://github.com/OsmHackTW/integrality_check</p><p>挖坑區：<a href="https://github.com/OsmHackTW/integrality_check/issues"></a>https://github.com/OsmHackTW/integrality_check/issues</p><p></p><p>已實現的稽核項目：</p><ul><li>tagging 錯誤的廁所</li>
@@ -14,6 +14,19 @@
 <p>建議事項 (還沒有具體想法而需要討論或是查資料的)：</p><ul><li>name 包含主觀編輯內容</li>
 <li>無效地標資料</li>
 <li>資料不完整的連鎖商店 (7-11, 全家, 85度C ...)</li></ul>
+
+<p>版本規劃</p><ul><li>0.1.x - 基礎建設與單車應用<ul><li>0.1.0 測試工具建置，廁所資料 (執行中)</li>
+<li>0.1.1 加水、打氣的地點 (標註單車驛站的警察局、附設打氣筒的 7-11)</li>
+<li>0.1.2 單車店與單車用品店 (例如捷安特、方程式單車)</li>
+<li>0.1.3 可以淋浴的地點 (例如南港軟體園區、台達電)</li>
+<li>0.1.4 可以停車的餐廳 (例如 I&rsquo;m here)</li>
+<li>0.1.5 租車點 (例如 U-Bike)</li></ul>
+</li>
+<li>0.2.x - 連鎖企業<ul><li>0.2.0 報表美化</li>
+<li>0.2.1 連鎖便利商店 7-11、全家、萊爾富 資料驗證</li>
+<li>0.2.2 連鎖加油站 中油、台塑、全國</li>
+<li>0.2.3 連鎖咖啡 85度C、星巴克</li></ul>
+</ul>
 
 </body>
 </html>
