@@ -3,10 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1458"/>
+<meta name="version" content="1557"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$byfoqdK7szz</title>
 </head>
-<body><h1>COSCUP 2015 OSM Workshop</h1><p></p><h2> 基本資訊</h2><p>日期：2015/8/15-16 COSCUP期間</p><p>辦法：<a href="http://blog.coscup.org/2015/03/coscup-workshop.html"></a>http://blog.coscup.org/2015/03/coscup-workshop.html</p><p>申請連結：<a href="http://coscup2015.kktix.cc/events/2ff2de9e"></a>http://coscup2015.kktix.cc/events/2ff2de9e</p><p></p><h2>主題</h2><p>不同於以往介紹開放街圖，一開始就是談歷史和知名事件，這次打算打算改變作法，直接展示開放街圖圖資，用OverPass API來探究開放街圖資料的豐富性。</p><p></p><p>Workshop主題徵集投稿：</p><p></p><p>如有想到有趣的WorkShop主題，自行在下面空白處接續填寫。或者有意願擔任工作人員的話請自行填表</p><p></p><ol><li>OverPass API by <a href='/ep/profile/pWWS3IPz7GQ'/>Supaplex</a>&nbsp;<ol><li>打算放在第一個主題，先用OverPass Turbo的精靈模式找公車站牌、便利商店、YouBike公共自行車等資料夠多的POI，省道幹線、公車路線等，來給觀眾好的印象。再來透過與現場人員互動，請他說出他想找什麼，在現場用OverPass Turbo找出來。</li>
+<body><h1>COSCUP 2015 OSM Workshop</h1><p>自由的圖資－如何hack開放街圖</p><h2> 基本資訊</h2><p>日期：2015/8/15-16 COSCUP期間</p><p>辦法：<a href="http://blog.coscup.org/2015/03/coscup-workshop.html"></a>http://blog.coscup.org/2015/03/coscup-workshop.html</p><p>申請連結：<a href="http://coscup2015.kktix.cc/events/2ff2de9e"></a>http://coscup2015.kktix.cc/events/2ff2de9e</p><p></p><h2>主題</h2><p>不同於以往介紹開放街圖，一開始就是談歷史和知名事件，這次打算打算改變作法，直接展示開放街圖圖資，用OverPass API來探究開放街圖資料的豐富性。</p><p></p><ol><li>開放街圖簡介</li>
+<li>回報地圖問題添加資料</li>
+<li>客制化截取資料與進階編輯</li></ol>
+
+<p>Workshop主題徵集投稿：</p><p></p><p>如有想到有趣的WorkShop主題，自行在下面空白處接續填寫。或者有意願擔任工作人員的話請自行填表</p><p></p><ol><li>OverPass API by <a href='/ep/profile/pWWS3IPz7GQ'/>Supaplex</a> (與JOSM合併)<ol><li>打算放在第一個主題，先用OverPass Turbo的精靈模式找公車站牌、便利商店、YouBike公共自行車等資料夠多的POI，省道幹線、公車路線等，來給觀眾好的印象。再來透過與現場人員互動，請他說出他想找什麼，在現場用OverPass Turbo找出來。</li>
 <li><a href="http://wiki.openstreetmap.org/wiki/Map_Features"></a>http://wiki.openstreetmap.org/wiki/Map_Features.</li></ol>
 </li>
 <li>&nbsp; 開放街圖介紹 by Supaplex<ol><li>如果投Workshop的主題夠多，則可取消，以開場主持人簡單介紹就好</li></ol>
@@ -24,7 +28,7 @@
 <li>如果不想使用note可以直接在行動裝置上編輯然後加註<b>fixme</b>=continue，像是營業時間忘了怎麼標、不確定怎麼tag都可以先寫到note=&quot;&nbsp;&nbsp; &quot;裡面。</li>
 <li><a href="https://wiki.openstreetmap.org/wiki/Key:fixme"></a>https://wiki.openstreetmap.org/wiki/Key:fixme</li></ul>
 </ol>
-<ol><li>特殊編輯<ol><li>JOSM基本介紹：滑鼠左右鍵、a、s，多重選擇(按住ctrl)，合併路徑，切割路徑，分離點，合併點，</li>
+<ol><li>特殊編輯&nbsp;<ol><li>JOSM基本介紹：滑鼠左右鍵、a、s，多重選擇(按住ctrl)，合併路徑，切割路徑，分離點，合併點，</li>
 <li>filter：使用JOSM或是iD的過濾功能（boundary, powerline, landuse）<ol><li>修鐵路用，勾H不勾I：(type:node -child) OR (railway=*) OR (type:way untagged)</li>
 <li>畫landuse，勾H不勾I：(type:node -child) OR (type:way untagged) OR (landuse=*) OR (natural=*)</li>
 <li>畫大量closed way再一次匡選標注（有兩個）：<ol><li>勾H勾I：type:way untagged</li>
