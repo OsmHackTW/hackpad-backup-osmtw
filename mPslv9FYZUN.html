@@ -3,10 +3,25 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="472"/>
+<meta name="version" content="524"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$mPslv9FYZUN</title>
 </head>
-<body><h1>2015-06-08-Taipei-OpenStreetMap-Meetup-note</h1><p>2015年臺北月聚動啟第二彈來了！將在 6/8 (一) 晚上 19:30~ 21:30 在摩茲工寮聚會，這次除了聊聊畫圖心得，趁著有許多有經驗的圖客在場，共同討論怎麼處理困擾已久的大難題－臺南公園的路徑。</p><p></p><h2>時間地點</h2><p>時間：6/8 (一)&nbsp; 19:30~ 21:30</p><p>地點：摩茲工寮(100 台北市中正區八德路一段 94 號 3F<a href='https://www.openstreetmap.org/node/3051216659'/> </a><a href="https://www.openstreetmap.org/node/3051216659)"></a>https://www.openstreetmap.org/node/3051216659<a href='https://www.openstreetmap.org/node/3051216659'/>)</a></p><p>交通：捷運忠孝新生站，公車光華商場站 (<a href="http://overpass-turbo.eu/s/9CP)"></a>http://overpass-turbo.eu/s/9CP)</p><p>臉書活動連結：<a href="https://www.facebook.com/events/396243120562780/"></a>https://www.facebook.com/events/396243120562780/</p><p></p><h2>議題</h2><p><b>臺南公園</b></p><p>將針對臺南公園，處理被畫成區域的公園路徑。另外可以思考社群怎麼跟指定畫OSM當作業的老師，溝通如何依據規範畫圖，並且能夠修正完成。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_mPslv9FYZUN_p.200184_1432962788976_20150530_000-臺南公園.png'/></p><p>2015/5/30截圖</p><p><a href="https://www.openstreetmap.org/#map=17/23.00256/120.21152"></a>https://www.openstreetmap.org/#map=17/23.00256/120.21152</p><p></p><p>檢驗臺南公園修正成果</p><ul class="code"><li>[out:json]</li>
+<body><h1>2015-06-08-Taipei-OpenStreetMap-Meetup-note</h1><p>2015年臺北月聚動啟第二彈來了！將在 6/8 (一) 晚上 19:30~ 21:30 在摩茲工寮聚會，這次除了聊聊畫圖心得，趁著有許多有經驗的圖客在場，共同討論怎麼處理困擾已久的大難題－臺南公園的路徑。</p><p></p><h2>時間地點</h2><p>時間：6/8 (一)&nbsp; 19:30~ 21:30</p><p>地點：摩茲工寮(100 台北市中正區八德路一段 94 號 3F<a href='https://www.openstreetmap.org/node/3051216659'/> </a><a href="https://www.openstreetmap.org/node/3051216659)"></a>https://www.openstreetmap.org/node/3051216659<a href='https://www.openstreetmap.org/node/3051216659'/>)</a></p><p>交通：捷運忠孝新生站，公車光華商場站 (<a href="http://overpass-turbo.eu/s/9CP)"></a>http://overpass-turbo.eu/s/9CP)</p><p>臉書活動連結：<a href="https://www.facebook.com/events/396243120562780/"></a>https://www.facebook.com/events/396243120562780/</p><p></p><h2>議題</h2><p><b>臺南公園</b></p><p>將針對臺南公園，處理被畫成區域的公園路徑。另外可以思考社群怎麼跟指定畫OSM當作業的老師，溝通如何依據規範畫圖，並且能夠修正完成。</p><p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_mPslv9FYZUN_p.200184_1432962788976_20150530_000-臺南公園.png'/></p><p>2015/5/30截圖</p><p><a href="https://www.openstreetmap.org/#map=17/23.00256/120.21152"></a>https://www.openstreetmap.org/#map=17/23.00256/120.21152</p><p></p><undefined><li>先前討論</li></undefined>
+<p>先前在 <a href='/Enditless-eLp9PTXyXRn'/>Editless Hackpad</a>&nbsp; 討論到幾點需要修正的部分</p><ul class="task"><li>不必要的 name tag. 譬如 &quot;柏油路&quot; &quot;人行道&quot; &quot;路口&quot;</li></li>
+<li>&nbsp;許多 way 用了過量的 nodes</li>
+<li>tags 的使用也需要再檢視, 譬如 Texture=石頭 應該寫成 surface=*</li>
+<li>ID, TerrainID, Build_Area, Build_NO, 等等 tag 可能要清掉</li></li>
+<li>有彎度的 way 也用了相當誇張數量的 nodes</li>
+<li>他無視前人已經畫的東西(譬如路, building), 直接重畫一個蓋上去, 但兩者有位移, 就看到兩個半疊在一起的東西</li></li>
+<li>他畫的很多東西直接重疊了兩次(甚至四次), 在原地 copy-paste 那種重疊, 所以不容易注意到。我清掉大部分了(試砍掉，常會發現砍掉之後原地還有一樣的東西)</li>
+<li>很多 highway=* 他都畫成 area, 不太有必要</li>
+<li>有些中文字的 encoding 壞掉了, 不是 utf-8</li>
+<li>可能是我 simplify nodes 時造成的(加上他 copy-paste 的因素), 相鄰的 landuse 原本共用座標的 nodes 被各自 simplify 成不同的座標, 導致相鄰的 landuse 相接得不太漂亮, 需要再修</li>
+<li>有些該接在一起的路沒接起來</li>
+<li>有橋的地方 waterway 不應該斷掉，應以 layer 處理</li>
+<li>需要有人跟該使用者或相關單位反應「103學年度國立成功大學測量及空間資訊學系總實習成果」</li></ul>
+
+<p>檢驗臺南公園修正成果</p><ul class="code"><li>[out:json]</li>
 <li>[timeout:25]</li>
 <li>;</li>
 <li>(</li>
