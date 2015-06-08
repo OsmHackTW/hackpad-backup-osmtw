@@ -3,27 +3,36 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="93"/>
+<meta name="version" content="386"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$1AvlkwLVRaN</title>
 </head>
-<body><h1>臺灣地址標注方式</h1><p></p><ul class="code"><li>縣：addr:state　　</li>
-<li>省轄市：addr:city？　</li>
-<li>直轄市：addr:city？</li>
-<li>鄉、鎮、縣轄市：addr:city</li>
-<li>區：addr:district</li>
-<li>村、里(非必要)：？※　 #　</li>
-<li>鄰(非必要)：？※</li>
-<li>地名：？※2</li>
-<li>addr:street 路、街(含巷、弄)</li>
-<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:place'/>addr:place</a>&nbsp;&nbsp;</li>
-<li>addr:housenumber 門牌號碼。只放數字，不放「號」。</li>
-<li>addr:housename 大樓名稱</li>
-<li>樓：addr:floor　</li>
-<li>室：addr:door</li>
-<li>&nbsp;addr:hamlet</li>
-<li>&nbsp;addr:zip</li>
-<li>&nbsp;addr:town</li>
-<li>&nbsp;addr:township</li></ul>
+<body><h1>臺灣地址標注方式</h1><p></p><p>縣市</p><ul class="code"><li><br/></li>
+<li><a href='http://wiki.openstreetmap.org/wiki/JA:Key:addr:country'/>addr:country</a> 國家</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:city'/>addr:city</a>&nbsp; 省轄市/直轄市</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:district'/>addr:district</a>&nbsp; 鄉、鎮、縣轄市、區</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:hamlet'/>addr:hamlet</a> 村</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:subdistrict'/>addr:subdistrict</a> 社區&nbsp;</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/JA:Key:addr:street'/>addr:street</a>&nbsp; 道路、街名、巷、弄</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/JA:Key:addr:postcode'/>addr:postcode</a> 郵遞區號，至少三碼</li>
+<li>addr:neighbourhood 鄰</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:housenumber'/>addr:housenumber</a> 門牌號碼。只放數字，不放「號」。</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:housename'/>addr:housename</a> 大樓名稱</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:floor'/>addr:floor</a> 樓</li>
+<li>addr:door 室</li>
+<li><a href='http://wiki.openstreetmap.org/wiki/Key:addr:place'/>addr:place</a>&nbsp;&nbsp; 地名</li>
+<li><br/></li>
+<li><a href='http://wiki.openstreetmap.org/wiki/JA:Key:addr:full'/>addr:full</a> 偷懶的時候可以一行寫完整地址</li>
+<li><br/></li>
+<li>錯誤命名</li>
+<li>addr:zip&nbsp; <a href="http://taginfo.osm.kcwu.csie.org/search?q=addr%3Azip"></a>http://taginfo.osm.kcwu.csie.org/search?q=addr%3Azip</li>
+<li>addr:town <a href="http://taginfo.osm.kcwu.csie.org/search?q=addr%3Atown"></a>http://taginfo.osm.kcwu.csie.org/search?q=addr%3Atown</li>
+<li>addr:township <a href="http://taginfo.osm.kcwu.csie.org/keys/addr%3Atownship"></a>http://taginfo.osm.kcwu.csie.org/keys/addr%3Atownship</li></ul>
 
-<p>※：一般完整的郵務地址不需要村里鄰。(除了彰化部分鄉鎮有不同村同路名的情況)</p><p>&nbsp;※2：門牌為地名而非路街名，如中興嶺郵局的地址為「臺中市新社區中興嶺170-2號」，「中興嶺」應該放在addr:hamlet嗎？</p><p>&nbsp;※3：Wiki上說使用英譯地名？</p><p></p><p><b>初始討論</b></p><p>&nbsp;</p><p>* OpenStreetMap台灣 <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/861044760627661/"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/861044760627661/</p><p></p><p></p></body>
+<p><b>範例</b></p><p></p><p><b>參考資料</b></p><ul><li>OpenStreetMap台灣 <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/861044760627661/"></a><a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/861044760627661/'/>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/861044760627661/</a></li>
+<li>Addresses - OpenStreetMap Wiki <a href="http://wiki.openstreetmap.org/wiki/Addresses"></a>http://wiki.openstreetmap.org/wiki/Addresses</li>
+<li>Key:addr - OpenStreetMap Wiki <a href="http://wiki.openstreetmap.org/wiki/Key:addr"></a>http://wiki.openstreetmap.org/wiki/Key:addr</li>
+<li>JA:Key:addr - OpenStreetMap Wiki <a href="http://wiki.openstreetmap.org/wiki/JA:Key:addr"></a>http://wiki.openstreetmap.org/wiki/JA:Key:addr</li>
+<li>中華郵政全球資訊網-郵務業務 <a href="http://www.post.gov.tw/post/internet/Postal/index.jsp?ID=207"></a>http://www.post.gov.tw/post/internet/Postal/index.jsp?ID=207</li></ul>
+
+<p></p></body>
 </html>
