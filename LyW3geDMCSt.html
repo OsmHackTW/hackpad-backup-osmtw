@@ -3,8 +3,31 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="142"/>
+<meta name="version" content="171"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$LyW3geDMCSt</title>
 </head>
-<body><h1>2015-07-06-Taipei-OpenStreetMap-Meetup-note</h1><p></p><h2>時間地點</h2><p></p><p>場地：摩茲工寮(洽詢中)</p><p>時間：2015 7/6(一) 19:30-21:30</p><p></p><p><b>報名與簽到</b></p><p></p><p>*</p><p></p><p></p><h2>議題</h2><p></p><p><b>臺南公園 Part II</b></p><p></p><p><a href='/mPslv9FYZUN'/>2015 06 08 Taipei OpenStreetMap Meetup note</a></p><p></p><p><a href='/ep/profile/nQXRn8b7n5G'/>yellowsoar</a> 請 dongpo 代為向成大的老師反應問題</p><p></p><p><b>Enditless</b></p><p></p><p></p><p><b>COSCUP</b></p><p></p><p></p><p></p></body>
+<body><h1>2015-07-06-Taipei-OpenStreetMap-Meetup-note</h1><p></p><h2>時間地點</h2><p>地點：摩茲工寮(100 台北市中正區八德路一段 94 號 3F<a href='https://www.openstreetmap.org/node/3051216659'/> </a><a href="https://www.openstreetmap.org/node/3051216659)(洽詢中)"></a><a href='https://www.openstreetmap.org/node/3051216659'/>https://www.openstreetmap.org/node/3051216659)</a>(洽詢中)</p><p>交通：捷運忠孝新生站，公車光華商場站 (<a href="http://overpass-turbo.eu/s/9CP)"></a><a href='http://overpass-turbo.eu/s/9CP'/>http://overpass-turbo.eu/s/9CP</a>)</p><p>時間：2015 7/6(一) 19:30-21:30</p><p></p><p><b>報名與簽到</b></p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Supaplex</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">2</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+</table>
+<p></p><p></p><h2>議題</h2><p></p><p><b>臺南公園 Part II</b></p><p></p><p><a href='/mPslv9FYZUN'/>2015 06 08 Taipei OpenStreetMap Meetup note</a></p><p></p><p>先前在 <a href='https://osmtw.hackpad.com/Enditless-eLp9PTXyXRn'/>Editless Hackpad</a>&nbsp; 討論到幾點需要修正的部分</p><ul class="task"><li>不必要的 name tag. 譬如 &quot;柏油路&quot; &quot;人行道&quot; &quot;路口&quot;</li></li>
+<li>&nbsp;許多 way 用了過量的 nodes</li>
+<li>tags 的使用也需要再檢視, 譬如 Texture=石頭 應該寫成 surface=*</li>
+<li>ID, TerrainID, Build_Area, Build_NO, 等等 tag 可能要清掉</li></li>
+<li>有彎度的 way 也用了相當誇張數量的 nodes</li>
+<li>他無視前人已經畫的東西(譬如路, building), 直接重畫一個蓋上去, 但兩者有位移, 就看到兩個半疊在一起的東西</li></li>
+<li>他畫的很多東西直接重疊了兩次(甚至四次), 在原地 copy-paste 那種重疊, 所以不容易注意到。我清掉大部分了(試砍掉，常會發現砍掉之後原地還有一樣的東西)</li>
+<li>很多 highway=* 他都畫成 area, 不太有必要</li>
+<li>有些中文字的 encoding 壞掉了, 不是 utf-8</li>
+<li>可能是我 simplify nodes 時造成的(加上他 copy-paste 的因素), 相鄰的 landuse 原本共用座標的 nodes 被各自 simplify 成不同的座標, 導致相鄰的 landuse 相接得不太漂亮, 需要再修</li>
+<li>有些該接在一起的路沒接起來</li>
+<li>有橋的地方 waterway 不應該斷掉，應以 layer 處理</li></li>
+<li>需要有人跟該使用者或相關單位反應「103學年度國立成功大學測量及空間資訊學系總實習成果」</li></li>
+<li><a href='https://osmtw.hackpad.com/ep/profile/nQXRn8b7n5G'/>yellowsoar</a> 請 dongpo 代為向成大的老師反應問題</li><ul class="comment"><li>回應：需要用社群慣用的標法來標示公園，如路徑除非是廣場，不要用區域標</li></ul>
+</ul>
+
+<p></p><p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_mPslv9FYZUN_p.200184_1435591768208_2015-06-29-%E8%87%BA%E5%8D%97%E5%85%AC%E5%9C%92.png'/></p><p>2015/6/29截圖</p><p></p><p><b>Enditless</b></p><p></p><p></p><p><b>COSCUP</b></p><p>COSCUP 2015 OSM Workshop</p><p></p><p>增加主題：</p><p>原則：主題要有趣，讓人上癮。</p><p></p><p>觀察中研院一帶，有什麼可以改進的地方，先標示note</p><p>商店</p><p></p><p></p><p></p></body>
 </html>
