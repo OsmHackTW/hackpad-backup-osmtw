@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2556"/>
+<meta name="version" content="2584"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$CvG90ocPSZV</title>
 </head>
 <body><h1>飲用水地圖社群小聚#2 記錄&nbsp;</h1><ul><li><a href='/oKsnEo5WTjI'/>飲用水地圖社群小聚記錄#1</a></li>
@@ -21,9 +21,9 @@
 </ul>
 <ul><li>方案二：民眾拍照+圖客志工上資料<ul><li>基本方式：可以先徵集民眾的照片（提供簡單教學），再靠專業志工上傳資料到地圖上</li>
 <li>操作流程<ul><li>室外水點，拍照依靠 GPS 資訊，需要提醒民眾打開 gps 功能</li>
-<li>室內水點，拍照，並紀錄地點地址</li>
-<li>上傳照片與位置資訊、備註說明</li>
-<li>由專業志工抓出照片經緯度、或從地址轉出經緯度</li>
+<li>室內水點，拍照，並紀錄地點地址、機構名稱</li>
+<li>民眾上傳照片與位置資訊、備註說明</li>
+<li>由圖客志工抓出照片經緯度、或從地址轉出經緯度</li>
 <li>志工與民眾，依據照片內容、現場勘查，幫忙確認 tag、水點標註位置是否正確</li></ul>
 </li>
 <li>關於「照片」<ul><li>「照片」需要提供拍照範例，例如「飲水台」、「飲水機」等，原則上整個機體盡量呈現，單點多拍</li>
@@ -41,10 +41,10 @@
 </ul>
 
 <p><b>電腦操作簡單步驟小記（依照順序）</b></p><undefined><li><b>類型一：飲水機</b></li></undefined>
-<p>申請帳號</p><p>先登入</p><p>按編輯</p><p>point （注意！點，不要加在線條上：例如道路、河川、電線、捷運！）</p><p>amenity=drinking_water</p><p>name 名字=「飲水型態」（簡化，例如飲水台、飲水機、奉茶）</p><p>tag</p><p>alt_name「地名＋飲水型態」（完整名稱，飲水地圖使用上就用此完整名稱）</p><p>level</p><p>indoor</p><p>brand「『賀眾牌』、3M」</p><p>bottle</p><p>source「若是賀眾提供的資料，則填入賀眾公司全名」</p><p>description</p><p>冷熱水（避免與淋浴用水混淆，所以都用 drinking_water:）</p><ul><li>drinking_water:hot_water=yes</li>
+<p>申請帳號</p><p>先登入</p><p>按編輯</p><p>point （注意！點，不要加在線條上：例如道路、河川、電線、捷運！）</p><p>amenity=drinking_water</p><p>name 名字=「飲水型態」（簡化，例如飲水台、飲水機、奉茶）</p><p>tag</p><p>alt_name「地名＋飲水型態」（完整名稱，飲水地圖使用上就用此完整名稱）</p><p>level</p><p>indoor</p><p>brand「『賀眾牌』、『3M』...」</p><p>bottle</p><p>source「若是賀眾提供的資料，則填入賀眾公司全名」</p><p>description</p><p>冷熱水（避免與淋浴用水混淆，所以都用 drinking_water:）</p><ul><li>drinking_water:hot_water=yes</li>
 <li>drinking_water:warm_water=yes</li>
 <li>drinking_water:cold_water=yes（意思是冷水！並不是冰水）</li></ul>
-<p>note 寫給其他地圖編輯者看的</p><p>fixme=yes 若需要其他人幫忙修正</p><p>按下儲存！</p><p>若要放該水點的圖片則是要放到...?</p><p></p><p>-----</p><p>類別一：直接標示飲水機/點 標法與 tag 說明</p><ul><li>name（「地標」+「飲水型態」，若無名字則填入「飲水點」或是把 tag 撈回來組成 name）<ul><li>飲水型態：飲水機、直飲台、生飲台（沒有濾心）</li>
+<p>note 寫給其他地圖編輯者看的</p><p>fixme=yes 若需要其他人幫忙修正</p><p>按下儲存！</p><p>若要放該水點的圖片則是要放到...?</p><p></p><p>-----</p><p>關於類別一的標法與 tag 細節說明</p><ul><li>name（「地標」+「飲水型態」，若無名字則填入「飲水點」或是把 tag 撈回來組成 name）<ul><li>飲水型態：飲水機、直飲台、生飲台（沒有濾心）</li>
 <li>加水站建議用 amenity=water_point（對象不是人）</li>
 <li>舉例：萬隆捷運站生飲台、警察局飲水機</li></ul>
 </li>
@@ -78,7 +78,7 @@
 <li>drinking_water:cold_water=yes（意思是冷水！並不是冰水）</li></ul>
 </ul>
 
-<p>-----</p><p>類別二：標示該建築物/區域有提供飲用水/機 標法與 tag 說明</p><ul><li>name<ul><li>舉例：台灣環境資訊協會</li></ul>
+<p>-----</p><p>關於類別二的標法與 tag 說明</p><ul><li>name<ul><li>舉例：台灣環境資訊協會</li></ul>
 </li>
 <li>drinking_water=yes/或其它（用在建築物內的飲水機）</li></ul>
 <ul class="comment"><li>這類飲水點附屬於機關內、裝水者需要詢問場地機關、可能地標物本身有原先用途（如店家、機構）而飲水設施只是附屬</li><ul><li><a href="http://wiki.openstreetmap.org/wiki/Key:drinking_water"></a><a href='http://wiki.openstreetmap.org/wiki/Key:drinking_water'/>http://wiki.openstreetmap.org/wiki/Key:drinking_water</a></li></ul>
