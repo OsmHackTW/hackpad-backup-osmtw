@@ -3,23 +3,23 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="129"/>
+<meta name="version" content="151"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$2y0btHcBwhI</title>
 </head>
 <body><h1>自己的圖磚自己刻 docker 大法</h1><p></p><p>建立資料庫位置</p><ul class="code"><li>mkdir /tmp/osm-postgresql &amp;&amp; chmod 777 /tmp/osm-postgresql</li>
 <li>wget -O /tmp/import.osm <a href="http://download.geofabrik.de/asia/taiwan-latest.osm.pbf"></a>http://download.geofabrik.de/asia/taiwan-latest.osm.pbf</li></ul>
 
-<p><b>建立伺服器</b></p><ul class="code"><li>docker pull chihchun/openstreetmap-tiles</li>
-<li>docker run -v /tmp/osm-postgresql:/var/lib/postgresql chihchun/openstreetmap-tiles initdb startdb createuser createdb&nbsp;</li>
-<li>docker run -v /tmp/osm-postgresql:/var/lib/postgresql -v /tmp:/data chihchun/openstreetmap-tiles startdb import</li>
-<li>docker run -P -v /tmp/osm-postgresql:/var/lib/postgresql chihchun/openstreetmap-tiles startdb startservices</li>
-<li>docker run -p 127.0.0.1:8080:80 -P -v /tmp/osm-postgresql:/var/lib/postgresql chihchun/openstreetmap-tiles startdb startservices</li></ul>
+<p><b>建立伺服器</b></p><ul class="code"><li>docker pull chihchun/openstreetmap-tiles-tw</li>
+<li>docker run -v /tmp/osm-postgresql:/var/lib/postgresql chihchun/openstreetmap-tiles-tw initdb startdb createuser createdb&nbsp;</li>
+<li>docker run -v /tmp/osm-postgresql:/var/lib/postgresql -v /tmp:/data chihchun/openstreetmap-tiles-tw startdb import</li>
+<li>docker run -P -v /tmp/osm-postgresql:/var/lib/postgresql chihchun/openstreetmap-tiles-tw startdb startservices</li>
+<li>docker run -p 127.0.0.1:8080:80 -P -v /tmp/osm-postgresql:/var/lib/postgresql chihchun/openstreetmap-tiles-tw startdb startservices</li></ul>
 
 <p>firefox <a href="http://localhost/8080"></a>http://l<a href='http://l'/>o</a><a href='http://lo'/>c</a><a href='http://loc'/>a</a><a href='http://loca'/>l</a><a href='http://local'/>h</a><a href='http://localh'/>o</a><a href='http://localho'/>s</a><a href='http://localhos'/>t</a><a href='http://localhost'/>/</a><a href='http://localhost/'/>8</a><a href='http://localhost/8'/>0</a><a href='http://localhost/80'/>8</a><a href='http://localhost/808'/>0</a></p><p></p><p>除錯</p><ul class="code"><li>docker run -v /tmp/osm-postgresql:/var/lib/postgresql -v /tmp:/data -i -t homme/openstreetmap-tiles cli&nbsp;</li></ul>
 
-<p></p><p><b>TODO</b></p><ul class="taskdone"><li>需要引入 all the spatial reference systems, <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/2f2cfd15aca14c5ace588f7d08908f4c2a54220f"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/2f2cfd15aca14c5ace588f7d08908f4c2a54220f</li></ul>
-<ul class="task"><li>build local map</li>
-<li>需要寫好 import script.</li>
-<li>修正中文字形</li></ul>
+<p></p><p><b>TODO</b></p><ul class="taskdone"><li>需要引入 all the spatial reference systems, <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/2f2cfd15aca14c5ace588f7d08908f4c2a54220f"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/2f2cfd15aca14c5ace588f7d08908f4c2a54220f</li>
+<li>build local map <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/f7eb6221f045f6b570dfb1e0bf62ceb4e4682b36"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/f7eb6221f045f6b570dfb1e0bf62ceb4e4682b36</li>
+<li>需要寫好 import script. * added downlaod commands. · OsmHackTW/openstreetmap-tiles-docker@c18ac92 <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/c18ac929920eff21186e400afd73376799159b36"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/c18ac929920eff21186e400afd73376799159b36</li>
+<li>修正中文字形 * uses more fonts, include unifont. · OsmHackTW/openstreetmap-tiles-docker@2e62152 <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/2e62152f23937069a1496db0a21fc84ed92f2899"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker/commit/2e62152f23937069a1496db0a21fc84ed92f2899</li></ul>
 <p>&nbsp;</p><p>* chihchun/openstreetmap-tiles Repository | Docker Hub Registry - Repositories of Docker Images <a href="https://registry.hub.docker.com/u/chihchun/openstreetmap-tiles/"></a>https://registry.hub.docker.com/u/chihchun/openstreetmap-tiles/</p><p>* OsmHackTW/openstreetmap-tiles-docker <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker</p><p></p><p></p></body>
 </html>
