@@ -1,0 +1,10 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="37"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$2y0btHcBwhI</title>
+</head>
+<body><h1>自己的圖磚自己刻 docker 大法</h1><p>$ mkdir /tmp/osm-postgresql &amp;&amp; chmod 777 /tmp/osm-postgresql</p><p>$ wget -O /tmp/import.osm <a href="http://download.geofabrik.de/asia/taiwan-latest.osm.pbf"></a>http://download.geofabrik.de/asia/taiwan-latest.osm.pbf</p><p></p><p>$ docker pull homme/openstreetmap-tiles</p><p>$ docker run -v /tmp/osm-postgresql:/var/lib/postgresql homme/openstreetmap-tiles initdb startdb createuser createdb&nbsp;</p><p>$ docker run -v /tmp/osm-postgresql:/var/lib/postgresql -v /tmp:/data homme/openstreetmap-tiles startdb import</p><p>$ docker run -P -v /tmp/osm-postgresql:/var/lib/postgresql homme/openstreetmap-tiles startdb startservices</p><p>$ docker run -v /tmp/osm-postgresql:/var/lib/postgresql -v /tmp:/data -a STDIN -a STDOUT -a STDERR -i -t homme/openstreetmap-tiles cli&nbsp;</p><p></p><p></p><p>TODO</p><p>需要引入 all the spatial reference systems,&nbsp;</p><p>&nbsp;需要寫好 import script.</p><p>&nbsp;</p><p></p></body>
+</html>
