@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="151"/>
+<meta name="version" content="161"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$2y0btHcBwhI</title>
 </head>
-<body><h1>自己的圖磚自己刻 docker 大法</h1><p></p><p>建立資料庫位置</p><ul class="code"><li>mkdir /tmp/osm-postgresql &amp;&amp; chmod 777 /tmp/osm-postgresql</li>
+<body><h1>自己的圖磚自己刻 docker 大法</h1><p></p><p>Source: <a href="https://github.com/OsmHackTW/openstreetmap-tiles-docker"></a>https://github.com/OsmHackTW/openstreetmap-tiles-docker</p><p></p><p>建立資料庫位置</p><ul class="code"><li>mkdir /tmp/osm-postgresql &amp;&amp; chmod 777 /tmp/osm-postgresql</li>
 <li>wget -O /tmp/import.osm <a href="http://download.geofabrik.de/asia/taiwan-latest.osm.pbf"></a>http://download.geofabrik.de/asia/taiwan-latest.osm.pbf</li></ul>
 
 <p><b>建立伺服器</b></p><ul class="code"><li>docker pull chihchun/openstreetmap-tiles-tw</li>
