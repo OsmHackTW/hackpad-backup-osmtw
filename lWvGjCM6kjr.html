@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="408"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lWvGjCM6kjr</title>
+</head>
+<body><h1>飲水地圖線上回報功能</h1><p></p><p>用 OSM Note 來做</p><p></p><ul><li>填資料範例 POST <a href="http://www.openstreetmap.org/api/0.6/notes?lat=24.00&lon=121.00&text=ThisIsANote"></a>http://www.openstreetmap.org/api/0.6/notes?lat=24.00&amp;lon=121.00&amp;text=ThisIsANote</li><ul class="comment"><li>這 API 有點危險 XD</li></ul>
+</ul>
+<ul><li>讀資料範例 GET <a href="https://www.openstreetmap.org/api/0.6/notes.json?bbox=121.4564323425293,24.974854621062875,121.5084457397461,25.073782645952882"></a>https://www.openstreetmap.org/api/0.6/notes.json?bbox=121.4564323425293,24.974854621062875,121.5084457397461,25.073782645952882</li>
+<li>文件 <a href="http://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API"></a>http://wiki.openstreetmap.org/wiki/API_v0.6#Map_Notes_API</li>
+<li>可以新增、comment、關閉、reopen、search</li></ul>
+
+<h2>作法</h2><ul><li>網站上做一個表單，填名稱、水溫、室內／室外、樓層、說明（再參考之前整理的 tag 表）、「這是準確位置還是大略的位置？（checkbox，預設是「大略的」）」</li>
+<li>地圖上要加一個準星，避免沒對準</li>
+<li>加一個 hashtag #飲水地圖</li>
+<li>幫使用者 POST 進去</li>
+<li>驗證碼</li>
+<li>做一個列出所有 #飲水地圖 的 Note 列表，然後訓練一批人專門解這種 Note<ul><li>也可以 POST 完以後把 id 存到 Google Spreadsheet/Ethercalc，可以請大家有空幫忙解</li></ul>
+</ul>
+
+<h2>問題</h2><ul><li>OSM 底圖的資料不足<ul><li>用通用版電子地圖？</li></ul>
+</li>
+<li>需要說一下寫 Note 注意事項？&nbsp;</li></ul>
+
+</body>
+</html>
