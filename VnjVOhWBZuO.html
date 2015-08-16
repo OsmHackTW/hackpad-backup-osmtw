@@ -3,16 +3,16 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1791"/>
+<meta name="version" content="2658"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$VnjVOhWBZuO</title>
 </head>
-<body><h1>主題地圖與 OSM（新手筆記）</h1><p></p><h2>主題地圖構想舉例</h2><ul><li>都市公共農園、社區農園：<a href="https://g0v.hackpad.com/a1BIZhjPD82"></a><a href='https://g0v.hackpad.com/a1BIZhjPD82'/>https://g0v.hackpad.com/a1BIZhjPD82</a></li></ul>
+<body><h1>主題地圖與 OSM（新手筆記）</h1><p></p><h2>主題地圖構想舉例，以及一些特性列舉</h2><p>歡迎丟新主題</p><p></p><ul><li>都市公共農園、社區農園：<a href="https://g0v.hackpad.com/a1BIZhjPD82"></a><a href='https://g0v.hackpad.com/a1BIZhjPD82'/>https://g0v.hackpad.com/a1BIZhjPD82</a></li></ul>
 <ul class="comment"><li>有一些農園案例已消失，但也希望標注起來作為記錄</li>
 <li>一些農園位在建築露台、建築屋頂</li>
 <li>希望將一個農園的更多相關欄位資料與說明資料，呈現在地圖上</li>
 <li>希望這一份資料可以 open 給更多單位使用，例如臺北市公燈處、新北市農業局</li></ul>
 <ul><li>永久屋與臨時住宅：<a href="https://g0v.hackpad.com/jEoiuMS44dD"></a><a href='https://g0v.hackpad.com/jEoiuMS44dD'/>https://g0v.hackpad.com/jEoiuMS44dD</a></li></ul>
-<ul class="comment"><li>「臨時住宅」多數已消失，但希望標注</li>
+<ul class="comment"><li>「臨時住宅」多數已消失，但仍希望標注</li>
 <li>主題地圖上，希望附帶更多該永久屋 / 臨時住宅的「照片、設計圖說、新聞連結、居住者訪談素材」等等</li></ul>
 <ul><li>野餐地圖：<a href="https://g0v.hackpad.com/z9Kbeb0WNMi"></a>https://g0v.hackpad.com/z9Kbeb0WNMi</li><ul class="comment"><li>先判斷與此議題相關的 OSM tag 例如 tourism=picnic_site</li>
 <li>會有一部分的野餐地點是來自於使用者自己標的，這部分可能不是 OSM tag 的邏輯</li>
@@ -45,18 +45,21 @@
 <li>以 umap 作為架構，整合 OSM 中與主題相關的資料，並匯入其他非 OSM 資料</li></ol>
 
 <p><b>「我該怎麼選擇工具，畫出主題地圖」問答引導</b></p><ol><li>這個主題的資料內容，會不會需要群眾協作，畫新的資料、回報、修改？<ol><li>需要。 → 請回答第 2 題。</li>
-<li>不需要。<ol><li>建議使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>，<a href='https://public.tableau.com/s/download'/>tableau Public</a> 等資料地圖化的功能，上傳你的資料檔案，並使用 <a href='http://opendatacommons.org/licenses/odbl/'/>Open Data Commons 開放資料庫授權條款</a> 的 OSM 底圖，可以很快速的呈現出主題地圖。</li></ol>
+<li>不需要。<ol><li>建議使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>，<a href='https://public.tableau.com/s/download'/>tableau Public</a> 等資料地圖化的功能，上傳你的資料檔案，並使用 <a href='http://opendatacommons.org/licenses/odbl/'/>Open Data Commons 開放資料庫授權條款</a> 的 OSM 底圖，可以很快速的呈現出主題地圖。</li>
+<li>教學文：<ol><li><a href='http://newtoypia.blogspot.tw/2015/07/csv-geojson.html'/>csv 轉 geojson ： 大批地址匯入你的私房地圖</a></li></ol>
+</li></ol>
 </li></ol>
 </li>
-<li>資料內容是不是在目前的 OSM 上就可以被表達清楚了？（請參考：<a href='/-OSM-VnjVOhWBZuO#:h=OSM-不支援的內容類型'/>OSM 不支援的內容類型</a>）<ol><li>是。<ol><li>建議於 OSM 上編輯畫上你的資料，再用 OverPass Turbo 將你需要的資料撈出來，並使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>，<a href='https://public.tableau.com/s/download'/>tableau Public</a> 等資料地圖化的功能。</li>
+<li>資料內容在目前的 OSM database 是否可以表達清楚？（請參考：<a href='/-OSM-VnjVOhWBZuO#:h=OSM-不支援的內容類型'/>OSM 不支援的內容類型</a>）<ol><li>不行耶，我想畫的東西好像表達不出來。 → 請回答第 3 題。</li>
+<li>是。<ol><li>建議於 OSM 上編輯畫上你的資料，再用 OverPass Turbo 將你需要的資料撈出來，並使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>，<a href='https://public.tableau.com/s/download'/>tableau Public</a> 等資料地圖化的功能。</li>
 <li>案例：<a href='http://drinking.teia.tw/'/>公共飲水點地圖</a>。</li>
 <li>教學文：<ol><li><a href='http://supaplex99.blogspot.tw/2015/08/how-to-use-overpass-turbo-wizard-mode-to-extract-openstreetmap-data.html'/>怎麼使用 OverPass Turbo 精靈模式截取開放街圖資料</a></li>
 <li><a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html'/>製作隨時更新的客製化地圖，透過動態連結 uMap 地圖與開放街圖資料庫</a></li></ol>
 </li></ol>
+</li></ol>
 </li>
-<li>不行耶，我想畫的東西好像表達不出來。 → 請回答第 3 題。</li></ol>
-</li>
-<li>有什麼資料格式或是特性，是目前 OSM 無法支援，但對於你的主題地圖來說很重要？<ol><li>我想要畫出已經消失的事物。<ol><li>建議使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>、<a href='https://localwiki.org/'/>localwiki</a>。</li>
+<li>有什麼資料格式或是特性，是目前 OSM 無法支援，但對於你的主題地圖來說很重要？</li></ol>
+<ul class="comment"><li>資料要不要考慮放到<a href="https://sheethub.com"></a>https://sheethub.com ？</li><ol><li>想要畫出已經消失的事物。<ol><li>建議使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>、<a href='https://localwiki.org/'/>localwiki</a>。</li>
 <li>類似主題：<a href='https://g0v.hackpad.com/yaGxzVg6Iv1'/>大台北瑠公圳水系地圖</a></li></ol>
 </li>
 <li>這批資料裡有主觀評估的表達。<ol><li>建議使用 umap。</li>
@@ -65,34 +68,45 @@
 <li>「地號」資料<ol><li>建議先使用 <a href='https://g0v.hackpad.com/-Land-No.-Mapper-uhB6qAwYXe5'/>地號轉地圖</a> 工具，取得輪廓資料 GeoJson，再匯入 umap。</li>
 <li>類似主題：<a href='http://taipei-pop.herokuapp.com/'/>天龍特公地</a></li></ol>
 </li>
-<li>我希望能改造出更貼近主題的畫圖編輯器<ol><li>建議_______？________</li>
+<li>希望能改造出更貼近主題的畫圖編輯器<ol><li>建議_______？________</li>
 <li>案例：<ol><li><a href='http://wheelmap.org/zh_TW/map'/>輪椅地圖</a></li>
-<li><a href='http://nationalmap.gov'/>USGS The National Map</a>，運用 OSM 編輯器程式碼，與 OSM database 毫無關聯。<a href='https://crowdgov.wordpress.com/case-studies/national-map-corps/'/>介紹文章</a>。</li></ol>
+<li><a href='http://nationalmap.gov'/>USGS The National Map</a>，運用 OSM 編輯器程式碼，與 OSM database 無關。<a href='https://crowdgov.wordpress.com/case-studies/national-map-corps/'/>介紹文章</a>。</li></ol>
 </ol>
 </ol>
-</ol>
+</ul>
 
-<p></p><p><b>OSM 不支援的內容類型（歡迎修正與新增）</b></p><p>主觀判斷類</p><ul><li>主觀評估，例如<a href='http://umap.openstreetmap.fr/zh-tw/map/map_36562'/>台北生態綠網串聯共筆地圖</a>針對路徑上的「綠意」進行評估並畫在地圖上</li>
-<li>概念示意用途，例如<a href='https://localwiki.org/taipeicommunity/_explore'/>臺北市社區營造資料庫</a></li></ul>
+<p></p><p><b>OSM 不支援的內容類型（歡迎修正與新增）</b></p><p>主觀判斷類</p><ul><li>主觀評估，例如<a href='http://umap.openstreetmap.fr/zh-tw/map/map_36562'/>台北生態綠網串聯共筆地圖</a>針對路徑上的「綠意」進行評估並畫在地圖上</li></ul>
+<ul class="comment"><li>依目前OSM現有的標注來看，綠意程度跟硬體是無關的，取決於人的判斷，這種概念適合用其他地圖來呈現，或者...要玩就玩大一點，仔細的把OSM wiki上關於綠地的等級該怎麼標注寫出來就解決這個問題了！！！例如說...每10平方公尺有幾棵樹、10平方公尺內是不是都有草地覆蓋如果有的話是什麼草種之類的。</li>
+<li>生態綠網的資料在現階段確實不適合寫進osm，期待的應該是日後有機會變成像<a href='http://www.greenway.org/'/>這個組織</a>完成的事情，成為東海岸的greenway，之後以netnwork的方式寫進osm，一點補充。</li></ul>
+<ul><li>概念示意用途，例如<a href='https://localwiki.org/taipeicommunity/_explore'/>臺北市社區營造資料庫</a></li></ul>
 <p>多版本</p><ul><li>會有各個版本的內容，例如<a href='http://www.apc.gov.tw/portal/docList.html?CID=5FC6DA1C91974642'/>原住民族傳統領域</a>有官方版與在地版、相鄰部落對於邊界位置的看法也不同</li></ul>
 <p>已消失</p><ul><li>已消失的歷史資料，曾經有過的事物、或是空間，例如<a href='https://g0v.hackpad.com/M2N0PCz0lo3'/>臺北城城牆石</a></li></ul>
-<p>非街道建築的地理框架、連續性資料(?)、科學屬性的資料(?)</p><ul><li>地理行政系統，例如「地號」與地塊的資料</li>
+<p>非街道建築的地理框架、連續性資料(?)、動態(?)、科學屬性的資料(?)</p><ul><li>地理行政系統，例如「地號」與地號輪廓的資料</li>
 <li>地質資料</li>
 <li>氣溫分佈資料</li></ul>
 
-<p></p><p><b>疑問</b></p><ul><li>umap 有可能畫出立體的內容嗎？</li>
-<li>點線面與名稱之外，各種的描述項目，如何一併呈現呢？<ul><li>例如社區農園地圖，除了畫出農園範圍之外，希望可以同時呈現出該農園面積數字、作物用途、種植方式...等等的屬性</li>
+<p></p><p><b>疑問</b></p><ul><li>umap 有可能畫出立體的內容嗎？</li></ul>
+<ul class="comment"><li>立體的地圖...像CADmapper這樣？<a href="https://cadmapper.com"></a>https://cadmapper.com<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.192101_1439740048566_Unknown.png'/></li>
+<li>嗯嗯！</li>
+<li>設想的使用情境是：在「公有土地的願景規劃」的地圖中，預想其中一個圖層是讓使用者畫出他對於一塊公有土地的願景，除了平面點線面之外，如果他希望畫出一些立體建築量體來表達規劃想法，那麼他也可以畫出建築物平面範圍並給予樓層高度，然後量體可以自動長起來（的幻想）。類似此示意圖（截圖自 <a href='http://www.freespaceberlin.org/'/>FreespaceBerlin</a>，不過他們採取的方式是在該公有地附近，舉辦實體活動邀請路人手繪願景，他們提供黑白線框的現況）</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.208757_1439740146038_hackpad.com_VyyMj9YOnwX_p.172171_1419838865810_121212.png'/></p><ul class="comment"><li>答案是可能辦不到，這得有人把CAD畫出來，或者得有人做3D modeling (<a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)</li></ul>
+<ul><li>點線面與名稱之外，各種的描述項目，如何一併呈現呢？<ul><li>例如社區農園地圖，除了畫出農園範圍之外，希望可以同時呈現出該農園面積數字、作物用途、種植方式...等等的屬性</li>
 <li>有比較建議的做法嗎？</li></ul>
-</li>
-<li>群眾貢獻「現場照片」這部分，要如何整合起來？上傳方式？<ul><li>app ?</li></ul>
+<ul class="comment"><li>我覺得...呈現的部分已經單獨是一個專案的層級了</li>
+<li>嗯... 我之前試著用 <a href='https://www.google.com/fusiontables/data?docid=1CCWdCOQhKmns70i-FLct6h-etR7oWgr_ZDKqE5ny#map:id=3'/>google fusion tables 地圖介面</a> 建置這些屬性與欄位，但是它不能畫出農園範圍...</li>
+<li><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.208757_1439745440413_螢幕快照 2015-08-17 上午1.16.54.png'/></li></ul>
 </ul>
+<ul><li>群眾貢獻「現場照片」這部分，要如何整合起來？上傳方式？<ul><li>app ?</li></ul>
+</ul>
+<ul class="comment"><li>可能第一個問題要討論的是照片的授權，然後再來是應該是要有一個伺服器能上傳照片（假設照片採用匿名上傳）然後伺服端這邊把上傳的照片重新編號分別對應一組經緯度座標，至於整合的部分得先考慮到這片農地是不是已經標注，所以在這之前應該可以透過note回報讓圖客去編輯，（透過note回報的部分可以參考飲水機地圖線上回報功能<a href="https://osmtw.hackpad.com/lWvGjCM6kjr"></a>https://osmtw.hackpad.com/lWvGjCM6kjr，題外話，這個如果做好了，絕對會是影響整個OSM的重大突破！！！）再來先不管沒有標注和已經標註的問題，整合的部分就要考慮底圖跟位置資料還有變動性資料這三個層次，底圖可以直接用OSM的底圖或者另外自建圖磚，位置資料可以直接讀取OSM的closedway物件ID，有標注的可以讀取照片顯示，而沒有標注的也許要讀取OSM note來顯示順便誘導人家去編輯OSM。</li></ul>
 
-<p><b>參考文章</b></p><ul><li><a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html'/>製作隨時更新的客製化地圖，透過動態連結 uMap 地圖與開放街圖資料庫</a></li>
+<p><b>參考文章與工具</b></p><ul><li><a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html'/>製作隨時更新的客製化地圖，透過動態連結 uMap 地圖與開放街圖資料庫</a></li>
 <li><a href='http://supaplex99.blogspot.tw/2015/08/how-to-use-overpass-turbo-wizard-mode-to-extract-openstreetmap-data.html'/>怎麼使用 OverPass Turbo 精靈模式截取開放街圖資料</a></li>
 <li><a href='http://newtoypia.blogspot.tw/2015/07/csv-geojson.html'/>csv 轉 geojson ： 大批地址匯入你的私房地圖</a></li>
 <li><a href='http://newtoypia.blogspot.tw/2015/03/my-map-osm.html'/>我的私房地圖，OSM 版</a></li>
+<li><a href='/Open-Geo-Data-for-Government-Cases-of-OSM-and-Gov-collaboration-mode-FH8Jcnpt052#:h=2.-OSM-to-Government-(to-OSM)'/>Open Geo Data for Government - Cases of OSM and Gov collaboration mode</a></li>
 <li><a href='https://public.tableau.com/s/download'/>Public Tableau</a>&nbsp;</li>
-<li><a href='/Open-Geo-Data-for-Government-Cases-of-OSM-and-Gov-collaboration-mode-FH8Jcnpt052#:h=2.-OSM-to-Government-(to-OSM)'/>Open Geo Data for Government - Cases of OSM and Gov collaboration mode</a></li></ul>
+<li><a href='https://cadmapper.com/'/>CAD Mapper</a></li></ul>
 
 <p></p><p></p></body>
 </html>
