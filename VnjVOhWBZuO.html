@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3438"/>
+<meta name="version" content="3490"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$VnjVOhWBZuO</title>
 </head>
 <body><h1>主題地圖與 OSM（麻瓜兼新手筆記）</h1><p></p><h2>「我該怎麼選擇工具，畫出主題地圖」？</h2><p></p><p><b>簡單的原則</b></p><ol><li>將圖資畫在 OSM，再撈出所需要的資料，組成特定主題的地圖，該資料集也拿去做其他應用</li>
@@ -70,12 +70,14 @@
 <li>噪音</li>
 <li>空氣品質 （pm2.5,懸浮微粒）</li></ul>
 
-<p></p><p><b>疑問</b></p><ul><li>umap 有可能畫出立體的內容嗎？</li></ul>
+<p></p><p><b>疑問</b></p><ul><li>Umap 的手繪圖層，能夠轉出程 GeoJson 嗎？</li></ul>
+
+<ul><li>Umap 有可能畫出立體的內容嗎？</li></ul>
 <ul class="comment"><li>立體的地圖...像CADmapper這樣？<a href="https://cadmapper.com"></a>https://cadmapper.com<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.192101_1439740048566_Unknown.png'/></li>
 <li>嗯嗯！</li>
 <li>設想的使用情境是：在「公有土地的願景規劃」的地圖中，預想其中一個圖層是讓使用者畫出他對於一塊公有土地的願景，除了平面點線面之外，如果他希望畫出一些立體建築量體來表達規劃想法，那麼他也可以畫出建築物平面範圍並給予樓層高度，然後量體可以自動長起來（的幻想）。類似此示意圖（截圖自 <a href='http://www.freespaceberlin.org/'/>FreespaceBerlin</a>，不過他們採取的方式是在該公有地附近，舉辦實體活動邀請路人手繪願景，他們提供黑白線框的現況）</li></ul>
 <p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.208757_1439740146038_hackpad.com_VyyMj9YOnwX_p.172171_1419838865810_121212.png'/></p><ul class="comment"><li>答案是可能辦不到，這得有人把CAD畫出來，或者得有人做3D modeling (<a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)</li>
-<li>g0v Ronny 有提過可以用 libraryXXX 把建築物與樓高畫出來，待詢問</li></ul>
+<li>g0v Ronny 有提過可以用 libraryXXX 把建築物與樓高畫出來，不過好像是 Leaflet.JS，待詢問</li></ul>
 
 <ul><li>點線面與名稱之外，各種的描述項目，如何一併呈現呢？<ul><li>例如社區農園地圖，除了畫出農園範圍之外，希望可以同時呈現出該農園面積數字、作物用途、種植方式...等等的屬性，info-box。有比較建議的做法嗎？</li></ul>
 <ul class="comment"><li>我覺得...呈現的部分已經單獨是一個專案的層級了</li>
