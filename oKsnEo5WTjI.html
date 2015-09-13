@@ -3,10 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2371"/>
+<meta name="version" content="2397"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$oKsnEo5WTjI</title>
 </head>
-<body><h1>飲用水地圖社群小聚記錄</h1><p>地圖網址與 4/17 小聚記錄：<a href="https://osmtw.hackpad.com/afSMeOLuHkR"></a>https://osmtw.hackpad.com/afSMeOLuHkR</p><p></p><h2>4/30 小聚記錄</h2><ul><li>與會人：陳瑞賓、貞寧、秉怡、英勛（luke）、chewei、pm5（小野花）、文凱、阿文</li></ul>
+<body><h1>飲用水地圖社群小聚 #1 記錄</h1><ul><li>4/17 第一次次社群小聚記錄：<a href="https://osmtw.hackpad.com/afSMeOLuHkR"></a>https://osmtw.hackpad.com/afSMeOLuHkR</li>
+<li>hackfoldr <a href="http://beta.hackfoldr.org/drinking-water"></a>http://beta.hackfoldr.org/drinking-water</li></ul>
+
+<h2>4/30 小聚記錄</h2><ul><li>與會人：陳瑞賓、貞寧、秉怡、英勛（luke）、chewei、pm5（小野花）、文凱、阿文</li></ul>
 
 <p>pm5&gt; 簡介飲水地圖現況。運用開放街圖的平台累積飲水點的資料。也可能製作更友善的介面來編輯與補充這些資料，例如無障礙街圖的友善介面。討論使用者的需求。開放街圖是採用共識決。尋找有意願參與的公私有單位。</p><p></p><p>新朋友自我介紹 &amp; 順著聊：</p><p>文凱&gt; 在網路上看到社群活動。目前界面輸入點位的時候好像無法成功？</p><p>貞寧&gt; 介面上能否加入「新增飲水點」的功能？</p><p>pm5&gt; 可以，需要再製作。現在的情況是，地圖還不能輸入，輸入資料需要從開放街圖的編輯器來輸入。或是可以提供給我們「地址與飲水點狀況」資料，我們會在把點位資料匯入OSM。</p><p>阿文&gt; 文山社大，想了解可以如何運用，哪些可以協助做的。</p><p></p><p>瑞賓&gt; 臉書的活動頁裡面有針對<b>賀眾牌飲水機</b>的資料，匯入與否的討論，也有社群朋友回應。先針對這個來說明，賀眾牌飲水機看到了這計畫，願意做一些事情，特助前來一起開會，介紹該公司從兩年前從飲水機轉到家用市場，願意協助做品牌行銷，提供賀眾的飲水機資料點。<b>第一部分</b>需要針對資料能否匯入與條件，因為我們是以開放街圖為平台，所以需要社群討論。賀眾提出需求，是否能露出「賀眾」的公司名稱。一些討論的方案，點選後呈現出賀眾的註記與說明、或是可以撈出賀眾的資料集。<b>第二部分</b>則是關於應用談行銷，對賀眾來說有幾個行銷時間點，他們可運用公司的資源配合，例如母親節。飲水地圖做到一個程度、或是做出app應用，或許可以結合店面體系、業務員，來做議題推廣，實質上的合作細節需要再確認。</p><p>瑞賓&gt; brand 是否會混淆租用者與飲水提供者的身份？</p><p>luke&gt; brand 若是自家白開水，或許是「奉茶」</p><p>pm5&gt; 一般地圖呈現的時候，不會主動呈現太細節，例如 brand 。</p><p>luke&gt; 可以進一步定義資料稱呼、必填、選填。hot_drinking_water</p><p>pm5&gt; 介紹 wiki 上的一些定義慣例。若回應賀眾的需求，可以有「查詢指令」撈出來。介紹關於 brand 的註記方法。在 OSM 的資料結構，點、線、面、關係，例如飲水地圖上面的點，道路是線或是面。名字與描述，可以增加屬性，分為必填與建議填。</p><p></p><p><b>標示方法</b></p><p>目前標示方法會分成兩大類別, 一類是直接標示飲水機/點, 另一類則是標示該建築物/區域有提供飲用水/機.</p><p></p><p>類別一：直接標示飲水機/點</p><ul><li>name 名字=「飲水型態」（地圖上為了簡潔呈現）<ul><li>飲水型態：飲水機、直飲台、生飲台（沒有濾心）</li>
 <li>加水站建議用 amenity=water_point（對象不是人）</li>
