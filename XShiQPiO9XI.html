@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="505"/>
+<meta name="version" content="799"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$XShiQPiO9XI</title>
 </head>
 <body><h1>data.gov.tw可匯入清單及作業流程</h1><p></p><h2>交通運輸類</h2><ol><li>maps.nlsc.gov.tw: 通用版電子地圖(不含等高線)opendata&nbsp;</li></ol>
@@ -24,11 +24,13 @@
 <h2>民生相關</h2><ol><li>水庫<a href='http://data.gov.tw/node/13795'/>蓄水範圍 </a><a href="http://data.gov.tw/node/13795"></a><a href='http://data.gov.tw/node/13795'/>http://data.gov.tw/node/13795</a></li>
 <li>焚化爐煙囪位置地理圖資 <a href="http://data.gov.tw/node/8341"></a>http://data.gov.tw/node/8341</li>
 <li>垃圾掩埋場位置地理圖資 <a href="http://data.gov.tw/node/6386"></a>http://data.gov.tw/node/6386</li>
-<li>垃圾掩埋場復育場址地理圖資 <a href="http://data.gov.tw/node/6387"></a>http://data.gov.tw/node/6387</li>
-<li>垃圾掩埋場範圍地理圖資 <a href="http://data.gov.tw/node/6388"></a>http://data.gov.tw/node/6388</li></ol>
+<li>垃圾掩埋場復育場址地理圖資 <a href="http://data.gov.tw/node/6387"></a>http://data.gov.tw/node/6387</li></ol>
+<ul class="comment"><li>現場可能已經是綠地，例如基隆潮境公園、台北福德坑公園</li></ul>
+<ol><li>垃圾掩埋場範圍地理圖資 <a href="http://data.gov.tw/node/6388"></a>http://data.gov.tw/node/6388</li></ol>
 
-<p></p><h2>旅遊景點</h2><ol><li>旅館民宿<a href='http://data.gov.tw/node/7780'/> </a><a href="http://data.gov.tw/node/7780"></a>http://data.gov.tw/node/7780</li>
-<li>景點 <a href="http://data.gov.tw/node/7777"></a>http://data.gov.tw/node/7777</li>
+<p></p><h2>旅遊景點</h2><ol><li>旅館民宿<a href='http://data.gov.tw/node/7780'/> </a><a href="http://data.gov.tw/node/7780"></a>http://data.gov.tw/node/7780</li><ul class="comment"><li>可能要找觀光局資料</li></ul>
+</ol>
+<ol><li>景點 <a href="http://data.gov.tw/node/7777"></a>http://data.gov.tw/node/7777</li>
 <li><a href='http://data.gov.tw/node/9938'/>國家風景區經營管理範圍 </a><a href="http://data.gov.tw/node/9938"></a><a href='http://data.gov.tw/node/9938'/>http://data.gov.tw/node/9938</a></li>
 <li>森林遊樂區範圍界(18區) <a href="http://data.gov.tw/node/9931"></a>http://data.gov.tw/node/993<a href='http://data.gov.tw/node/993'/>1</a></li>
 <li>自然保留區 <a href="http://data.gov.tw/node/9933"></a>http://data.gov.tw/node/9933</li>
@@ -67,5 +69,24 @@
 
 <h2>流口水區</h2><ol><li>交通路網數值圖 <a href="http://gist.motc.gov.tw/Gis_Platform"></a>http://gist.motc.gov.tw/Gis_Platform</li></ol>
 
-<h2>相關討論</h2><p><a href='/5e5JXlrBC9Q'/>GNS 地名匯入</a></p><p></p><p></p></body>
+<h2>相關討論</h2><p><a href='/5e5JXlrBC9Q'/>GNS 地名匯入</a></p><p></p><p>方式</p><ul><li>存下 csv</li>
+<li>JOSM，opendata，可以匯入 csv</li>
+<li>選擇預設的 WGS84</li>
+<li>開始「檢查」已被標註的地名資料<ul><li>Overpass</li>
+<li>例如以嘉義為例，現有 132 個地名</li></ul>
+</li>
+<li>JOSM 開新的圖層，將 Overpass 會過來</li>
+<li>若是有重複<ul><li>若是大地名，則刪掉 GNS&nbsp;</li>
+<li>若是小地名，則還需要參考內政部的資料</li></ul>
+</ul>
+<p>討論</p><ul><li>先合併大地名，比較空的地方表示有許多小地名，可以再匯入</li>
+<li>可以先代換成介面上差異性高的 icon 方便比對「既有資料」與「批次資料」</li>
+<li>批次資料可能不會有「北大特區」、「淡海新市鎮」</li></ul>
+<p>可能的資料對照方式</p><ul><li>先把 OSM 的地名載下來，做資料比對與更新</li>
+<li>比對方法，兩點距離，抓「？」公里</li>
+<li>更新</li>
+<li>一些特殊情況，新店有兩個「安坑」，都是正確的</li>
+<li>確定會重複的：縣市與鄉鎮的地名</li></ul>
+
+<p></p></body>
 </html>
