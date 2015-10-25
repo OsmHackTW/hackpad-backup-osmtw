@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="3490"/>
+<meta name="version" content="3525"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$VnjVOhWBZuO</title>
 </head>
 <body><h1>主題地圖與 OSM（麻瓜兼新手筆記）</h1><p></p><h2>「我該怎麼選擇工具，畫出主題地圖」？</h2><p></p><p><b>簡單的原則</b></p><ol><li>將圖資畫在 OSM，再撈出所需要的資料，組成特定主題的地圖，該資料集也拿去做其他應用</li>
@@ -70,14 +70,16 @@
 <li>噪音</li>
 <li>空氣品質 （pm2.5,懸浮微粒）</li></ul>
 
-<p></p><p><b>疑問</b></p><ul><li>Umap 的手繪圖層，能夠轉出程 GeoJson 嗎？</li></ul>
+<p></p><p><b>疑問</b></p><ul><li>Umap 的手繪圖層，能夠轉出 GeoJson 嗎？<ul><li>可以呦！</li></ul>
+</ul>
 
 <ul><li>Umap 有可能畫出立體的內容嗎？</li></ul>
 <ul class="comment"><li>立體的地圖...像CADmapper這樣？<a href="https://cadmapper.com"></a>https://cadmapper.com<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.192101_1439740048566_Unknown.png'/></li>
 <li>嗯嗯！</li>
 <li>設想的使用情境是：在「公有土地的願景規劃」的地圖中，預想其中一個圖層是讓使用者畫出他對於一塊公有土地的願景，除了平面點線面之外，如果他希望畫出一些立體建築量體來表達規劃想法，那麼他也可以畫出建築物平面範圍並給予樓層高度，然後量體可以自動長起來（的幻想）。類似此示意圖（截圖自 <a href='http://www.freespaceberlin.org/'/>FreespaceBerlin</a>，不過他們採取的方式是在該公有地附近，舉辦實體活動邀請路人手繪願景，他們提供黑白線框的現況）</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.208757_1439740146038_hackpad.com_VyyMj9YOnwX_p.172171_1419838865810_121212.png'/></p><ul class="comment"><li>答案是可能辦不到，這得有人把CAD畫出來，或者得有人做3D modeling (<a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)</li>
-<li>g0v Ronny 有提過可以用 libraryXXX 把建築物與樓高畫出來，不過好像是 Leaflet.JS，待詢問</li></ul>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VnjVOhWBZuO_p.208757_1439740146038_hackpad.com_VyyMj9YOnwX_p.172171_1419838865810_121212.png'/></p><p></p><ul class="comment"><li>答案是可能辦不到，這得有人把CAD畫出來，或者得有人做3D modeling (<a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)"></a>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/907523272646476/)</li>
+<li>g0v Ronny 有提過可以用 libraryXXX 把建築物與樓高畫出來，不過好像是 Leaflet.JS，待詢問</li>
+<li>如果不考慮建築物正確高度還有形狀的話，沒有問題，但一旦要考慮的話，就是得要有人把這些資料生出來。</li></ul>
 
 <ul><li>點線面與名稱之外，各種的描述項目，如何一併呈現呢？<ul><li>例如社區農園地圖，除了畫出農園範圍之外，希望可以同時呈現出該農園面積數字、作物用途、種植方式...等等的屬性，info-box。有比較建議的做法嗎？</li></ul>
 <ul class="comment"><li>我覺得...呈現的部分已經單獨是一個專案的層級了</li>
@@ -91,8 +93,6 @@
 </ul>
 <ul class="comment"><li>可能第一個問題要討論的是照片的授權，然後再來是應該是要有一個伺服器能上傳照片（假設照片採用匿名上傳）然後伺服端這邊把上傳的照片重新編號分別對應一組經緯度座標，至於整合的部分得先考慮到這片農地是不是已經標注，所以在這之前應該可以透過note回報讓圖客去編輯，（透過note回報的部分可以參考飲水機地圖線上回報功能<a href="https://osmtw.hackpad.com/lWvGjCM6kjr"></a>https://osmtw.hackpad.com/lWvGjCM6kjr，題外話，這個如果做好了，絕對會是影響整個OSM的重大突破！！！）再來先不管沒有標注和已經標註的問題，整合的部分就要考慮底圖跟位置資料還有變動性資料這三個層次，底圖可以直接用OSM的底圖或者另外自建圖磚，位置資料可以直接讀取OSM的closedway物件ID，有標注的可以讀取照片顯示，而沒有標注的也許要讀取OSM note來顯示順便誘導人家去編輯OSM。</li>
 <li>照片上傳的功能不知道有沒有可能結合 <a href='http://openstreetview.org/'/>OpenStreetView</a> 呢？</li></ul>
-
-<ul><li>Umap 手繪的圖形圖層，能夠輸出成 GeoJson 嗎？</li></ul>
 
 <p></p><p><b>參考文章與工具</b></p><ul><li><a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html'/>製作隨時更新的客製化地圖，透過動態連結 uMap 地圖與開放街圖資料庫</a></li>
 <li><a href='http://supaplex99.blogspot.tw/2015/08/how-to-use-overpass-turbo-wizard-mode-to-extract-openstreetmap-data.html'/>怎麼使用 OverPass Turbo 精靈模式截取開放街圖資料</a></li>
