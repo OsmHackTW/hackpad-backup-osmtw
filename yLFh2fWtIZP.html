@@ -3,12 +3,37 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="121"/>
+<meta name="version" content="685"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$yLFh2fWtIZP</title>
 </head>
 <body><h1>鉛管分佈地圖 心得分享</h1><p></p><h2>Information (for speaker)</h2><p>時間：2015-10-27 20:00&nbsp;</p><p>主講：江明宗</p><p>主題：鉛管分佈地圖 心得分享</p><p>大綱：</p><p></p><undefined><li><b>線上觀賞</b></li></undefined>
 <p>YouTube <a href="http://www.youtube.com/watch?v=xMa4dWdtvIU"></a>http://www.youtube.com/watch?v=xMa4dWdtvIU</p><undefined><li><b>線上與會</b></li></undefined>
 <p>Hangouts <a href="https://plus.google.com/hangouts/_/hoaevent/AP36tYfSiBjHzg6gyYVFwbVEtSu6JtyeEHjDA10RNnKlo1AUoJN0kA"></a>https://plus.google.com/hangouts/_/hoaevent/AP36tYfSiBjHzg6gyYVFwbVEtSu6JtyeEHjDA10RNnKlo1AUoJN0kA</p><undefined><li><b>Slide</b></li></undefined>
-
-<h2>FaQ</h2><p></p><h2>Co-note</h2><p></p></body>
+<p>links</p><ul><li>*<a href="https://gist.github.com/audreyt/435dd6f7996ea7547f41"></a>https://gist.github.com/audreyt/435dd6f7996ea7547f41</li>
+<li><a href="https://github.com/clkao/comap/blob/4e07f1e07daeb07c548414a7931408712f9f2494/app/comap.ls#L55"></a>https://github.com/clkao/comap/blob/4e07f1e07daeb07c548414a7931408712f9f2494/app/comap.ls#L55</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Nominatim"></a>http://wiki.openstreetmap.org/wiki/Nominatim</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/API_v0.6"></a>http://wiki.openstreetmap.org/wiki/API_v0.6</li>
+<li><a href="https://en.wikipedia.org/wiki/World_file"></a>https://en.wikipedia.org/wiki/World_file</li>
+<li><a href="https://github.com/kiang/lead_pipes"></a>https://github.com/kiang/lead_pipes</li></ul>
+<ul class="comment"><li>請問願不願意提供 source code呢？</li>
+<li>一直都是公開的，附上連結了</li>
+<li>Thanks</li></ul class="comment">
+<h2>FaQ</h2><p>&gt; mcdlee: 宜蘭的資料是點陣圖。點陣圖也可以作為OpenData (天下無難事，只怕有心人)</p><ul class="comment"><li>圖檔來源 <a href="http://www.e-land.gov.tw/ct.asp?xItem=62039&ctNode=890&mp=4"></a>http://www.e-land.gov.tw/ct.asp?xItem=62039&amp;ctNode=890&amp;mp=4</li>
+<li>透過 QGIS Georeferencer 完成圖檔的定位，然後再透過 gdalinfo 算出圖檔對應的四點座標放入地圖</li>
+<li>應該是有資料，只是他們直接套通用版電子地圖...</li>
+<li>據說台水內部的 GIS 相當的無法信任，所以大概也沒有勇氣放出來給大家看吧</li></ul>
+<p>&gt; Chiahua Wang: 如果是這樣抓的話，影像定位會偏還蠻常見的。起碼我做過的都會在邊緣偏掉。</p><p>&gt; mcdlee: 有朋友發現「還有 16 公尺變成十幾段的麻花捲」 知道怎麼回事嗎？</p><ul class="comment"><li>取資料的時候有發現，同樣一條路會依據村里切割，不確定是不是要問這個部份。目前的作法是即使切割成多段，都一併放入 geojson 的 GeometryCollection 分開呈現</li>
+<li>這個應該不是依據村里切割而已，為了公車路線還有其他考量，同一條路會切成好幾段，遇到橋樑或隧道也會切開。</li>
+<li>因為只有大概看幾個資料，所以現在才知道會進一步針對其他需求切割</li></ul>
+<p>&gt; <a href='/ep/profile/Hbl46FI1eUP'/>Chiahua Wang</a> : 12個栓是什麼意思啊自來水栓嗎？</p><ul class="comment"><li>&nbsp;應該是，概念上感覺像是這條管子上面有幾個開口，而開口對應到戶還是建築物就不得而知了</li></ul>
+<p>&gt; mcdlee: 是假設「整條路底下都是鉛管嗎？」</p><p>A: Y，原始資料沒有細節，包括支管到誰家也沒有</p><ul class="comment"><li>忽然想到...如果同一條路雙向是分開的，那是取哪一邊？</li>
+<li>全部取，因為原始資料只有路名</li>
+<li>瞭解</li></ul>
+<p>＞Bert Wang : 其它沒找到的資料，要從那去修正？</p><ul class="comment"><li>進入到 openstreetmap 的編輯界面進行編輯，這個部份我就不是很熟悉了</li>
+<li>看來也是要從資料來源來核對。感謝。</li>
+<li>題外話： <a href='http://gismobile.water.gov.taipei/ '/>臺北自來水事業處轄區消防栓簡易查詢</a></li>
+<li><br/></li></ul>
+<p>&gt; mcdlee: (小離題) 餵給 nominatim 的地址可以是部份字串嗎？例如「中興大學」找到「國立中興大學」</p><ul class="comment"><li>like <a href="http://nominatim.openstreetmap.org/search?format=json&q=%E4%B8%AD%E8%88%88%E5%A4%A7%E5%AD%B8"></a>http://nominatim.openstreetmap.org/search?format=json&amp;q=%E4%B8%AD%E8%88%88%E5%A4%A7%E5%AD%B8</li>
+<li>可以輸入模糊條件，但事實上資料庫基礎沒有很足，所以很容易找不到資料，大概被 google 寵壞了吧 XD</li></ul class="comment">
+<h2>Co-note</h2><p>補充一下</p><p>Georeference = 空間對位</p><p></p></body>
 </html>
