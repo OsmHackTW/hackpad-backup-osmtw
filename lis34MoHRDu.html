@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="996"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
+</head>
+<body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><p></p><p>參加策略: 與居住地相關的(自己,家人或是親朋好友都可以)避難處所, 盡可能詳細的標示在OpenStreetMap 上面. 也可以讓參與者更了解自己居住環境（或是故鄉老家）的緊急防災避難場所位於哪裡.</p><p></p><p>標示方法如下:</p><ol><li>先找到跟自己相關的最靠近避難所位置(可以透過各地消防局或是縣市政府的開放平台找到資料)<ol><li>例如：<a href='http://xydo.gov.taipei/public/Attachment/581415161819.pdf'/>台北市信義區安康里避難疏散地圖</a> 可以從 <a href='http://xydo.gov.taipei/ct.asp?xItem=8175428&amp;CtNode=3539&amp;mp=124091'/>台北市信義區公所網頁</a> 找到</li></ol>
+</li>
+<li>找到資料後開始去標示避難所,標示的格式, 避難點包括「室內避難處所」,「室外避難處所」,「備援避難處所」 ,「區公所」等地點, 然後這些避難處所適用於土石流, 水災, 或是震災都可以標示成為附加資訊. 我們用剛剛提到的 <a href='http://xydo.gov.taipei/public/Attachment/581415161819.pdf'/>台北市信義區安康里避難疏散地圖</a> 舉例如下:<ol><li>地圖上看到博愛國小標示為「室內避難處所」</li>
+<li>查看左邊的避難處所說明資訊, 可以找到關於博愛國小的相關說明</li>
+<li>針對震災, 博愛國小是優先開設學校, 可容納 80 人, 同時有地址與</li>
+<li>在 OSM Editor 點選博愛國小 (如下圖)</li></ol>
+</ol>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_lis34MoHRDu_p.208000_1446651974961_螢幕快照 2015-11-04 下午11.45.29.png'/></p><ul class="comment"><li>需要先確定 tagging schema 才能一步步教學 :)</li></li>
+<li>名稱是「博愛國小」沒有問題, 但 Amenity = School 的同時, 要如何加註這個地點是「台北市信義區安康里避難處所」?</li></li>
+<li>避難所種類: 戶外, 適用震災</li></li>
+<li>備註:容納 80 人</li></li>
+<li>電話: 02-2722-6616#601 (避難所開設後才能使用)</li>
+<li>水保局有已經做好的土石流避難處所的資料，有GIS ShapeFile，也有json，<a href="https://swcb.hackpad.com/DVKQx4ytzF6"></a>https://swcb.hackpad.com/DVKQx4ytzF6，其他還有一些資料可以使用<a href="http://246.swcb.gov.tw/OpenData.aspx"></a>http://246.swcb.gov.tw/OpenData.aspx，不知道有沒有幫助？如果需要其他有關土石流避難的資料，水保局可以盡力提供。</li>
+<li>請問 <a href="http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx"></a><a href='http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx'/>http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx</a> 這樣的避難路線, 是否也有公開 KML 或是 GeoJSON 格式呢?</li></ul>
+<ol><li>最後需要做資料驗證, 需要確認還有哪些區域沒有更新到, 以及針對已經更新到OSM的資料部分進行驗證跟維護工作.</li></ol>
+
+<p><b>資料來源</b></p><p></p><p>ncdr 避難收容處所開設情形 : <a href="http://data.gov.tw/node/12849"></a>http://data.gov.tw/node/12849</p><ul class="comment"><li>這個是不是開設以後才會有資料? 沒記錯話是消防署那邊統一公告.</li>
+<li>&lt;shelterInfo adaptForWeaker=&quot;否&quot; address=&quot;信義區松仁路95巷20號&quot; county=&quot;臺北市&quot; defaultville=&quot;安康里&quot; disastertype=&quot;震災&quot; isIndoor=&quot;是&quot; isOutdoor=&quot;否&quot; lat=&quot;25.0364&quot; lon=&quot;121.5711&quot;name=&quot;博愛國小&quot; openstatus=&quot;撤除&quot; peopleno=&quot;80&quot; refugedno=&quot;&quot; shelterCode=&quot;SA110-0001&quot; shelterId=&quot;3162&quot; town=&quot;信義區&quot; twd97x=&quot;307630.45&quot; twd97y=&quot;2769928.89371&quot; village=&quot; &quot;/&gt;</li>
+<li><br/></li>
+<li>一直都有，會有開設 openstatus=&quot;撤除&quot;</li>
+<li>喔喔, 對, 馬上來看!! 不過還是得討論 OSM 上面的 tag 重複狀況怎樣解決. 村長的建議就直接解決了建立這些資料的功夫了!</li>
+<li>另外村長有看到 土石流避難路線 相關資訊嗎? 這邊圖之前看過, 超難懂.</li>
+<li>參考 <a href="http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx"></a>http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx</li></ul>
+<p><b>Tagging schema</b></p><p>&nbsp;可參考 <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset</p><ul><li>收容所/避難所<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></li>
+<li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:social_facility'/>social_facility</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dshelter'/>shelter</a></li></ul>
+<ul class="comment"><li>和 amenity = shelter 是不是不一樣呢?</li>
+<li>承平時期如何和原有功能共存？是個問題。</li>
+<li>看起來只能選一個, 這應該會是問題, 有沒有機會使用「附功能」之類的 e.g. co_amenity? 全部都貼在 Note 好像也怪怪的.</li>
+<li>如果這些資料是和 eoc 那份 xml 一樣， osm 裏頭只要標註 reference id&nbsp; (ref:tw:gov:shelter=SA110-0001) 應該就可以了，再用特製的 renderer 抓資料一起畫出來即可；另一個選擇是建立 shelter code 對應 osm object 的 table</li>
+<li>帥! 這個 XML 是 TaipeiEOC 還是全省都有?</li>
+<li>我記得是 ncdr 共通的</li>
+<li>讚 解了大部分問題</li></ul>
+<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:name'/>name</a>=…</li><ul class="comment"><li>和承平時期的名稱要不要區分?</li></ul>
+</ul>
+<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:operator'/>operator</a>=…</li>
+<li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:social_facility:for'/>social_facility:for</a> = ???</li>
+<li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>opening_hours</a>=Mo-Fr 08:30-20:00,Tu-Su 08:00-15:00; Sa 08:00-12:00</li></ul>
+</ul>
+<ul class="comment"><li>這個應該就只有「因應緊急狀況而開設」才會有, 所以 opening_hours 好像不用說明</li><ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:source'/>source</a>=…</li>
+<li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a>=…</li>
+<li>&nbsp;<a href='https://wiki.openstreetmap.org/wiki/Key:capacity'/>capacity</a>=容納人數</li></ul>
+</ul>
+
+</body>
+</html>
