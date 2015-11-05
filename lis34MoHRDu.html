@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1038"/>
+<meta name="version" content="1177"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
 <body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li></ul>
@@ -31,7 +31,8 @@
 <li>喔喔, 對, 馬上來看!! 不過還是得討論 OSM 上面的 tag 重複狀況怎樣解決. 村長的建議就直接解決了建立這些資料的功夫了!</li>
 <li>另外村長有看到 土石流避難路線 相關資訊嗎? 這邊圖之前看過, 超難懂.</li>
 <li>參考 <a href="http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx"></a>http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx</li></ul>
-<p><b>Tagging schema</b></p><p>&nbsp;可參考 <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset</p><ul><li>收容所/避難所<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></li>
+
+<p><b>OpenHarzaMap Proposal</b></p><p><a href="http://wiki.openstreetmap.org/wiki/OpenHazardMap"></a>http://wiki.openstreetmap.org/wiki/OpenHazardMap</p><p></p><p><b>Tagging schema</b></p><p>&nbsp;可參考 <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset</p><ul><li>收容所/避難所<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></li>
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:social_facility'/>social_facility</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dshelter'/>shelter</a></li></ul>
 <ul class="comment"><li>和 amenity = shelter 是不是不一樣呢?</li>
 <li>承平時期如何和原有功能共存？是個問題。</li>
@@ -51,6 +52,45 @@
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a>=…</li>
 <li>&nbsp;<a href='https://wiki.openstreetmap.org/wiki/Key:capacity'/>capacity</a>=容納人數</li></ul>
 </ul>
+
+<p></p><p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li></ul>
+<ul class="code"><li>{{Proposal_Page</li>
+<li>|name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|definition&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|appearance&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|draftStartDate =&nbsp;</li>
+<li>|rfcStartDate&nbsp;&nbsp; =&nbsp;</li>
+<li>|voteStartDate&nbsp; =&nbsp;</li>
+<li>|voteEndDate&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>}}</li>
+<li><br/></li>
+<li>== Proposal ==</li>
+<li>Propose to have co_amenity</li>
+<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>== Rationale ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>Due to some buildings or area (e.g. school, park) can be emergency shelter during disaster, we propose that amenity can have an alternative attribute to describe its function.</li>
+<li><br/></li>
+<li>== Examples ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li>amenity=school</li>
+<li>co_amenity=shelter</li>
+<li><br/></li>
+<li>== Tagging ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><br/></li>
+<li><br/></li>
+<li>== Applies to ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><br/></li>
+<li>== Rendering ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><br/></li>
+<li>== Features/Pages affected ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
+<li><br/></li>
+<li>== Comments ==</li>
+<li><br/></li>
+<li>Please comment on the [[{{TALKPAGENAME}}|discussion page]].</li></ul>
 
 </body>
 </html>
