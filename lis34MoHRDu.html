@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1177"/>
+<meta name="version" content="1215"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
 <body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li></ul>
@@ -21,7 +21,8 @@
 <li>備註:容納 80 人</li></li>
 <li>電話: 02-2722-6616#601 (避難所開設後才能使用)</li>
 <li>水保局有已經做好的土石流避難處所的資料，有GIS ShapeFile，也有json，<a href="https://swcb.hackpad.com/DVKQx4ytzF6"></a>https://swcb.hackpad.com/DVKQx4ytzF6，其他還有一些資料可以使用<a href="http://246.swcb.gov.tw/OpenData.aspx"></a>http://246.swcb.gov.tw/OpenData.aspx，不知道有沒有幫助？如果需要其他有關土石流避難的資料，水保局可以盡力提供。</li>
-<li>請問 <a href="http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx"></a><a href='http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx'/>http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx</a> 這樣的避難路線, 是否也有公開 KML 或是 GeoJSON 格式呢?</li></ul>
+<li>請問 <a href="http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx"></a><a href='http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx'/>http://246.swcb.gov.tw/preventInfo/RefugeMap.aspx</a> 這樣的避難路線, 是否也有公開 KML 或是 GeoJSON 格式呢?</li>
+<li>目前只有避難處所的點位及KML(json有地址電話，ShapeFile及KML有位置)，醫療處所的點位及KML，沒有避難路線的KML</li></ul>
 <ol><li>最後需要做資料驗證, 需要確認還有哪些區域沒有更新到, 以及針對已經更新到OSM的資料部分進行驗證跟維護工作.</li></ol>
 
 <p><b>資料來源</b></p><p></p><p>ncdr 避難收容處所開設情形 : <a href="http://data.gov.tw/node/12849"></a>http://data.gov.tw/node/12849</p><ul class="comment"><li>這個是不是開設以後才會有資料? 沒記錯話是消防署那邊統一公告.</li>
