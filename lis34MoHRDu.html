@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="997"/>
+<meta name="version" content="1038"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
-<body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><p></p><p>參加策略: 與居住地相關的(自己,家人或是親朋好友都可以)避難處所, 盡可能詳細的標示在OpenStreetMap 上面. 也可以讓參與者更了解自己居住環境（或是故鄉老家）的緊急防災避難場所位於哪裡.</p><p></p><p>標示方法如下:</p><ol><li>先找到跟自己相關的最靠近避難所位置(可以透過各地消防局或是縣市政府的開放平台找到資料)<ol><li>例如：<a href='http://xydo.gov.taipei/public/Attachment/581415161819.pdf'/>台北市信義區安康里避難疏散地圖</a> 可以從 <a href='http://xydo.gov.taipei/ct.asp?xItem=8175428&amp;CtNode=3539&amp;mp=124091'/>台北市信義區公所網頁</a> 找到</li></ol>
+<body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li></ul>
+
+<p>參加策略: 與居住地相關的(自己,家人或是親朋好友都可以)避難處所, 盡可能詳細的標示在OpenStreetMap 上面. 也可以讓參與者更了解自己居住環境（或是故鄉老家）的緊急防災避難場所位於哪裡.</p><p></p><p>標示方法如下:</p><ol><li>先找到跟自己相關的最靠近避難所位置(可以透過各地消防局或是縣市政府的開放平台找到資料)<ol><li>例如：<a href='http://xydo.gov.taipei/public/Attachment/581415161819.pdf'/>台北市信義區安康里避難疏散地圖</a> 可以從 <a href='http://xydo.gov.taipei/ct.asp?xItem=8175428&amp;CtNode=3539&amp;mp=124091'/>台北市信義區公所網頁</a> 找到</li></ol>
 </li>
 <li>找到資料後開始去標示避難所,標示的格式, 避難點包括「室內避難處所」,「室外避難處所」,「備援避難處所」 ,「區公所」等地點, 然後這些避難處所適用於土石流, 水災, 或是震災都可以標示成為附加資訊. 我們用剛剛提到的 <a href='http://xydo.gov.taipei/public/Attachment/581415161819.pdf'/>台北市信義區安康里避難疏散地圖</a> 舉例如下:<ol><li>地圖上看到博愛國小標示為「室內避難處所」</li>
 <li>查看左邊的避難處所說明資訊, 可以找到關於博愛國小的相關說明</li>
@@ -44,7 +46,8 @@
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:social_facility:for'/>social_facility:for</a> = ???</li>
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>opening_hours</a>=Mo-Fr 08:30-20:00,Tu-Su 08:00-15:00; Sa 08:00-12:00</li></ul>
 </ul>
-<ul class="comment"><li>這個應該就只有「因應緊急狀況而開設」才會有, 所以 opening_hours 好像不用說明</li><ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:source'/>source</a>=…</li>
+<ul class="comment"><li>這個應該就只有「因應緊急狀況而開設」才會有, 所以 opening_hours 好像不用說明</li>
+<li>這個應該要提 proposal <a href="http://wiki.openstreetmap.org/wiki/Proposal_process"></a>http://wiki.openstreetmap.org/wiki/Proposal_process</li><ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:source'/>source</a>=…</li>
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a>=…</li>
 <li>&nbsp;<a href='https://wiki.openstreetmap.org/wiki/Key:capacity'/>capacity</a>=容納人數</li></ul>
 </ul>
