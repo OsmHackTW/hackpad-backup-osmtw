@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2091"/>
+<meta name="version" content="2214"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
 <body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li>
@@ -65,22 +65,15 @@
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a>=…</li>
 <li>&nbsp;<a href='https://wiki.openstreetmap.org/wiki/Key:capacity'/>capacity</a>=容納人數</li>
 <li><a href='https://wiki.openstreetmap.org/wiki/Key:shelter'/>shelter</a>=yes/no&nbsp;</li></ul>
-<ul class="comment"><li>這個 shelter 很奇妙的是講巴士站有沒有遮雨棚, 我們能不能延伸用在不同建築物上啊 XD</li>
-<li><b>Humanitarian OSM Tags/HDM preset:</b></li></ul>
-<ul style="list-style: none;"><li>&nbsp;<a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset#Hazards"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset#Hazards</li>
-<li><b><i>examples of shelter according to the HOT OSM Tags </i>preset</b></li>
-<li><b>Shelter</b></li></ul>
-<ul><li><u><a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a></u>=<u><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></u></li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:social_facility'/>social_facility</a></u>=<u><a href='http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dshelter'/>shelter</a></u></li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:name'/>name</a></u>=…</li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:operator'/>operator</a></u>=…</li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:social_facility:for'/>social_facility:for</a></u>=abused,child,disabled person,diseased,drug_addicted,homeless,juvenile,mental_health,migrant,orphan,senior,underprivileged,victim</li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>opening_hours</a></u>=Mo-Fr 08:30-20:00,Tu-Su 08:00-15:00; Sa 08:00-12:00</li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:source'/>source</a></u>=…</li>
-<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a></u>=…</li></ul>
+<ul class="comment"><li>這個 shelter 很奇妙的是講巴士站有沒有遮雨棚, 我們能不能延伸用在不同建築物上啊 XD</li></ul>
 </ul>
 
-<p><b>Proposed features/Muster point</b></p><p>國外有人丟出muster point的proposal tagging schema,也就是說, shelter在OSM上面是代表涼亭的意思,並不是我們所謂的避難所. 反而像是meetup point或是muster point才是所謂的災害發生時所謂的集合點.更貼切的還有refugee camp.</p><p><i>Muster Point</i></p><p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Muster_point"></a>http://wiki.openstreetmap.org/wiki/Proposed_features/Muster_point</p><p><i>Refugee Camp Mapping tagging schema</i></p><p><a href="http://wiki.openstreetmap.org/wiki/Refugee_Camp_Mapping"></a><u><a href='http://wiki.openstreetmap.org/wiki/Refugee_Camp_Mapping'/>http://wiki.openstreetmap.org/wiki/Refugee_Camp_Mapping</a></u></p><p></p><p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li></ul>
+<p><b>Humanitarian OSM Tags/HDM preset:</b></p><p>&nbsp;<a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset#Hazards"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset#Hazards</p><p><b><i>examples of shelter according to the HOT OSM Tags </i>preset</b></p><p><b>Shelter</b></p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a></u>=<u><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></u></p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:social_facility'/>social_facility</a></u>=<u><a href='http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dshelter'/>shelter</a></u></p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:name'/>name</a></u>=…</p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:operator'/>operator</a></u>=…</p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:social_facility:for'/>social_facility:for</a></u>=abused,child,disabled person,diseased,drug_addicted,homeless,juvenile,mental_health,migrant,orphan,senior,underprivileged,victim</p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>opening_hours</a></u>=Mo-Fr 08:30-20:00,Tu-Su 08:00-15:00; Sa 08:00-12:00</p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:source'/>source</a></u>=…</p><p><u><a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a></u>=…</p><p></p><p><b>Proposed features/Muster point</b></p><p>國外有人丟出muster point的proposal tagging schema,也就是說, shelter在OSM上面是代表涼亭的意思,並不是我們所謂的避難所. 反而像是meetup point或是muster point才是所謂的災害發生時所謂的集合點.更貼切的還有refugee camp.</p><p><i>Muster Point</i></p><p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Muster_point"></a>http://wiki.openstreetmap.org/wiki/Proposed_features/Muster_point</p><p><i>Refugee Camp Mapping tagging schema</i></p><p><a href="http://wiki.openstreetmap.org/wiki/Refugee_Camp_Mapping"></a><u><a href='http://wiki.openstreetmap.org/wiki/Refugee_Camp_Mapping'/>http://wiki.openstreetmap.org/wiki/Refugee_Camp_Mapping</a></u></p><p></p><ul class="comment"><li>Muster Point 感覺是會合點, Shelter 還分室內室外還有沒有資源等等. 而 Refugee Camp 與我們目前要做的 shelter mapping 意義上似乎有不小差距. 因應敘利亞難民而建立的避難營區, 跟我們平常小學生上課, 發生災害時轉換成避難場所, 這個用法或許要再討論..</li></ul>
+
+<ul class="comment"><li><i>A Quick Mailing list to discuss the tags used in OSM, how they could evolve, and how editors and renderers might interact with them.</i></li>
+<li><i>You may want to propose a new tag on </i><a href="http://wiki.openstreetmap.org/wiki/Proposed_features"></a><i><u><a href='http://wiki.openstreetmap.org/wiki/Proposed_features'/>http://wiki.openstreetmap.org/wiki/Proposed_features</a></u></i><i> and combine this with a quick email to the OSM tagging mailing list to see if anyone has already started this. </i><a href="http://lists.openstreetmap.org/listinfo/tagging"></a><i><u><a href='http://lists.openstreetmap.org/listinfo/tagging'/>http://lists.openstreetmap.org/listinfo/tagging</a></u></i></li>
+<li><br/></li></ul>
+<p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li></ul>
 <ul class="code"><li>{{Proposal_Page</li>
 <li>|name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
 <li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
