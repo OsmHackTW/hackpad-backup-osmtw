@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1822"/>
+<meta name="version" content="1935"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
 <body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li>
@@ -53,7 +53,8 @@
 <li>emergency:shelter: phone:tw=02-2222-2222</li></ul>
 <ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:name'/>name</a>=…</li><ul class="comment"><li>和承平時期的名稱要不要區分?</li>
 <li>如果是大家熟悉的名字, 例如OO國小, 應該就都用同樣的名字即可. 不然有可能大家緊急的時候找不到（或沒聯想到）這兩個名字是同一個地方</li>
-<li>也可以不寫，或是用emergency:name=xxx來表示啟用時災防單位用的名稱</li></ul>
+<li>也可以不寫，或是用emergency:name=xxx來表示啟用時災防單位用的名稱</li>
+<li>是否需要加上 emergency:shelter:name=xxx 這樣呢?</li></ul>
 </ul>
 <ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:operator'/>operator</a>=…</li>
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:social_facility:for'/>social_facility:for</a> = ???</li>
@@ -64,10 +65,22 @@
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a>=…</li>
 <li>&nbsp;<a href='https://wiki.openstreetmap.org/wiki/Key:capacity'/>capacity</a>=容納人數</li>
 <li><a href='https://wiki.openstreetmap.org/wiki/Key:shelter'/>shelter</a>=yes/no&nbsp;</li></ul>
-<ul class="comment"><li>這個 shelter 很奇妙的是講巴士站有沒有遮雨棚, 我們能不能延伸用在不同建築物上啊 XD</li></ul>
+<ul class="comment"><li>這個 shelter 很奇妙的是講巴士站有沒有遮雨棚, 我們能不能延伸用在不同建築物上啊 XD</li>
+<li>Humanitarian OSM Tags/HDM preset:</li></ul>
+<ul style="list-style: none;"><li>&nbsp;<a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset#Hazards"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset#Hazards</li>
+<li><i>examples of shelter according to the HOT OSM Tags </i>preset</li>
+<li>Shelter</li></ul>
+<ul><li><u><a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a></u>=<u><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></u></li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:social_facility'/>social_facility</a></u>=<u><a href='http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dshelter'/>shelter</a></u></li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:name'/>name</a></u>=…</li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:operator'/>operator</a></u>=…</li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:social_facility:for'/>social_facility:for</a></u>=<b>abused,child,disabled person,diseased,drug_addicted,homeless,juvenile,mental_health,migrant,orphan,senior,underprivileged,victim</b></li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>opening_hours</a></u>=Mo-Fr 08:30-20:00,Tu-Su 08:00-15:00; Sa 08:00-12:00</li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:source'/>source</a></u>=…</li>
+<li><u><a href='http://wiki.openstreetmap.org/wiki/Key:note'/>note</a></u>=…</li></ul>
 </ul>
 
-<p></p><p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li></ul>
+<p><b>Proposed features/Muster point</b></p><p><a href="http://wiki.openstreetmap.org/wiki/Proposed_features/Muster_point"></a>http://wiki.openstreetmap.org/wiki/Proposed_features/Muster_point</p><p></p><p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li></ul>
 <ul class="code"><li>{{Proposal_Page</li>
 <li>|name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
 <li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
