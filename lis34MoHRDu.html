@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2668"/>
+<meta name="version" content="2931"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
 <body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li>
@@ -39,7 +39,7 @@
 <li>emergency:shelter_type=debris flow</li>
 <li>可以用 分號</li>
 <li>ex: emergency:shelter_type=earthquake;floods;debris flow</li></ul>
-<p>emergency:operator=台北市政府消防局</p><p>emergency:social_facility:opening_hours=closed&nbsp;&nbsp;</p><p>emergency:social_facility:capacity=80</p><p>emergency:social_facility:phone=+886-2-2345-0616p400</p><p>emergency:social_facility:source=內政部消防署</p><p>emergency:contact:phone=+886-6638-0119</p><p></p><p></p><p><b>OpenHarzadMap Proposal</b></p><p><a href="http://wiki.openstreetmap.org/wiki/OpenHazardMap"></a>http://wiki.openstreetmap.org/wiki/OpenHazardMap</p><p></p><p><b>Tagging schema</b></p><p>&nbsp;可參考 <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset</p><ul><li>收容所/避難所<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></li>
+<p>emergency:operator=台北市政府消防局</p><p>emergency:social_facility:opening_hours=closed&nbsp;&nbsp;</p><p>emergency:social_facility:capacity=80</p><p>emergency:social_facility:phone=+886-2-2345-0616Ext400</p><p>emergency:social_facility:source=內政部消防署</p><p>emergency:contact:phone=+886-6638-0119</p><p></p><p></p><p><b>OpenHarzadMap Proposal</b></p><p><a href="http://wiki.openstreetmap.org/wiki/OpenHazardMap"></a>http://wiki.openstreetmap.org/wiki/OpenHazardMap</p><p></p><p><b>Tagging schema</b></p><p>&nbsp;可參考 <a href="http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset"></a>http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags/HDM_preset</p><ul><li>收容所/避難所<ul><li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:amenity'/>amenity</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dsocial_facility'/>social_facility</a></li>
 <li>&nbsp;<a href='http://wiki.openstreetmap.org/wiki/Key:social_facility'/>social_facility</a>=<a href='http://wiki.openstreetmap.org/wiki/Tag:social_facility%3Dshelter'/>shelter</a></li></ul>
 <ul class="comment"><li>和 amenity = shelter 是不是不一樣呢?</li>
 <li>承平時期如何和原有功能共存？是個問題。</li>
@@ -81,15 +81,19 @@
 <ul class="comment"><li><i>A Quick Mailing list to discuss the tags used in OSM, how they could evolve, and how editors and renderers might interact with them.</i></li>
 <li><i>You may want to propose a new tag on </i><a href="http://wiki.openstreetmap.org/wiki/Proposed_features"></a><i><u><a href='http://wiki.openstreetmap.org/wiki/Proposed_features'/>http://wiki.openstreetmap.org/wiki/Proposed_features</a></u></i><i> and combine this with a quick email to the OSM tagging mailing list to see if anyone has already started this. </i><a href="http://lists.openstreetmap.org/listinfo/tagging"></a><i><u><a href='http://lists.openstreetmap.org/listinfo/tagging'/>http://lists.openstreetmap.org/listinfo/tagging</a></u></i></li>
 <li><br/></li></ul>
-<p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li></ul>
+<p><b>Proposal Page Template:</b></p><ul class="comment"><li>沒寫過 OSM Proposal, 各位可以一起看看嗎?</li>
+<li>我先幫各位把可能的部分寫下來(我也沒寫過OSM Proposal), 再麻煩大家來找碴, 幫忙訂正修改, 感謝!</li>
+<li>Please follow the instruction, and help to create the proposal:</li>
+<li><a href="http://wiki.openstreetmap.org/wiki/Proposal_process"></a>http://wiki.openstreetmap.org/wiki/Proposal_process</li></ul>
+
 <ul class="code"><li>{{Proposal_Page</li>
-<li>|name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
-<li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Proposed to have co_amenity</li>
+<li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Users in Taiwan</li>
 <li>|key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
-<li>|value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = High</li>
 <li>|type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
-<li>|definition&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
-<li>|appearance&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
+<li>|definition&nbsp;&nbsp;&nbsp;&nbsp; = Proposed to have co_amenity for emergency time</li>
+<li>|appearance&nbsp;&nbsp;&nbsp;&nbsp; = List of Taggings</li>
 <li>|status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
 <li>|draftStartDate =&nbsp;</li>
 <li>|rfcStartDate&nbsp;&nbsp; =&nbsp;</li>
@@ -108,10 +112,21 @@
 <li>co_amenity=shelter</li>
 <li><br/></li>
 <li>== Tagging ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
-<li><br/></li>
+<li>The Proposed Emergency Tagging Schema:&nbsp;</li>
+<li>emergency:amenity=social_facility</li>
+<li>emergency:social_facility=shelter</li>
+<li>emergency:social_facility:id=3162</li>
+<li>emergency:social_facility:for=displaced_people</li>
+<li>emergency:shelter_type=earthquake;floods;debris flow</li>
+<li>emergency:operator=台北市政府消防局</li>
+<li>emergency:social_facility:opening_hours=closed&nbsp;&nbsp;</li>
+<li>emergency:social_facility:capacity=80</li>
+<li>emergency:social_facility:phone=+886-2-2345-0616Ext400</li>
+<li>emergency:social_facility:source=內政部消防署</li>
+<li>emergency:contact:phone=+886-6638-0119</li>
 <li><br/></li>
 <li>== Applies to ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
-<li><br/></li>
+<li>areas</li>
 <li>== Rendering ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
 <li><br/></li>
 <li>== Features/Pages affected ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
