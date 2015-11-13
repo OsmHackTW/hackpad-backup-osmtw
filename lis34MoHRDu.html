@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2931"/>
+<meta name="version" content="3011"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lis34MoHRDu</title>
 </head>
 <body><h1>OSM上的災防疏散避難地圖</h1><p></p><p>目的是想幫台灣的各鄉鎮鄰里簡易疏散災防地圖內的避難處, 標示在OpenStreetMap上面.</p><p></p><p>11/15 ~11/21是<a href='http://education.nationalgeographic.com/programs/geographyawarenessweek/'/>Geography Awareness Week</a> , 究心公益科技 (GeoThings) 因而興起了與OSM社群共同舉辦 local mapping party 的想法, 把台灣的災防疏散避難地圖內的重要資訊, 包括避難處所的地址, 電話, 可容納人數等等. 這些冷冰冰的資料從原始的 PDF 圖片檔裡解放出來, 標示到OSM的地圖上. 以方便日後維護及更新, 也可以開放給一般民眾透過開放式街圖來了解自己所處的位置以及所關心的人的位置甚至是要前往旅行的地方附近的逃生避難點狀況並標示出來.</p><ul class="comment"><li>資料的授權?拿著一份不符合開放資料授權的 pdf 編輯是不被允許的。</li>
@@ -88,7 +88,7 @@
 
 <ul class="code"><li>{{Proposal_Page</li>
 <li>|name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Proposed to have co_amenity</li>
-<li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = Users in Taiwan</li>
+<li>|user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = People in Taiwan and the rest of the world with such co_amenity issue in their living countries</li>
 <li>|key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
 <li>|value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = High</li>
 <li>|type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =&nbsp;</li>
@@ -112,18 +112,17 @@
 <li>co_amenity=shelter</li>
 <li><br/></li>
 <li>== Tagging ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
-<li>The Proposed Emergency Tagging Schema:&nbsp;</li>
-<li>emergency:amenity=social_facility</li>
-<li>emergency:social_facility=shelter</li>
-<li>emergency:social_facility:id=3162</li>
-<li>emergency:social_facility:for=displaced_people</li>
-<li>emergency:shelter_type=earthquake;floods;debris flow</li>
-<li>emergency:operator=台北市政府消防局</li>
-<li>emergency:social_facility:opening_hours=closed&nbsp;&nbsp;</li>
-<li>emergency:social_facility:capacity=80</li>
-<li>emergency:social_facility:phone=+886-2-2345-0616Ext400</li>
-<li>emergency:social_facility:source=內政部消防署</li>
-<li>emergency:contact:phone=+886-6638-0119</li>
+<li>The Proposed Emergency Tagging Schema: (with 15 characters limitation)</li>
+<li>Emg:amenity=social_facility</li>
+<li>Emg:social_facility=shelter</li>
+<li>Emg:social_facility:id=3162</li>
+<li>Emg:shelter_type=earthquake;floods;debris flow</li>
+<li>Emg:operator=台北市政府消防局</li>
+<li>Emg:social_facility:opening_hours=closed;24/7&nbsp;&nbsp;</li>
+<li>Emg:social_facility:capacity=80</li>
+<li>Emg:social_facility:phone=+886-2-2345-0616Ext400</li>
+<li>Emg:social_facility:source=內政部消防署</li>
+<li>Emg:contact:phone=+886-6638-0119</li>
 <li><br/></li>
 <li>== Applies to ==&nbsp;&nbsp;&nbsp;&nbsp;</li>
 <li>areas</li>
