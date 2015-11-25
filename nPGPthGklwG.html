@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="203"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$nPGPthGklwG</title>
+</head>
+<body><h1>飲水地圖 OSM tag 參考資料</h1><p></p><h2>標示方法</h2><p>目前標示方法會分成兩大類別, 一類是直接標示出飲水機/點, 另一類則是標示該建築物/區域有提供飲用水/機.</p><p></p><p><b>類別一：標示出飲水機/點</b></p><ul><li>name 名字=「飲水型態」（地圖上為了簡潔呈現）<ul><li>飲水型態：飲水機、直飲台、生飲台（沒有濾心）</li>
+<li>加水站建議用 amenity=water_point（對象不是人）</li>
+<li>舉例：萬隆捷運站生飲台、警察局飲水機</li></ul>
+</li>
+<li>alt_name「地名＋飲水型態」（完整名稱，飲水地圖使用上就用此完整名稱）</li>
+<li>amenity=drinking_water 用途、做什麼用，單獨標示飲水機用的，捷運站內的飲水機<ul><li><a href="http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water'/>http://wiki.openstreetmap.org/wiki/Tag:amenity%3Ddrinking_water</a></li></ul>
+</li>
+<li>description 描述<ul><li>使用者自填 ex山區「最後水源」</li>
+<li>是否需要自備容器？重點在想描述出, 可&quot;直接用嘴喝&quot;, 不需任何杯瓶，幾種中文分法：<ul><li>需自備容器/不需自備容器</li>
+<li>備容/免容</li>
+<li>免容器</li>
+<li>直接用嘴喝</li></ul>
+</li></ul>
+</li>
+<li>source=survey 或參考以下的項目（資料來源）<ul><li>survey 表示現地勘查的結果</li></ul>
+</li>
+<li>indoor=yes（位於室內）<ul><li><a href="http://wiki.openstreetmap.org/wiki/Key:indoor"></a><a href='http://wiki.openstreetmap.org/wiki/Key:indoor'/>http://wiki.openstreetmap.org/wiki/Key:indoor</a></li></ul>
+</li>
+<li>level=樓層（數字）<ul><li><a href="http://wiki.openstreetmap.org/wiki/Key:level"></a><a href='http://wiki.openstreetmap.org/wiki/Key:level'/>http://wiki.openstreetmap.org/wiki/Key:level</a></li></ul>
+</li>
+<li>access=permissive 或（對外開放方式）</li>
+<li>opening_hours=（開放時間）<ul><li><a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours"></a><a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>http://wiki.openstreetmap.org/wiki/Key:opening_hours</a></li></ul>
+</li>
+<li>brand=[名稱]（飲水機廠牌，例如：賀眾, 3M）</li>
+<li>operator=[名稱]（店家／管理者）</li>
+<li>drinking_water:hot_water=yes（有提供熱水）</li>
+<li>drinking_water:warm_water=yes（溫水）</li>
+<li>drinking_water:cold_water=yes（冷水）</li>
+<li>drinking_water:iced_water=yes（冰水）</li>
+<li>bottle=yes（意思是可以很容易用瓶水裝水）<ul><li>bottle=require（可以考慮新增）</li>
+<li><a href="https://taginfo.openstreetmap.org/keys/bottle#values"></a><a href='https://taginfo.openstreetmap.org/keys/bottle#values'/>https://taginfo.openstreetmap.org/keys/bottle#values</a></li></ul>
+</li>
+<li>paper cup</li></ul>
+
+<p><b>類別二：標示該建築物/區域有提供飲用水/機</b></p><ul><li>name<ul><li>舉例：台灣環境資訊協會</li></ul>
+</li>
+<li>drinking_water=yes/或其它（用在建築物內的飲水機）</li></ul>
+<ul class="comment"><li>這類飲水點附屬於機關內、裝水者需要詢問場地機關、可能地標物本身有原先用途（如店家、機構）而飲水設施只是附屬</li><ul><li><a href="http://wiki.openstreetmap.org/wiki/Key:drinking_water"></a><a href='http://wiki.openstreetmap.org/wiki/Key:drinking_water'/>http://wiki.openstreetmap.org/wiki/Key:drinking_water</a></li></ul>
+</li>
+<li>source 資料來源 (這個類別，有辦法撰寫「資料來源」嗎？)</li></ul>
+<ul><li>description 描述 (這個類別，有辦法撰寫「描述」嗎？)</li>
+<li>drinking_water:hot_water=yes</li>
+<li>drinking_water:warm_water=yes</li>
+<li>drinking_water:cold_water=yes</li>
+<li>drinking_water:bottle=yes</li>
+<li>indoor=yes <a href="http://wiki.openstreetmap.org/wiki/Key:indoor"></a><a href='http://wiki.openstreetmap.org/wiki/Key:indoor'/>http://wiki.openstreetmap.org/wiki/Key:indoor</a><ul><li>level=樓層（數字）</li>
+<li>access=* （例如環資屬於 permissive）</li>
+<li>opening_hours 開放時間 <a href="http://wiki.openstreetmap.org/wiki/Key:opening_hours"></a><a href='http://wiki.openstreetmap.org/wiki/Key:opening_hours'/>http://wiki.openstreetmap.org/wiki/Key:opening_hours</a></li></ul>
+</ul>
+
+</body>
+</html>
