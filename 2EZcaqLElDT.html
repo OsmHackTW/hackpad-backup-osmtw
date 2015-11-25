@@ -3,8 +3,99 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="12"/>
+<meta name="version" content="1645"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$2EZcaqLElDT</title>
 </head>
-<body><h1>飲水地圖社群小聚 #5</h1><p>20151125</p><p>地點：環境資訊協會</p><p></p></body>
+<body><h1>飲水地圖社群小聚 #5</h1><p>20151125</p><p>地點：環境資訊協會</p><p>出席：陳瑞賓、 楊子琳、曾貞寧、pm5、張淑貞、黃煇策、</p><ul style="list-style: none;"><li>高英勛、chewei、黃裕翔、陳佳慶、Yi-Hsuan Chuang</li></ul>
+
+<p>資策會展示app，目前以google map做底圖</p><ul><li><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_2EZcaqLElDT_p.208757_1448450348950_12283137_10153803236724038_798952274_n.jpg'/></li></ul>
+<p>構想提議</p><ul><li>建立自己的資料庫，透過 api 應用</li>
+<li>編輯修正這個資料庫</li>
+<li>鼓勵大家使用這個資料庫</li>
+<li>希望先增加資料量</li>
+<li>資料格式，以利編輯維護</li></ul>
+<p>案例：Give Me Taps</p><ul><li><a href="http://taps.givemetap.co.uk/"></a>http://taps.givemetap.co.uk/</li>
+<li>南非大學生創立的公司，可以蒐集店家水點資訊</li>
+<li>使用 google map 以及 google api 店家資訊</li>
+<li>與店家洽談合作，商業合作</li></ul>
+
+<p>瑞賓：補充背景說明</p><ul><li>有許多單位都有這樣的計畫期待，近幾年資源、技術漸成熟可實行</li>
+<li>預設希望 500 公尺內會有公共飲水點</li>
+<li>以群眾參與、開放資料角度，結合 Open Street Map 社群</li>
+<li>目前網站：<a href="http://drinking.teia.tw/"></a>http://drinking.teia.tw/</li>
+<li>需要第二道程序，確認資料正確性</li>
+<li>「如何讓使用者變成參與者」</li>
+<li>OSM 底圖在部分區域尚未建置完備</li>
+<li>聯繫大學社團，合作水點標注</li>
+<li>也有飲水機、濾芯廠商的聯繫</li>
+<li>香港團體的聯繫</li></ul>
+
+<p>pm5 提問 google 上的資料</p><ul><li>寫一個頁面，營業時間，開放時間，其他欄位</li>
+<li>「審核」</li>
+<li>pm5&gt; 資料格式基本的討論成果<ul><li>網址：</li></ul>
+</li>
+<li>資料來源：<ul><li>民眾自發</li>
+<li>公家機關提供資料</li></ul>
+</li>
+<li>關於「資料庫」：<ul><li>資源需求：server、工程師資源、人力、上傳照片...</li></ul>
+</ul>
+
+<p>從 OSM 的角度來回應</p><ul><li>還是需要小心資料授權的課題</li>
+<li>確保民眾貢獻資料者，知道授權條款</li>
+<li>OSM 貢獻分為：1.編輯 2.回報 (note)</li>
+<li>底圖選用與資料庫無關</li>
+<li>資料品質與使用者經驗</li>
+<li>店家若想要標注水點：<ul><li>請他填寫表單</li>
+<li>捐款？</li></ul>
+</li>
+<li>維護面向的課題，在 OSM 上仰賴群眾長期編輯維護</li></ul>
+
+<p>授權問題目前的解法</p><ul><li>迂迴解套方式：把資料匯入成 Note，再讓圖客手繪進 OSM。</li></ul>
+
+<p>增加水點資料的解法(目前有600多筆資料，目標是十萬筆)</p><ul><li>問機關<ul><li>教育部：函轉？教育部不鳥我們</li>
+<li>國發會研考處：「我們鼓勵政府開放生活資訊資料..」</li>
+<li>台北市資訊局：...</li></ul>
+</li>
+<li>分區的指標：</li><ul class="task"><li>都會區：例如以 500 公尺半徑至少有一台飲水機，計算都會區範圍應該要有多少台，對比現況計算到達率，甚至計算覆蓋率、佔有率...</li></ul>
+<ul><li>風景區：遊客中心...</li>
+<li>登山區：...</li></ul>
+</li>
+<li>要跟國發會講，生活資訊資訊應該開放</li></ul>
+
+<p>自己建資料庫目前的解法</p><ul><li>Use case: 收使用者資料（Email 等等）</li></ul>
+
+<p>手機 App 目前的解法</p><ul><li>OSM 撈出資料</li>
+<li>Google 另外撈出相關的資料，例如店家資訊</li></ul>
+
+<p>使用者標注</p><ul><li>把飲水地圖模式應用到 Umap 上，成為「主題地圖」產製</li>
+<li>把 Note 拉出來變成標注<ul><li>Note 很難解</li></ul>
+</li>
+<li>加水點表單的問題</li><ul class="task"><li>因為定位準確度會差很多，有時是以公里計，應該 zoom 值不夠大的不能點，說明「請放大到 XXX」</li></ul>
+</ul>
+<ul><li>資料檢證角色層級<ul><li>最終防線：OSM 資深圖客</li>
+<li>中長期培訓：解 note 志工，配合 policy, guideline, reference</li></ul>
+</ul>
+<ul class="task"><li>資料品質的標準／準則（稍後另開一個 pad）</li><ul><li>熱／冰水不能標錯</li>
+<li>位置 + 說明的誤差可以接受到多少？<ul><li>例如一種參考標準：到達這個點位之後，「五分鐘」之內透過說明內容，使用者可以真的找到該飲水機面前並使用它</li>
+<li>考量「無障礙者」也可以無礙使用...</li>
+<li>關於尺寸、高度... 透過「型號」來對照設備規格來確認</li></ul>
+</li>
+<li>樓層一定要記得填，一樓也要填</li></ul>
+</ul>
+<ul class="task"><li>加一個錯誤回報功能，加在水點跳出的內容裡</li></ul>
+
+<p>上傳照片解法</p><ul><li>有現成的，但目前優先度太低，大概今年底以前不會出來</li>
+<li>相簿參考：<a href="https://goo.gl/photos/HQCrzZXFtgqNbEF49"></a>https://goo.gl/photos/HQCrzZXFtgqNbEF49 (很多賀X牌)</li></ul>
+
+<p>廠商資料的情況</p><ul><li>索取的資料要有：位置、品牌、型號、尺寸規格、（所在機關...）</li>
+<li>某種形式的資料授權同意、協議等</li></ul>
+<ul class="task"><li>使用介面上要加 branding</li></ul>
+
+<p>長遠方向列舉</p><ul><li>「資料集」可以被大家拿去</li>
+<li>呈現給使用者</li>
+<li>區分兩種使用者特性：<ul><li>1.願意改進資料的社群｜有什麼工具可以協助這個社群？</li>
+<li>2.一般使用者 end user｜</li></ul>
+</ul>
+
+<p><b>參考：</b></p><p>OSM api:<a href="https://wiki.openstreetmap.org/wiki/API_v0.6"></a>https://wiki.openstreetmap.org/wiki/API_v0.6</p><p></p><p></p></body>
 </html>
