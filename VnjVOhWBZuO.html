@@ -3,20 +3,26 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4016"/>
+<meta name="version" content="4245"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$VnjVOhWBZuO</title>
 </head>
-<body><h1>「特定主題地圖」與 OpenStreetMap</h1><p>說明：OpenStreetMap &amp; Database 是一個全球群眾參與繪製的地圖資料庫，風風火火的推展過程中逐漸讓大家認識到這個符合開源精神的地圖計畫。若你本身並非 OpenStreetMap 資深圖客，當你希望製作一份特定主題的地圖時，或許你會好奇「我該如何考量特定主題地圖的製作過程中，是否適合採用、運用 OpenStreetMap Database？」本文件希望透過一些問答引導的方式，協助釐清這個課題。</p><p></p><h2>「我想畫出特定主題的地圖，我該如何考量是否適合運用 OpenStreetMap Database 呢」？</h2><p></p><p><b>問答引導</b></p><ol><li>這個主題的資料內容，會不會需要群眾協作，持續畫新的資料、回報、修改？<ol><li>需要。 → 請回答第 2 題。</li>
+<body><h1>「特定主題地圖」與 OpenStreetMap</h1><p>說明：OpenStreetMap &amp; Database 是一個全球群眾參與繪製的地圖資料庫，風風火火的推展過程中逐漸讓大家認識到這個符合開源精神的地圖計畫。不過，人類想要畫的多采多姿的主題地圖構想與OSMdatabase 之間，並不是完全重合的。若你本身並非 OpenStreetMap 資深圖客，當你希望製作一份特定主題的地圖時，或許你會好奇「我該如何考量特定主題地圖的製作過程中，是否適合採用、運用 OpenStreetMap Database？」本文件希望透過一些問答引導的方式，協助釐清這個課題。</p><p></p><h2>「我想畫出特定主題的地圖，我該如何考量是否適合運用 OpenStreetMap Database 呢」？</h2><p></p><p><b>問答引導</b></p><ol><li>這個主題的資料內容，會不會需要群眾協作，持續畫新的資料、回報、修改？<ol><li>需要。 → 請回答第 2 題。</li>
 <li>不需要。<ol><li>建議使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>Umap</a>，<a href='https://public.tableau.com/s/download'/>Tableau Public</a> 等資料地圖化的功能，上傳你已經整理完畢的資料檔案，並使用 <a href='http://opendatacommons.org/licenses/odbl/'/>Open Data Commons 開放資料庫授權條款</a> 的 OSM 做為底圖，可以很快速的呈現出這份主題地圖。</li>
-<li>更多教學文：<a href='https://g0v.hackpad.com/-Mapfessional-EJfaf9C5gaT'/>地圖告解室 Mapfessional</a></li></ol>
+<li>更多教學文，可以參考：<a href='https://g0v.hackpad.com/-Mapfessional-EJfaf9C5gaT'/>地圖告解室 Mapfessional</a></li></ol>
 </li></ol>
 </li>
 <li>資料內容在目前的 OSM database 是否可以表達清楚？（請參考：<a href='/-OSM-VnjVOhWBZuO#:h=OSM-不支援的內容類型'/>OSM 不支援的內容類型</a>）<ol><li>不行耶，我想畫的東西好像表達不出來。 → 請回答第 3 題。</li>
-<li>是。<ol><li>建議於 OSM 上編輯畫上你的資料，再用 OverPass Turbo 將你需要的資料撈出來，並使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>，<a href='https://public.tableau.com/s/download'/>tableau Public</a> 等資料地圖化的功能。</li>
+<li>是的，OSM 已經可以清楚表達我所希望繪製的資料內容。<ol><li>建議於 OSM 上編輯畫上你的資料，再用 OverPass Turbo 將你需要的資料撈出來，並使用 <a href='https://umap.openstreetmap.fr/zh-tw/'/>umap</a>，<a href='https://public.tableau.com/s/download'/>tableau Public</a> 等資料地圖化的功能。</li>
 <li>案例：<a href='http://drinking.teia.tw/'/>公共飲水點地圖</a>。</li>
 <li>教學文：<ol><li><a href='http://supaplex99.blogspot.tw/2015/08/how-to-use-overpass-turbo-wizard-mode-to-extract-openstreetmap-data.html'/>怎麼使用 OverPass Turbo 精靈模式截取開放街圖資料</a></li>
 <li><a href='http://supaplex99.blogspot.tw/2015/08/using-overpass-turbo-to-extract-data-and-umap-with-dynamic-data-link-visualization.html'/>製作隨時更新的客製化地圖，透過動態連結 uMap 地圖與開放街圖資料庫</a></li></ol>
 </li></ol>
+</li>
+<li>是的，OSM 已經可以清楚表達我所希望繪製的資料內容，我希望能進一步改造出更貼近特定主題的 OSM 畫圖資編輯器。<ol><li>參考案例：<ol><li><a href='http://wheelmap.org/zh_TW/map'/>輪椅地圖</a></li>
+<li><a href='http://nationalmap.gov/'/>USGS The National Map</a>，運用 OSM 編輯器程式碼，與 OSM database 無關。<a href='https://crowdgov.wordpress.com/case-studies/national-map-corps/'/>介紹文章</a>。</li></ol>
+</li></ol>
+</li>
+<li>是的，但是有一些描述細節似乎不是很明確。<ol><li>建議前往 <a href='/tag-RmL5fQsiMGp'/>tag討論</a> 頁面，這邊有許多社群朋友正在釐清各式各樣的細節繪製方式。</li></ol>
 </li></ol>
 </li>
 <li>有什麼資料格式或是特性，是目前 OSM 無法支援，但對於你的主題地圖來說很重要？</li></ol>
@@ -28,11 +34,12 @@
 </li>
 <li>這批資料內有「地號」資料。<ol><li>建議先使用 <a href='https://g0v.hackpad.com/-Land-No.-Mapper-uhB6qAwYXe5'/>地號轉地圖</a> 工具，取得輪廓資料 GeoJson，再匯入 umap。</li>
 <li>類似主題：<a href='http://taipei-pop.herokuapp.com/'/>天龍特公地</a></li></ol>
-</li>
-<li>我希望能改造出更貼近特定主題的 OSM 畫圖資編輯器<ol><li>參考案例：<ol><li><a href='http://wheelmap.org/zh_TW/map'/>輪椅地圖</a></li>
-<li><a href='http://nationalmap.gov'/>USGS The National Map</a>，運用 OSM 編輯器程式碼，與 OSM database 無關。<a href='https://crowdgov.wordpress.com/case-studies/national-map-corps/'/>介紹文章</a>。</li></ol>
 </ol>
-</ol>
+</ul>
+
+<p><b>課題：</b></p><ul><li>使用者要怎麼知道「他所關心的資料內容在目前的 OSM database 是否可以表達清楚？」...<ul><li>正面列出 OSM 已有的 tag，讓使用者參考</li>
+<li>使用者前往互動提問與回答的頁面，進行詢問</li>
+<li><br/></li></ul>
 </ul>
 
 <p><b>歸納出三種方案原則</b></p><ol><li>將圖資畫在 OSM database，再撈出所需要的資料，組成特定主題的地圖，該資料集也可以拿去做其他應用。</li>
@@ -44,7 +51,7 @@
 <ul class="comment"><li>依目前OSM現有的標注來看，綠意程度跟硬體是無關的，取決於人的判斷，這種概念適合用其他地圖來呈現，或者...要玩就玩大一點，仔細的把OSM wiki上關於綠地的等級該怎麼標注寫出來就解決這個問題了！！！例如說...每10平方公尺有幾棵樹、10平方公尺內是不是都有草地覆蓋如果有的話是什麼草種之類的。</li>
 <li>生態綠網的資料在現階段確實不適合寫進OSM，期待的應該是日後有機會變成像<a href='http://www.greenway.org/'/>這個組織</a>完成的事情，成為東海岸的greenway，之後以relation的方式寫進OSM，一點補充。</li></ul>
 <ul><li>心智圖，例如：<a href='https://visualizations.dnainfo.com/nycneighdraw/23951/'/>繪製「你認為的社區範圍？」(NewYork</a>)</li>
-<li>概念示意用途，例如<a href='https://localwiki.org/taipeicommunity/_explore'/>臺北市社區營造資料庫</a>、爆炸範圍示意圖...</li></ul>
+<li>概念示意用途，例如<a href='https://localwiki.org/taipeicommunity/_explore'/>臺北市社區營造資料庫</a>、氣體爆炸範圍示意圖...</li></ul>
 
 <undefined><li><b>公務行政用途</b></li></undefined>
 <ul><li>例如全台都市計畫與土地使用分區圖資...</li></ul>
@@ -68,7 +75,12 @@
 <li>噪音</li>
 <li>空氣品質 （pm2.5,懸浮微粒）</li></ul>
 
-<h2>疑問專區</h2><ul><li>Umap 的手繪圖層，能夠轉出 GeoJson 嗎？<ul><li>可以呦！</li></ul>
+<p><b>互動引導</b></p><ul><li>前述內容，可以進一步製作成方便流通、讓更多團體組織了解這些內容的呈現方式</li>
+<li>例如製作成示意概念圖，來輔助說明這件事情</li>
+<li>參考：g0v授權小幫手 <a href="https://g0v.github.io/cchelper/"></a>https://g0v.github.io/cchelper/</li>
+<li>參考：<a href="https://g0v.hackpad.com/J84agQVmxG7"></a>https://g0v.hackpad.com/J84agQVmxG7</li></ul>
+
+<p></p><h2>疑問專區</h2><ul><li>Umap 的手繪圖層，能夠轉出 GeoJson 嗎？<ul><li>可以呦！</li></ul>
 </ul>
 
 <ul><li>Umap 有可能畫出立體的內容嗎？</li></ul>
@@ -101,8 +113,6 @@
 <li><a href='https://public.tableau.com/s/download'/>Public Tableau</a>&nbsp;</li></ul>
 <p>建築資料立體化</p><ul><li><a href='https://cadmapper.com/'/>CAD Mapper</a></li>
 <li><a href='http://gemvg.com/archives/676'/>3D台北城</a></li></ul>
-
-<p><b>本文件的 Todo</b></p><ul><li>「人類想要畫的地圖內容」與「OSMdatabase」之間，並不是完全重合的，希望透過一個示意概念圖來輔助說明這件事情。</li></ul>
 
 <p></p><h2>各種主題地圖列舉，並分析其中與 OSMdatabase 可以結合的部份</h2><p>歡迎丟新主題與圖資特點</p><p></p><ul><li>都市公共農園、社區農園：<a href="https://g0v.hackpad.com/a1BIZhjPD82"></a><a href='https://g0v.hackpad.com/a1BIZhjPD82'/>https://g0v.hackpad.com/a1BIZhjPD82</a></li></ul>
 <ul class="comment"><li>有一些農園案例已消失，但也希望標注起來作為記錄</li>
