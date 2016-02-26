@@ -3,22 +3,28 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="322"/>
+<meta name="version" content="572"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$BAdDl4G9uXM</title>
 </head>
-<body><h1>飲水地圖專案介紹</h1><p></p><ul><li><b>緣由</b></li></ul>
-<ul style="list-style: none;"><li>目前<a href='https://watermap.teia.tw'/>飲水地圖</a>正努力推廣中，但在開啟網頁後，計畫說明的頁面、地圖的功能等對使用者來說不太方便。</li>
+<body><h1>飲水地圖提案介紹</h1><p></p><ul><li><b>專案介紹</b></li></ul>
+<ul style="list-style: none;"><li>由 OSM 社群與環境資訊協會共同推動的 <a href='https://watermap.teia.tw'/>飲水地圖</a> 正努力推廣中，已蒐集全台灣 800 個免費取水點，已有 40 個民間店家或空間主動參與。</li>
 <li><br/></li>
-<li>目前開啟網頁後畫面：</li>
+<li>目前使用者開啟網頁後，計畫說明的頁面、地圖的功能等對使用者來說不太方便，開啟網頁後畫面：</li>
 <li><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456453318870_undefined'/></li></ul>
 
+<ul><li><b>徵人需求</b></li></ul>
+<ul style="list-style: none;"><li>前端工程師、OSM 圖客</li></ul>
+
 <ul><li><b>要解決的問題</b></li></ul>
-<ul style="list-style: none;"><li>希望能夠改成進入飲水地圖後直接分成 <u>新增飲水點/搜尋附近飲水點</u>，對使用者來說較為直觀，並且強制定位功能，避免水點資料標註/呈現不正確。</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><ul style="list-style: none;"><li>改善網站使用的介面，希望能夠改成下面示意的樣式：</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 點擊<a href='https://watermap.teia.tw'/>Watermap.teia.tw</a></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 進入下述頁面</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本一</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452691821_1.png'/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本二</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452700179_2.png'/></p><ul style="list-style: none;"><li>1. 點選新增水點：</li>
+<ul style="list-style: none;"><li>1.希望能夠改成進入飲水地圖後直接分成 <u>新增飲水點 / 搜尋附近飲水點</u>，對使用者來說較為直觀</li>
+<li>2.增加強制定位功能，避免水點資料標註/呈現不正確。</li>
+<li>3.基於前述兩項需求，希望改善網站使用的介面如下：</li></ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 使用者點擊 <a href='https://watermap.teia.tw'/>Watermap.teia.tw</a>，進入下述頁面</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本一</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452691821_1.png'/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本二（相對於版本一，增加地址搜尋功能）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452700179_2.png'/></p><ul style="list-style: none;"><li>功能說明：</li>
+<li><br/></li>
+<li>1. 點選【新增水點】</li>
 <li>＜手機＞需跳出要求開啟定位的功能，開啟定位功能後始可彈出新增水點的視窗</li>
 <li>＜桌機＞需跳出允許定位的要求，允許後始可彈出新增水點的視窗</li></ul>
-<p>&nbsp;</p><ul style="list-style: none;"><li>2. 點選尋找水點：</li>
+<p>&nbsp;</p><ul style="list-style: none;"><li>2. 點選【尋找水點】</li>
 <li><u>版本一</u></li>
 <li>＜手機＞需跳出要求開啟定位的功能，開啟定位功能後自動帶入方圓ｘ公里範圍的水點</li>
 <li>＜桌機＞需跳出允許定位的要求，允許後自動帶入方圓ｘ公里範圍的水點</li></ul>
@@ -26,9 +32,9 @@
 <ul style="list-style: none;"><li><u>版本二</u></li>
 <li>(1)&nbsp; 可選擇尋找方圓ｘ公里的水點</li>
 <li>(2)&nbsp; 使用地址搜尋方圓x公里的水點</li></ul>
-<p>&nbsp;</p><p>&nbsp;</p><ul style="list-style: none;"><li>※&nbsp; 說明計畫的頁面一樣放在地圖左側的『?號』即可</li></ul>
-<p>&nbsp;&nbsp;&nbsp;</p><ul><li><b>徵人需求</b></li></ul>
-<ul style="list-style: none;"><li>前端工程師、OSM 圖客</li></ul>
+<p>&nbsp;</p><p></p><ul style="list-style: none;"><li>※&nbsp; 說明計畫的頁面一樣放在地圖左側的『?號』即可</li></ul>
 
-</body>
+<ul><li><b>github:&nbsp;</b></li></ul>
+
+<p></p><p></p></body>
 </html>
