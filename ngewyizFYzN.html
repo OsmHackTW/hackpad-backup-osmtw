@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="271"/>
+<meta name="version" content="377"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$ngewyizFYzN</title>
 </head>
-<body><h1>Multilingual names</h1><p></p><p><b>簡介</b></p><p></p><p>目前多國語系的 name 標籤，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。</p><p></p><p>但由於中文用戶包含簡體與繁體兩種字體，以及各地翻譯不同，很容易產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用者「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a>http://www.openstreetmap.org/node/2681940781</li>
+<body><h1>[draft] Multilingual names</h1><p></p><p><b>簡介</b></p><p></p><p>目前多國語系的 name 標籤 (tag)，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。</p><p></p><p>但由於中文用戶包含簡體與繁體兩種字體，以及各地翻譯不同，很容易因為共用標籤 key 產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用者「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a>http://www.openstreetmap.org/node/2681940781</li>
 <li>珠穆朗玛峰</li>
 <li>聖母峰</li></ul>
 
-<p>為了滿足多元使用情境與需求，建議使用 IETF language tag&nbsp; (BCP 47) 標示多國語系。</p><p></p><ul class="code"><li>Syntax of language tags</li><ul><li>A single primary language subtag based on a two-letter language code from ISO 639-1 (2002) or a three-letter code from ISO 639-2 (1998), ISO 639-3 (2007) or ISO 639-5 (2008), or registered through the BCP 47 process and composed of five to eight letters;</li>
+<p>為了滿足多元使用情境與需求，建議 name 標籤使用 IETF language tag&nbsp; (BCP 47) 標示多國語系。</p><p></p><p><b>倡議</b></p><p>倡議使用 IETF language tag&nbsp; (BCP 47) 語法形式。</p><p></p><p></p><ul class="code"><li>Syntax of language tags</li><ul><li>A single primary language subtag based on a two-letter language code from ISO 639-1 (2002) or a three-letter code from ISO 639-2 (1998), ISO 639-3 (2007) or ISO 639-5 (2008), or registered through the BCP 47 process and composed of five to eight letters;</li>
 <li>Up to three optional <b>extended language subtags</b> composed of three letters each, separated by hyphens; (There is currently no extended language subtag registered in the Language Subtag Registry without an equivalent and preferred primary language subtag. This component of language tags is preserved for backwards compatibility and to allow for future parts of ISO 639.)</li>
 <li>An optional <b>script subtag</b>, based on a four-letter script code from ISO 15924 (usually written in title case);</li>
 <li>An optional <b>region subtag</b> based on a two-letter country code from ISO 3166-1 alpha-2 (usually written in upper case), or a three-digit code from UN M.49 for geographical regions;</li>
@@ -21,7 +21,7 @@
 <li>An optional private-use subtag, composed of the letter x and a hyphen followed by subtags of one to eight characters each, separated by hyphens.</li>
 <li><br/></li></ul>
 
-<p><b>倡議</b></p><p>倡議使用 IETF language tag&nbsp; (BCP 47) 語法形式。</p><p></p><p></p><ul class="code"><li>Language-Tag&nbsp; = langtag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; normal language tags</li>
+<p></p><p></p><ul class="code"><li>Language-Tag&nbsp; = langtag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; normal language tags</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / privateuse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; private use tag</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / grandfathered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; grandfathered tags</li>
 <li>&nbsp;langtag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = language</li>
@@ -92,7 +92,83 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / &quot;zh-xiang&quot;</li>
 <li><br/></li>
 <li>&nbsp;alphanum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = (ALPHA / DIGIT)&nbsp;&nbsp;&nbsp;&nbsp; ; letters and numbers</li></ul>
-<p>&nbsp;</p><p><b>標籤格式</b></p><p></p><p>&nbsp;</p><p>&nbsp;</p><p><b>參考</b></p><ul><li>BCP 47 - Tags for Identifying Languages - <a href="http://tools.ietf.org/html/bcp47"></a><a href='http://tools.ietf.org/html/bcp47'/>http://tools.ietf.org/html/bcp47</a></li>
+<p>&nbsp;</p><p><b>標籤格式</b></p><p></p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr /><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">name:zh-TW</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">name:zh-CN</td>
+</tr>
+</table>
+<p></p><ul><li>:nan-TW</li>
+<li><br/></li></ul>
+
+<p></p><ul><li><br/></li>
+<li>:nan Minnan (Holo-oe, Ban-lam-gu, 閩南語, Mǐnnán)</li>
+<li><br/></li>
+<li>:hak Hakka (客家, Kèjiā)</li>
+<li><br/></li>
+<li>:ami Amis (Pangcah, 阿美族, āměi)</li>
+<li><br/></li>
+<li>:tay Atayal (泰雅, Tàiyǎ)</li>
+<li><br/></li>
+<li>:bnn Bunun (布農, Bùnóng)</li>
+<li><br/></li>
+<li>:ckv Kavalan (噶瑪蘭, Gámǎlán)</li>
+<li><br/></li>
+<li>:pwn Paiwan (排灣, Páiwān)</li>
+<li><br/></li>
+<li>:pyu Puyuma (卑南族, Bēinán)</li>
+<li><br/></li>
+<li>:dru Rukai (魯凱族, Lǔkǎi)</li>
+<li><br/></li>
+<li>:ais Sakizaya (撒奇萊雅, Sāqíláiyǎ)</li>
+<li><br/></li>
+<li>:xsy Saisiat (賽夏, Sàixià)</li>
+<li><br/></li>
+<li>:ssf Shao (邵, Shào)</li>
+<li><br/></li>
+<li>:tao Tao (Yami, 達悟, Dáwù)</li>
+<li><br/></li>
+<li>:trv Truku (Taroko, 太魯閣, Tàilǔgé, 賽德克, Seediq)</li>
+<li><br/></li>
+<li>:tsu Tsou (鄒, Zōu)</li>
+<li><br/></li></ul>
+
+<p></p><ul><li><br/></li>
+<li>:zh-Hant-TW</li>
+<li><br/></li>
+<li>:zh-Hans-TW</li>
+<li><br/></li></ul>
+
+<p></p><ul><li><br/></li>
+<li>:zh-Hans-CN</li>
+<li><br/></li>
+<li>:zh-Hant-CN</li>
+<li><br/></li></ul>
+
+<p></p><ul><li><br/></li>
+<li>:zh-Hant-HK</li>
+<li><br/></li>
+<li>:zh-Hant-MO</li>
+<li><br/></li>
+<li>:zh-Hans-SG</li>
+<li><br/></li></ul>
+<p>1976年後則改用中國大陸的簡化字。&nbsp;</p><ul><li><br/></li>
+<li>:zh-Hant-HK</li>
+<li><br/></li></ul>
+
+<p></p><ul><li><br/></li>
+<li>zh-yue</li>
+<li><br/></li></ul>
+
+<p></p><ul><li><br/></li>
+<li>ja-Hani</li>
+<li><br/></li></ul>
+
+<p></p><p><b>整合程序</b></p><ol><li>複製台灣區域所有 name:zh -&gt; name:zh-TW</li>
+<li>將 name:zh-TW 加入 iD, JOSM 預設標籤。</li>
+<li>通知 Map render / clients,&nbsp;<ol><li>依照 region 預先讀取</li>
+<li><br/></li></ol>
+</ol>
+<p>&nbsp;</p><p>&nbsp;</p><p><b>參考</b></p><ul><li>BCP 47 - Tags for Identifying Languages - <a href="http://tools.ietf.org/html/bcp47"></a><a href='http://tools.ietf.org/html/bcp47'/>http://tools.ietf.org/html/bcp47</a></li>
 <li>BCP 47 Validator - <a href="http://schneegans.de/lv/"></a><a href='http://schneegans.de/lv/'/>http://schneegans.de/lv/</a></li>
 <li><a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"></a><a href='http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry'/>http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a></li></ul>
 
