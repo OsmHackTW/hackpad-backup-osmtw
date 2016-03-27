@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="424"/>
+<meta name="version" content="1044"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$ngewyizFYzN</title>
 </head>
-<body><h1>[draft] Multilingual names</h1><p></p><p><b>簡介</b></p><p></p><p>目前多國語系的 name 標籤 (tag)，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。</p><p></p><p>但由於中文用戶包含簡體與繁體兩種字體，以及各地翻譯不同，很容易因為共用標籤 key 產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用者「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a>http://www.openstreetmap.org/node/2681940781</li>
+<body><h1>[RFC] Multilingual names</h1><p></p><p><b>簡介</b></p><p></p><p>目前多國語系的 name 標籤 (tag)，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。但由於中文用戶包含簡體與繁體兩種字體編碼，以及對於國際地名翻譯不同，很容易因為共用標籤 key 產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a><a href='http://www.openstreetmap.org/node/2681940781'/>http://www.openstreetmap.org/node/2681940781</a></li>
 <li>珠穆朗玛峰</li>
 <li>聖母峰</li></ul>
 
-<p>為了滿足多元使用情境與需求，建議 name 標籤使用 IETF language tag&nbsp; (BCP 47) 標示多國語系。</p><p></p><p><b>倡議</b></p><p>倡議使用 IETF language tag&nbsp; (BCP 47) 語法形式。</p><p></p><ul class="code"><li>Syntax of language tags</li><ul><li>A single primary language subtag based on a two-letter language code from ISO 639-1 (2002) or a three-letter code from ISO 639-2 (1998), ISO 639-3 (2007) or ISO 639-5 (2008), or registered through the BCP 47 process and composed of five to eight letters;</li>
+<p>為了滿足多元使用情境與需求，原有 ISO-639 標示過於簡化，建議 name 標籤使用 IETF language tag&nbsp; (BCP 47) 標示多國語系，以容納各地區地名使用習慣，以及繁體、簡體、閩南、客家、廣東話、台灣原著民、拼音等語言需求。</p><p></p><p><b>倡議</b></p><p>在此倡議使用 IETF language tag&nbsp; (BCP 47) 語法形式。語法形式包含了如下 subtags.</p><p></p><p></p><ul class="code"><li>Syntax of language tags</li><ul><li>A single primary language subtag based on a two-letter language code from ISO 639-1 (2002) or a three-letter code from ISO 639-2 (1998), ISO 639-3 (2007) or ISO 639-5 (2008), or registered through the BCP 47 process and composed of five to eight letters;</li>
 <li>Up to three optional <b>extended language subtags</b> composed of three letters each, separated by hyphens; (There is currently no extended language subtag registered in the Language Subtag Registry without an equivalent and preferred primary language subtag. This component of language tags is preserved for backwards compatibility and to allow for future parts of ISO 639.)</li>
 <li>An optional <b>script subtag</b>, based on a four-letter script code from ISO 15924 (usually written in title case);</li>
 <li>An optional <b>region subtag</b> based on a two-letter country code from ISO 3166-1 alpha-2 (usually written in upper case), or a three-digit code from UN M.49 for geographical regions;</li>
@@ -21,7 +21,7 @@
 <li>An optional private-use subtag, composed of the letter x and a hyphen followed by subtags of one to eight characters each, separated by hyphens.</li>
 <li><br/></li></ul>
 
-<p></p><p></p><ul class="code"><li>Language-Tag&nbsp; = langtag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; normal language tags</li>
+<p>ABNF 語法如下</p><ul class="code"><li>Language-Tag&nbsp; = langtag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; normal language tags</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / privateuse&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; private use tag</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / grandfathered&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; grandfathered tags</li>
 <li>&nbsp;langtag&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = language</li>
@@ -92,16 +92,377 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / &quot;zh-xiang&quot;</li>
 <li><br/></li>
 <li>&nbsp;alphanum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = (ALPHA / DIGIT)&nbsp;&nbsp;&nbsp;&nbsp; ; letters and numbers</li></ul>
-<p>&nbsp;</p><p></p><p></p><p></p><p><b>使用情境</b></p><p></p><p><a href="https://docs.google.com/spreadsheets/d/1d0ahZTEuu9B8Ud7CJOFYi5fBSoI_s1iOo8QZoKkrA5E/edit?usp=sharing"></a>https://docs.google.com/spreadsheets/d/1d0ahZTEuu9B8Ud7CJOFYi5fBSoI_s1iOo8QZoKkrA5E/edit?usp=sharing</p><p></p><p><b>整合程序</b></p><ol><li>複製台灣區域所有 name:zh -&gt; name:zh-TW</li>
-<li>將 name:zh-TW 加入 iD, JOSM 預設標籤。</li>
-<li>通知 Map render / clients,&nbsp;<ol><li>依照 region 預先讀取</li>
+
+<p><b>使用情境</b></p><p>依照 IETF language tag&nbsp; (BCP 47) 標示，建議做出以下更動</p><ul><li>台灣地區繁體中文使用者，改用 &quot;name:zh-TW&quot;，以符合本地需求。</li>
+<li>為了解決命名衝突問題，建議如下<ul><li>配合中國訪客，台灣地區簡體用戶請改用 &quot;name:zh-CN&quot;。</li>
+<li>如除了編碼外，有地名命名衝突，則於台灣境內簡體名稱改用 zh-Hans-TW。</li>
+<li>各地區 name 與 name:zh 預設使用當地字碼與名稱。如台灣境內 name 應同等 name:zh，name:zh 應同等 name:zh-TW。香港境內則為 name:zh-HK = name:zh = name.</li>
+<li>各地區域中文用戶 - 香港用戶請改用 name:zh-HK、澳門請用 name:zh-MO、新加坡請改用 name:zh-SG.&nbsp;</li></ul>
+</li>
+<li>其他中文語言<ul><li>因為閩南話次方言各地演化產生變異，漳州話、泉州話、廈門話略有不同。台灣地區閩南語地名建議用 name:nan-TW. 預設使用台羅拼音。</li>
+<li>台灣地區客家話地名，請使用 name:hak-TW.</li>
+<li>其他中文語言如吳語、廣東話、晉語請見語言表。</li></ul>
+</li>
+<li>台灣使用南島語系的官方登記原住民族群可依照其 language subtag 標注地名。</li>
+<li>拼音系統的使用慣例<ul><li>name:en 依照當地政府所使用的拼音系統 (參照路牌) 為主。</li>
+<li>name:zh-Latn 預設對應 name:zh 的漢語拼音系統。採取當地名稱直譯，例如「路」直接譯為 Lu, 而非 Road 或 Rd. 如此可以便利非中文用戶，發出地名本地音。</li>
+<li>name:zh-Hanb 台灣注音符號系統。</li></ul>
+</li>
+<li>繪圖 (render) 應依照語系優先值套用地名名稱，如台灣用戶，應該先查找 name:zh-TW 後 name:zh 後 name.</li>
+<li>日文漢字 (Japanese Kanji) 請使用 name:ja-Hani 韓文漢字 (Korean Hanja) 請使用 ko:Hani.</li></ul>
+
+<p>各語系使用<a href='https://docs.google.com/spreadsheets/d/1d0ahZTEuu9B8Ud7CJOFYi5fBSoI_s1iOo8QZoKkrA5E/edit?usp=sharing'/>如下 (好讀版本)</a></p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Mandarin &#20013;&#25991;&#35486;&#31995;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21488;&#28771;&#22659;&#20839;&#20351;&#29992;&#32321;&#39636;&#20013;&#25991;&#12289;&#20013;&#22269;&#22659;&#20869;&#20351;&#29992;&#31616;&#20307;&#20013;&#25991;&#12290;&#22283;&#38555;&#22320;&#21312;&#21063;&#28961;&#20849;&#29992;&#35215;&#31684;&#29986;&#29983;&#34909;&#31361;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-TW</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38928;&#35373;&#26159;&#32321;&#39636;&#20013;&#25991;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hant-TW</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24314;&#35696;&#20351;&#29992; :zh-TW</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hans-TW</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36969;&#21512;&#22312;&#21488;&#28771;&#20351;&#29992;&#31777;&#39636;&#23383;&#30340;&#29992;&#25142;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-CN</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#40664;&#35748;&#26159;&#31616;&#20307;&#20013;&#25991;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hans-CN</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24314;&#35758;&#20351;&#29992; :zh-CN</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hant-CN</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36866;&#21512;&#22312;&#20013;&#22269;&#22659;&#20869;&#20351;&#29992;&#32321;&#20307;&#23383;&#30340;&#29992;&#25143;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-HK</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38928;&#35373;&#20351;&#29992;&#32321;&#39636;&#20013;&#25991;&#65292;&#30001;&#26044;&#39321;&#28207;&#25919;&#27402;&#20132;&#25509;&#20013;&#22283;&#65292;&#21463;&#25919;&#27835;&#24433;&#38911;&#37096;&#20221;&#27665;&#30526;&#25913;&#29992;&#31777;&#39636;&#23383;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hant-HK</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24314;&#35696;&#20351;&#29992; :zh-HK</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hants-HK</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-MO</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38928;&#35373;&#20351;&#29992;&#32321;&#39636;&#20013;&#25991;&#65292;&#30001;&#26044;&#28595;&#38272;&#25919;&#27402;&#20132;&#25509;&#20013;&#22283;&#65292;&#21463;&#25919;&#27835;&#24433;&#38911;&#37096;&#20221;&#27665;&#30526;&#25913;&#29992;&#31777;&#39636;&#23383;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hant-MO</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24314;&#35696;&#20351;&#29992; :zh-MO</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hans-MO</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-SG</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">1976 &#24180;&#21518;&#25913;&#29992;&#20013;&#22269;&#35268;&#33539;&#30340;&#31616;&#20307;&#23383;&#12290;&#39044;&#35774;&#20351;&#29992;&#31616;&#20307;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hans-SG</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24314;&#35758;&#20351;&#29992; :zh-SG</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hant-SG</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Dialect &#20013;&#25991;&#26041;&#35328;&#35486;&#31995;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:nan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Minnan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38313;&#21335;&#35486;, Holo-oe, Ban-lam-gu, M&#464;nn&#225;n</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#22240;&#28858;&#38313;&#21335;&#35441;&#27425;&#26041;&#35328;&#21508;&#22320;&#28436;&#21270;&#29986;&#29983;&#35722;&#30064;&#65292;&#28467;&#24030;&#35441;&#12289;&#27849;&#24030;&#35441;&#12289;&#24264;&#38272;&#35441;&#30053;&#26377;&#19981;&#21516;&#12290;&#21488;&#28771;&#22320;&#21312;&#24314;&#35696;&#20351;&#29992; :nan-TW</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:nan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:nan-TW</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#32771;&#24942;&#29992;&#25142;&#26063;&#32676;&#65292;&#24314;&#35696;&#20351;&#29992;&#21488;&#32645;&#25340;&#38899;&#65292;&#20006;&#20197;&#20013;&#33775;&#27665;&#22283;&#25945;&#32946;&#37096;&#20986;&#29256;&#30340;&#12298;&#33274;&#28771;&#38313;&#21335;&#35486;&#24120;&#29992;&#35422;&#36781;&#20856;&#12299;&#36984;&#23450;&#26368;&#25509;&#36817;&#36890;&#34892;&#33108;&#30340;&#12300;&#39640;&#38596;&#38899;&#12301;&#20570;&#28858;&#20027;&#38899;&#35712;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:hak</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Hakka Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">K&#232;ji&#257;, &#23458;&#23478;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21488;&#28771;&#22320;&#21312;&#24314;&#35696;&#20351;&#29992; :hak-TW</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:hak</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Hakka Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">K&#232;ji&#257;, &#23458;&#23478;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:hak-TW</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:yue</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Yue Chinese; Cantonese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:yue-HK</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Yue Chinese; Cantonese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#39321;&#28207;&#22320;&#21312;&#24314;&#35696;&#20351;&#29992; :yue-HK</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:yue-CN</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Yue Chinese; Cantonese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24291;&#26481;&#31561;&#22320;&#21312;&#24314;&#35696;&#20351;&#29992; :yue-CN</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:cdo</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Min Dong Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38313;&#26481;&#35441; (Min Dong Chinese), &#31119;&#24030;&#35441;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:cjy</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Jinyu Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26185;&#35486;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:gao</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Gan Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24178;&#24413;&#23528;&#26041;&#35328;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:hsn</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Xiang Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#28248;&#35486;:&#21513;&#28294;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:cmn</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Mandarin Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#28450;&#35486;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#26410;&#29992;, &#38928;&#35373; :zh</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:cpx</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Pu-Xian Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#33670;&#20185;&#35486;,&#33288;&#21270;&#35486;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:czh</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Huizhou Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#24509;&#24030;&#35441;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:czo</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Min Zhong Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38313;&#20013;&#35486;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:lzh</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Literary Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#25991;&#35328;&#25991;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:mnp</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Min Bei Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38313;&#21271;&#35486;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:wuu</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Wuu Chinese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21555;&#35486;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Austronesian, &#21335;&#23798;&#35486;&#31995;, Indigenous Taiwanese</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:ais</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Sakizaya</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">S&#257;q&#237;l&#225;iy&#462;, &#25746;&#22855;&#33802;&#38597;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:ami</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Amis</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#257;m&#283;i, &#38463;&#32654;, Pangcah</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:bnn</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Bunun</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">B&#249;n&#243;ng, &#24067;&#36786;, Bunun</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:ckv</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Kavalan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">G&#225;m&#462;l&#225;n, &#22134;&#29802;&#34349;, Kebalan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:dru</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Rukai</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">L&#468;k&#462;i, &#39791;&#20977;, Drekay</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:pwn</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Paiwan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">P&#225;iw&#257;n, &#25490;&#28771;, Payuan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:pyu</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Puyuma</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">B&#275;in&#225;n, &#21329;&#21335;, Pinuyumayan</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:ssf</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Shao</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Sh&#224;o, &#37045;, Thao</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:tao</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Tao</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">D&#225;w&#249;, &#36948;&#24735;, Yami, Tao</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:tay</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Atayal</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">T&#224;iy&#462;, &#27888;&#38597;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:trv</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Truku</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Taroko, &#22826;&#39791;&#38307;, T&#224;il&#468;g&#233;, &#36093;&#24503;&#20811;, Seediq</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:tsu</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Tsou</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Z&#333;u, &#37138;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:xsy</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Saisiat</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">S&#224;ixi&#224;, &#36093;&#22799;, SaiSiyat</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:sxr</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Hla'alua</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Hla'alua, &#25289;&#38463;&#39791;&#21703;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:xnb</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Kanakanabu</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Kanakanavu, &#21345;&#37027;&#21345;&#37027;&#23500;&#26063;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Romanization, &#25340;&#38899;&#31995;&#32113;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Latn</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#38928;&#35373;&#28858;&#28450;&#35486;&#25340;&#38899;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Latn-pinyin</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#28450;&#35486;&#25340;&#38899;&#65292;&#24314;&#35696;&#20351;&#29992; :zh-Latn</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">-</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#36890;&#29992;&#25340;&#38899;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">-</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21488;&#28771; &#22283;&#38899;&#19968;&#24335;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">-</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#21488;&#28771; &#22283;&#38899;&#20108;&#24335;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">-</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Wade-Gilos &#32645;&#39340;&#25340;&#38899;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:en</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30001;&#26044;&#26377;&#22810;&#31278;&#25340;&#38899;&#31995;&#32113;&#12290;&#30446;&#21069;&#26044;&#21488;&#28771;&#28961;&#32113;&#19968;&#25340;&#38899;&#26041;&#24335;&#12290;&#24314;&#35696;&#36981;&#24490;&#30070;&#22320;&#25919;&#24220;&#30340;&#24931;&#20363;&#20351;&#29992;&#65292;&#20197;&#31526;&#21512;&#35264;&#20809;&#23458;&#23565;&#25033;&#26412;&#22320;&#22294;&#36039;&#30340;&#38656;&#27714;&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hanb</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Han with Bopomofo</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#27880;&#38899;&#31526;&#34399;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:zh-Hanb-TW</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Han with Bopomofo</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">&#30001;&#26044;&#27880;&#38899;&#31526;&#34399;&#21482;&#26377;&#21488;&#28771;&#22320;&#21312;&#20351;&#29992;&#65292;&#24314;&#35696;&#20351;&#29992; :zh-Hanb&#12290;</td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">CJK Han &#28450;&#23383;</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:ja-Hani</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Han; Hanzi; Kanji; Hanja</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Japanese Kanji</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+<tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">:ko-Hani</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Han; Hanzi; Kanji; Hanja</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Korean Hanja</td>
+<td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
+</tr>
+</table>
+<p></p><p></p><p><b>整合程序</b></p><ol><li>發出 RFC 尋求意見。</li>
+<li>提出 Proposal</li>
+<li>「複製」台灣區域所有 name:zh -&gt; name:zh-TW</li>
+<li>通知 Map Render / Clieients, 依照新的命名規格，改變地名使用優先次序<ol><li>依照 region 預先讀取</li>
 <li>依照 script coding 讀取</li></ol>
-</ol>
-<p>&nbsp;</p><p>&nbsp;</p><p><b>參考</b></p><ul><li>Multilingual names - OpenStreetMap Wiki - <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names"></a>http://wiki.openstreetmap.org/wiki/Multilingual_names</li>
+</li>
+<li>由於 &quot;name:zh&quot; 將成為壅餘標籤，未來將可逐步消失。</li></ol>
+
+<p><b>影響&nbsp;</b></p><ul><li>由於未變動原有 name:zh 標籤，可相容目前使用習慣，不會直接影響現有使用者。</li></ul>
+<p>&nbsp;</p><p><b>參考</b></p><ul><li>Multilingual names - OpenStreetMap Wiki - <a href="http://wiki.openstreetmap.org/wiki/Multilingual_names"></a><a href='http://wiki.openstreetmap.org/wiki/Multilingual_names'/>http://wiki.openstreetmap.org/wiki/Multilingual_names</a></li>
+<li>Map internationalization - OpenStreetMap Wiki - <a href="http://wiki.openstreetmap.org/wiki/Map_internationalization"></a><a href='http://wiki.openstreetmap.org/wiki/Map_internationalization'/>http://wiki.openstreetmap.org/wiki/Map_internationalization</a></li>
 <li>BCP 47 - Tags for Identifying Languages - <a href="http://tools.ietf.org/html/bcp47"></a><a href='http://tools.ietf.org/html/bcp47'/>http://tools.ietf.org/html/bcp47</a></li>
 <li>BCP 47 Validator - <a href="http://schneegans.de/lv/"></a><a href='http://schneegans.de/lv/'/>http://schneegans.de/lv/</a></li>
 <li><a href="http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry"></a><a href='http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry'/>http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry</a></li>
-<li>台灣的拼音系統爭議 - 維基百科，自由的百科全書 - <a href="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%9A%84%E6%8B%BC%E9%9F%B3%E7%B3%BB%E7%B5%B1%E7%88%AD%E8%AD%B0"></a>https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%9A%84%E6%8B%BC%E9%9F%B3%E7%B3%BB%E7%B5%B1%E7%88%AD%E8%AD%B0</li></ul>
+<li>台灣的拼音系統爭議 - 維基百科，自由的百科全書 - <a href="https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%9A%84%E6%8B%BC%E9%9F%B3%E7%B3%BB%E7%B5%B1%E7%88%AD%E8%AD%B0"></a><a href='https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%9A%84%E6%8B%BC%E9%9F%B3%E7%B3%BB%E7%B5%B1%E7%88%AD%E8%AD%B0'/>https://zh.wikipedia.org/wiki/%E5%8F%B0%E7%81%A3%E7%9A%84%E6%8B%BC%E9%9F%B3%E7%B3%BB%E7%B5%B1%E7%88%AD%E8%AD%B0</a></li>
+<li>臺灣閩南語羅馬字拼音方案 - 維基百科，自由的百科全書 - <a href="https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E9%96%A9%E5%8D%97%E8%AA%9E%E7%BE%85%E9%A6%AC%E5%AD%97%E6%8B%BC%E9%9F%B3%E6%96%B9%E6%A1%88"></a><a href='https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E9%96%A9%E5%8D%97%E8%AA%9E%E7%BE%85%E9%A6%AC%E5%AD%97%E6%8B%BC%E9%9F%B3%E6%96%B9%E6%A1%88'/>https://zh.wikipedia.org/wiki/%E8%87%BA%E7%81%A3%E9%96%A9%E5%8D%97%E8%AA%9E%E7%BE%85%E9%A6%AC%E5%AD%97%E6%8B%BC%E9%9F%B3%E6%96%B9%E6%A1%88</a></li></ul>
 
-<p></p></body>
+<p></p><p></p></body>
 </html>
