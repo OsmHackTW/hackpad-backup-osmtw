@@ -3,10 +3,10 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1044"/>
+<meta name="version" content="1057"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$ngewyizFYzN</title>
 </head>
-<body><h1>[RFC] Multilingual names</h1><p></p><p><b>簡介</b></p><p></p><p>目前多國語系的 name 標籤 (tag)，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。但由於中文用戶包含簡體與繁體兩種字體編碼，以及對於國際地名翻譯不同，很容易因為共用標籤 key 產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a><a href='http://www.openstreetmap.org/node/2681940781'/>http://www.openstreetmap.org/node/2681940781</a></li>
+<body><h1>[RFC] Multilingual names</h1><p></p><p><b>簡介</b></p><p>目前多國語系的 name 標籤 (tag)，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。但由於中文用戶包含簡體與繁體兩種字體編碼，以及對於國際地名翻譯不同，很容易因為共用標籤 key 產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a><a href='http://www.openstreetmap.org/node/2681940781'/>http://www.openstreetmap.org/node/2681940781</a></li>
 <li>珠穆朗玛峰</li>
 <li>聖母峰</li></ul>
 
@@ -111,7 +111,7 @@
 <li>繪圖 (render) 應依照語系優先值套用地名名稱，如台灣用戶，應該先查找 name:zh-TW 後 name:zh 後 name.</li>
 <li>日文漢字 (Japanese Kanji) 請使用 name:ja-Hani 韓文漢字 (Korean Hanja) 請使用 ko:Hani.</li></ul>
 
-<p>各語系使用<a href='https://docs.google.com/spreadsheets/d/1d0ahZTEuu9B8Ud7CJOFYi5fBSoI_s1iOo8QZoKkrA5E/edit?usp=sharing'/>如下 (好讀版本)</a></p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Mandarin &#20013;&#25991;&#35486;&#31995;</td>
+<p>OpenStreetMap 是一個使用標籤描述地理資訊的開源地圖專案，而標籤以後綴的形式支援多國語系，例如 name:en 代表英文名稱，為便於討論後綴所以整理成本表格。各語系使用<a href='https://docs.google.com/spreadsheets/d/1d0ahZTEuu9B8Ud7CJOFYi5fBSoI_s1iOo8QZoKkrA5E/edit?usp=sharing'/>如下 (好讀版本)</a></p><p></p><table style="font-size:13px;cell-spacing: 0px; border-collapse: collapse;"><tr><td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added">Mandarin &#20013;&#25991;&#35486;&#31995;</td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
 <td style="border:1px solid #999; min-width: 50px;height: 22px;line-height: 16px;padding: 0 4px 0 4px;" class="added"></td>
