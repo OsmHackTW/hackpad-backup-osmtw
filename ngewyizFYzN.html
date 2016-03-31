@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="1066"/>
+<meta name="version" content="1084"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$ngewyizFYzN</title>
 </head>
 <body><h1>[RFC] Multilingual names</h1><p></p><p><b>簡介</b></p><p></p><p>目前多國語系的 name 標籤 (tag)，社群偏好使用 alpha-2 code of ISO 639-1，因此全世界中文用戶使用 name:zh。但由於中文用戶包含簡體與繁體兩種字體編碼，以及對於國際地名翻譯不同，很容易因為共用標籤 key 產生衝突。例如 Everest 在台灣使用者偏好使用「聖母峰」、而中國使用「珠穆朗玛峰」。</p><p></p><ul class="code"><li><a href="http://www.openstreetmap.org/node/2681940781"></a><a href='http://www.openstreetmap.org/node/2681940781'/>http://www.openstreetmap.org/node/2681940781</a></li>
@@ -94,7 +94,7 @@
 <li>&nbsp;alphanum&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = (ALPHA / DIGIT)&nbsp;&nbsp;&nbsp;&nbsp; ; letters and numbers</li></ul>
 
 <p><b>使用情境</b></p><p>依照 IETF language tag&nbsp; (BCP 47) 標示，建議做出以下更動</p><ul><li>台灣地區繁體中文使用者，改用 &quot;name:zh-TW&quot;，以符合本地需求。</li>
-<li>為了解決命名衝突問題，建議如下<ul><li>配合中國訪客，台灣地區簡體用戶請改用 &quot;name:zh-CN&quot;。</li>
+<li>為了解決命名衝突問題，建議如下<ul><li>台灣地區簡體用戶主要為中國訪客，建議現有簡體地名改用 &quot;name:zh-CN&quot; 標示，以服務主流使用者。</li>
 <li>如除了編碼外，有地名命名衝突，則於台灣境內簡體名稱改用 zh-Hans-TW。</li>
 <li>各地區 name 與 name:zh 預設使用當地字碼與名稱。如台灣境內 name 應同等 name:zh，name:zh 應同等 name:zh-TW。香港境內則為 name:zh-HK = name:zh = name.</li>
 <li>各地區域中文用戶 - 香港用戶請改用 name:zh-HK、澳門請用 name:zh-MO、新加坡請改用 name:zh-SG.&nbsp;</li></ul>
