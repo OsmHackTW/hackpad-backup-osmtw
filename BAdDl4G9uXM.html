@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="685"/>
+<meta name="version" content="838"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$BAdDl4G9uXM</title>
 </head>
 <body><h1>飲水地圖提案介紹</h1><p></p><ul><li><b>專案介紹</b></li></ul>
@@ -20,15 +20,19 @@
 <li>高中地理科會做教材的輔導老師</li></ul>
 
 <ul><li><b>要解決的問題</b></li></ul>
-<ul style="list-style: none;"><li>1.希望能夠改成進入飲水地圖後直接分成 <u>新增飲水點 / 搜尋附近飲水點</u>，對使用者來說較為直觀</li>
-<li>2.增加強制定位功能，避免水點資料標註/呈現不正確。</li>
-<li>3.基於前述兩項需求，希望改善網站使用的介面如下：</li></ul>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 使用者點擊 <a href='https://watermap.teia.tw'/>Watermap.teia.tw</a>，進入下述頁面</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本一</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452691821_1.png'/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本二（相對於版本一，增加地址搜尋功能）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452700179_2.png'/></p><ul style="list-style: none;"><li>功能說明：</li>
+<ol><li>將水點回報開放時間統一格式，固定選取星期、時間 ，像是<a href='http://watergo.teia.tw/water-supply.html'/>店家申請表</a>內的格式</li>
+<li>將所有回報的資料呈現在飲水地圖上，例如：開放時間、地址、室內/外、對外開放等</li>
+<li>強制輸入飲水機名稱，避免有人回報資料後，因為無法判別是哪裡來的飲水機導致無法標注</li>
+<li>在新增水點處提醒若為店家私人水點，須請店家填寫店家申請表，民眾未經授權無法直接回報。或是直接把界更改成新增開放水點/ 新增私人店家水點。</li>
+<li>希望能夠改成進入飲水地圖後直接分成 <u>新增飲水點 / 搜尋附近飲水點</u>，對使用者來說較為直觀</li>
+<li>增加強制定位功能，避免水點資料標註/呈現不正確。</li></ol>
+
+<p>&nbsp;※基於最後兩項需求，希望改善網站使用的介面如下：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 使用者點擊 <a href='https://watermap.teia.tw'/>Watermap.teia.tw</a>，進入下述頁面</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本一</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452691821_1.png'/></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 版本二（相對於版本一，增加地址搜尋功能）</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_BAdDl4G9uXM_p.441848_1456452700179_2.png'/></p><ul style="list-style: none;"><li>功能說明：</li>
 <li><br/></li>
-<li>1. 點選【新增水點】</li>
+<li>一、 點選【新增水點】</li>
 <li>＜手機＞需跳出要求開啟定位的功能，開啟定位功能後始可彈出新增水點的視窗</li>
 <li>＜桌機＞需跳出允許定位的要求，允許後始可彈出新增水點的視窗</li></ul>
-<p>&nbsp;</p><ul style="list-style: none;"><li>2. 點選【尋找水點】</li>
+<p>&nbsp;</p><ul style="list-style: none;"><li>二、 點選【尋找水點】</li>
 <li><u>版本一</u></li>
 <li>＜手機＞需跳出要求開啟定位的功能，開啟定位功能後自動帶入方圓ｘ公里範圍的水點</li>
 <li>＜桌機＞需跳出允許定位的要求，允許後自動帶入方圓ｘ公里範圍的水點</li></ul>
@@ -39,7 +43,7 @@
 <ul class="comment"><li>openstreetmap網站的搜尋機制nomination沒辦法搜地址，可能得用其他第三方服務處理地址</li></ul>
 <p>&nbsp;</p><ul style="list-style: none;"><li>※&nbsp; 說明計畫的頁面一樣放在地圖左側的『?號』即可</li></ul>
 
-<ul><li><b>github:&nbsp;</b></li></ul>
+<p></p><ul><li><b>github:&nbsp;</b></li></ul>
 
 <p>ps. 已於3/11至臉書g0v.tw 後勤中心po文徵求，尚無回應</p><p></p><p></p></body>
 </html>
