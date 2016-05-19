@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="193"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$JYrdrSZ2WYj</title>
+</head>
+<body><h1>Map Features維護指南</h1><p>OSMwiki的<a href='http://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features'/>Map Feature</a>內容所顯示的說明表格是由多個template組成，以下直稱template。map feature之下的tamplate其實也很常被引用在tag條目裡。</p><p>繁體Map_Features<a href='http://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features'/> </a><a href="http://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features"></a>http://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features</p><p>指南目的：清點繁體Map Feature內的template引用狀況及同步template內tag資訊，作為翻譯前置作業</p><h2>現況</h2><p>目前template已經清點完畢，</p><p><b>翻譯請求</b></p><ul class="task"><li>Template:Building_typology <a href="http://wiki.openstreetmap.org/wiki/Template:Building_typology"></a>http://wiki.openstreetmap.org/wiki/Template:Building_typology</li></ul>
+<p><b>內容維護</b></p><p></p><h2>維護流程</h2><ol><li>先清點中英兩頁引用的template清單，分類為<ol><li>已引用於中文Map features</li>
+<li>已翻譯但未引用於中文Map features</li>
+<li>英文Map feature有引用，但中文未翻譯的template</li></ol>
+</li>
+<li>已翻譯，未引用→引用至Map features</li>
+<li>未翻譯→針對該template開翻譯需求卡</li>
+<li>已引用template（此時Map features 已納入〈1.a 已翻譯，未引用〉 部份）<ol><li>檢查template是否需要格式化（見子章節）</li>
+<li>內容維護<ol><li>檢查4.a 的XXXX是否代換錯誤</li>
+<li>同步：將中文版缺少的原文tag複製入中文template</li>
+<li>翻譯前置：製作尚需翻譯的tag清單，並紀錄所屬template</li></ol>
+</ol>
+</ol>
+<undefined><li><b>格式化template步驟</b></li></undefined>
+<p>「XXXX」請填template對應關鍵字。觀察template語法的訣竅：同時開啟對應的日本語條目當作對照。</p><p>因為英語版template夾雜模版制定語法，不利參照。且日語同為方塊字，視覺上利於分辨語法及內文。日本語條目更新快速，內容同步度高，當作檢查樣本也很可靠。</p><ol><li>檢查多語系切換語法</li></ol>
+<ul class="code"><li>&lt;noinclude&gt;{{Languages|ns=Template:|Map Features:XXXX}}&lt;/noinclude&gt;</li></ul>
+<ul class="comment"><li>此語法會令語系切換表格顯示在template page，卻不會出現在引用的頁面(即Map feature)</li></ul>
+<ol><li>統一標題格式</li>
+<li>視情況更改表尾常見內容，例如<ol><li>值(value)該欄位出現「yes」</li></ol>
+</ol>
+<ul class="code"><li>|yes:desc=當圖徵已經被其他主要圖徵標籤描述時，可利用此方式加註圖徵的XXXX意義。</li><ol><li>值(value)該欄位出現「User Defined」</li></ol>
+</ul>
+<ul class="code"><li>|Proposed_features:value2={{{Proposed_features:value2|使用者自訂}}}</li><ol><li>描述 (desc)該欄位出現「All commonly used values according to Taginfo」</li></ol>
+</ul>
+<ul class="code"><li>|Proposed_features:desc=&rsquo;&rsquo;到[[Taginfo]]查詢[//taginfo.openstreetmap.org/keys/XXXX#values 常用標籤值]&rsquo;&rsquo;</li></ul>
+<ol><li>補充模組頁尾訊息及template的分類標籤：需置於{{Map_Features:XXXX……}}之後</li></ol>
+<ul class="code"><li>&lt;span style=&quot;font-size:80%;line-height:120%&quot;&gt;此表格由模版自動生成，[[Template:Zh-hant:Map_Features:XXXX|協助改善中譯版本請按此]]。&lt;/span&gt;</li>
+<li>&lt;noinclude&gt;</li>
+<li>[[Category:Zh-hant:Map Features template|XXXX]]</li>
+<li>&lt;/noinclude&gt;</li></ul>
+
+</body>
+</html>
