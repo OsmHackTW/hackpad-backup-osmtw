@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7014"/>
+<meta name="version" content="7196"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$RmL5fQsiMGp</title>
 </head>
 <body><h1>tag討論</h1><h2>注意</h2><p>本頁面目前僅用於討論<u>未登錄在 OSM Wiki 上</u>的tag，發問前請先參閱 OSM Wiki ：</p><p><a href="https://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features"></a>https://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features</p><p></p><h2>前言</h2><p>無論是資深圖客還是新手菜鳥，相信在tagging的時候多少都有「阿勒！這個要標啥？（囧）」的情況出現過。如果「直接參考地圖上現有的標籤」、「搜尋OSM wiki」或者「參考搜尋引擎的搜尋結果」都找不到解答，那請把惱人的東西列出來讓大家一起來討論什麼東西要標什麼tag吧！</p><p></p><h2>本案運作方式</h2><p><b>發問</b></p><ol><li>往下拉到「討論中」，或點擊右方大綱的「討論中」（下圖）<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_RmL5fQsiMGp_p.192101_1407143789988_2014-08-04_17-14-08.png'/></li>
@@ -28,7 +28,16 @@
 <li>我個人原本的想法是整理出一個頁面，方便在查詢tag的時候只要搜尋這個頁面就好。</li></ul>
 </ol>
 
-<p><b>提供參考資料</b></p><p>如果有先前的討論內容或其他參考資料請列入「參考資料」段落</p><p></p><p><b>長遠目標</b></p><p>日本的<a href='http://wiki.openstreetmap.org/wiki/JA:How_to_map_a'/>五十音 JOSM presets</a></p><p>寫個直接點擊選項就會自動添加tag的app</p><p></p><h2>討論中</h2><p>本段落最新整理日期：2014/07/22 PM 08:50:12</p><p></p><p><b>大型組織, 政府單位, 公共單位</b></p><ol><li>農會？office=NGO</li>
+<p><b>提供參考資料</b></p><p>如果有先前的討論內容或其他參考資料請列入「參考資料」段落</p><p></p><p><b>長遠目標</b></p><p>日本的<a href='http://wiki.openstreetmap.org/wiki/JA:How_to_map_a'/>五十音 JOSM presets</a></p><p>寫個直接點擊選項就會自動添加tag的app</p><p></p><h2>討論中</h2><p><b>國道、快速道路、省道統一 network 欄位</b></p><ul><li>why? 因為 road shield 目前無法以 bbox 或 country 來做 style selector, 如果有 network 的話，可以省事很多:<ul><li>國道: network=TW:freeway</li>
+<li>省道 network=TW:provincial</li>
+<li>快速道路 network=TW:express</li></ul>
+</ul>
+
+<p><b>各縣市邊界補完 ISO-3166-2 欄位</b></p><ul><li>六都改制後，並未 assign 新的 iso-3166-2；金門連江也並未 assign。可參考 <a href="http://github.com/g0v/twhgis"></a>http://github.com/g0v/twhgis 暫定的編碼。</li></ul>
+
+<p><b>更新 </b><a href="https://wiki.openstreetmap.org/wiki/Taipei_Rapid_Transit_System"></a><b>https://wiki.openstreetmap.org/wiki/Taipei_Rapid_Transit_System</b></p><ul><li>文湖線似乎沒有把 stations 加入 role=stop&nbsp;</li></ul>
+
+<p>本段落最新整理日期：2014/07/22 PM 08:50:12</p><p></p><p><b>大型組織, 政府單位, 公共單位</b></p><ol><li>農會？office=NGO</li>
 <li>衛生所</li>
 <li>清潔隊停車場？我想就用 amenity=parking 加上 access=no 或更適合的字(如果沒對外開放) 或 operator= (如果有對外開放)</li>
 <li>里長服務處？</li></ol>
