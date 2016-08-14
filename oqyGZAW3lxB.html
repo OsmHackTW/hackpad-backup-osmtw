@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="2397"/>
+<meta name="version" content="2631"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$oqyGZAW3lxB</title>
 </head>
 <body><h1>COSCUP 2016 攤位籌備</h1><p></p><h2>基本資料</h2><p><b>宣傳目標</b></p><p>主要宣傳目標是什麼呢？</p><ul><li>讓來賓參與地圖編輯</li>
@@ -26,8 +26,8 @@
 <ul class="comment"><li>4~5位剛好，要看參加的各位那些時段可參加</li>
 <li>應該可以歡迎來聊天？</li>
 <li>如果沒有入場券能顧攤位嗎？</li>
-<li>可以！歡迎！</li>
-<li>Fngi Shu 週日有空</li></ul>
+<li>可以！歡迎！</li></ul>
+<ul><li>Fngi Shu 週日有空</li></ul>
 
 <p><b>輪班時間表</b></p><ul><li>全程：<ul><li>jiazheng</li></ul>
 </li>
@@ -109,7 +109,8 @@
 
 <h2>文案</h2><p><b>簡介</b></p><p>OpenStreetMap是一個開放的線上地理資料庫，由於其開放授權、向量資料、即時更新的特性，能夠自由運用在各種不同領域，如手機、導航裝置上的離線圖資，方便出國玩省資費，或是登山健行導航。在多次重大災害中，OpenStreetMap發揮其即時更新的強項，防災社群HOT與衛星圖資商合作，快速在災難發生的短短幾天時間，號召分佈全球各地的繪圖志工，畫出最新的災區地圖，提供進駐災區的救難隊使用。</p><p></p><p><b>問題</b></p><ul><li>還不知道OSM的訪客<ul><li>這是台灣的計畫還是全世界性的?<ul><li>後者</li></ul>
 </li>
-<li>OSM 是向量地圖嗎？</li><ul class="comment"><li>&nbsp;2016 年最常被問到的問題</li></ul>
+<li>OSM 是向量地圖嗎？</li><ul class="comment"><li>&nbsp;2016 年最常被問到的問題</li>
+<li>OSM 不只是地圖，是地理資料庫，呈現的地圖有點陣圖磚也有向量圖磚(mapbox studio, maps.me)</li></ul>
 </ul>
 <ul><li>這跟Google Map 有何不同?</li>
 <li>為什麼不用 Google Map?<ul><li>(必答，請做好準備，很重要不必說三次)</li>
@@ -119,27 +120,33 @@
 </ul>
 <ul class="comment"><li>如果有可以先寫好話術會更容易同步</li></ul>
 </ul>
-<ul><li>技術需求的訪客<ul><li>有 API 可以用嗎?<ul><li>前端&nbsp;<ul><li>OverPass QL ,&nbsp; APIv6</li></ul>
+<ul><li>技術需求的訪客<ul><li>有 API 可以用嗎?<ul><li>前端&nbsp;<ul><li>OSM api</li>
+<li>OverPass api</li>
+<li>overpass turbo QL</li></ul>
 </li></ul>
 </li>
-<li>技術名詞字典<ul><li>座標系統：介紹什麼是 WGS 84 (EPSG 4326)、TWD 97 (EPSG 3826)、EPSG 900913</li>
-<li>座標轉換：座標轉換工具、投影法</li>
+<li>技術名詞字典<ul><li>座標系統：介紹什麼是 WGS 84 (EPSG 4326)、TWD 97 (EPSG 3826)、EPSG 900913</li></ul>
+</ul>
+</ul>
+<ul class="comment"><li>需要提到分帶嗎？（國內有不少機關很愛用啊...）</li><ul><li>座標轉換：座標轉換工具、投影法</li>
 <li>圖磚輸出程式：mapnik mapsforge</li>
 <li>幾何資料格式：shp osm pbf geojson</li>
 <li>幾何運算工具：PostGIS</li>
 <li>常用 POI 表達方式：</li>
-<li>專有名詞提供維基百科或 OSM Wiki 的 QR Code 讓來賓可以快速閱讀</li></ul>
-<ul class="comment"><li><a href="https://www.the-qrcode-generator.com/"></a>https://www.the-qrcode-generator.com/</li></ul>
-</ul>
-</ul>
-<ul><li>應用情境照片<ul><li>災區應用</li>
+<li>專有名詞提供維基百科或 OSM Wiki 的 QR Code 讓來賓可以快速閱讀</li></li>
+<li><a href="https://www.the-qrcode-generator.com/"></a>https://www.the-qrcode-generator.com/</li></ul>
+</li>
+<li>應用情境照片</li><ul><li>災區應用</li>
 <li>登山應用</li>
 <li>一般應用</li></ul>
 </ul>
 
-<p><b>OpenStreetMap強項</b></p><ul><li>無障礙</li>
-<li>大眾運輸</li>
-<li>登山路線</li></ul>
+<p><b>OpenStreetMap強項</b></p><ul><li>無障礙</li></ul>
+<ul class="comment"><li>這個部分是指 wheelchair 嗎？還是指無障礙？兩者是有差別的</li></ul>
+<ul><li>大眾運輸</li>
+<li>登山路線</li>
+<li>樹木（樹種、高度、樹齡...）</li>
+<li><br/></li></ul>
 
 <p><b>有那些App應用?</b></p><p>iOS：Maps.Me、OSMAnd</p><p>Android：Maps.Me、OSMAnd</p><p></p><h2>相關連結</h2><ul><li>COSCUP 公告 - <a href="http://blog.coscup.org/2016/06/coscup-2016_22.html"></a><a href='http://blog.coscup.org/2016/06/coscup-2016_22.html'/>http://blog.coscup.org/2016/06/coscup-2016_22.html</a></li>
 <li>SITCON2016 擺攤檢討 - <a href='/0ZQHES8NJ5Q'/>SITCON2016&nbsp;</a></li>
