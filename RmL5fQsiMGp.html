@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="7297"/>
+<meta name="version" content="7365"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$RmL5fQsiMGp</title>
 </head>
 <body><h1>tag討論</h1><h2>注意</h2><p>本頁面目前僅用於討論<u>未登錄在 OSM Wiki 上</u>的tag，發問前請先參閱 OSM Wiki ：</p><p><a href="https://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features"></a>https://wiki.openstreetmap.org/wiki/Zh-hant:Map_Features</p><p></p><h2>前言</h2><p>無論是資深圖客還是新手菜鳥，相信在tagging的時候多少都有「阿勒！這個要標啥？（囧）」的情況出現過。如果「直接參考地圖上現有的標籤」、「搜尋OSM wiki」或者「參考搜尋引擎的搜尋結果」都找不到解答，那請把惱人的東西列出來讓大家一起來討論什麼東西要標什麼tag吧！</p><p></p><h2>本案運作方式</h2><p><b>發問</b></p><ol><li>往下拉到「討論中」，或點擊右方大綱的「討論中」（下圖）<img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_RmL5fQsiMGp_p.192101_1407143789988_2014-08-04_17-14-08.png'/></li>
@@ -52,8 +52,7 @@
 <li>立法委員服務處？</li><ul class="comment"><li>office=political_party <a href='http://wiki.openstreetmap.org/wiki/Talk:Key:office'/>(來源)</a></li></ul>
 </ol>
 <ol><li>避難處所？</li></ol>
-<ul class="comment"><li><b>social_facility</b>=shelter&nbsp; <a href="http://wiki.openstreetmap.org/wiki/Key:social_facility"></a>http://wiki.openstreetmap.org/wiki/Key:social_facility</li>
-<li><br/></li></ul>
+<ul class="comment"><li><b>social_facility</b>=shelter&nbsp; <a href="http://wiki.openstreetmap.org/wiki/Key:social_facility"></a>http://wiki.openstreetmap.org/wiki/Key:social_facility</li></ul>
 <ol><li>社區照顧關懷據點？</li>
 <li>醫療巡迴站？</li>
 <li>守望相助隊？</li>
@@ -67,6 +66,12 @@
 <li>監理站？</li>
 <li>民防中隊？</li></ol>
 <ul class="comment"><li>1.&nbsp; amenity=paramilitary 2. landuse=military, operator=民防</li></ul>
+<p>17. 收容所?</p><ul style="list-style: none;"><li>a服務里別? service area</li>
+<li>b室內人數?emergency:amenity:capacity:indoor</li>
+<li>c室外人數?emergency:amenity:capacity:outdoor</li>
+<li>d容納面積(室內)? emergency:amenity: receiving area:indoor</li>
+<li>e容納面積(室外)? emergency:amenity: receiving area:outdoor</li>
+<li>f 適合避難弱者安置?emergency:amenity: suitable for social vulnerable groups</li></ul>
 <p><b>設施</b></p><ol><li>殘障車位？如果是一整個停車場, 可以用 amenity=parking + <a href='http://wiki.openstreetmap.org/wiki/Tag:amenity%3Dparking'/>capacity:disabled</a> 來標殘障車位的數量, 如果要標單獨的殘障車位, 用 amenity=parking_space + <a href='http://wiki.openstreetmap.org/wiki/Proposed_features/parking'/>access:disabled=yes</a></li>
 <li>殘障坡道？highway=pedestrian + wheelchair=yes</li>
 <li>便利商店內的廁所與ATM，直接標POI？ATM 的話直接加 <a href='http://wiki.openstreetmap.org/wiki/Atm'/>atm=yes</a> 或是獨立分開標 amenity=atm 都可以(感覺wiki是推薦後者, 我自己是偏好前者)</li></ol>
