@@ -3,13 +3,20 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="154"/>
+<meta name="version" content="385"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$xiXcrtssNYT</title>
 </head>
-<body><h1>開放資料三角點匯入研究筆記</h1><p></p><h2>為什麼寫這份筆記?</h2><p>本著政府與民間互助合作可以。有測量方面的教授和從業人員跟我說標示三角點可能會有問題，而我只是在測量相關產業工作而非直接從業人員，所以秉持著大膽假設小心求證的精神，來研究開放資料三角點匯入 OSM 應該怎麼做比較適當。</p><p></p><h2>先備知識</h2><p><b>法規</b></p><ol><li>國土測繪法 <a href="http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0060090"></a>http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0060090</li>
+<body><h1>開放資料三角點匯入研究筆記</h1><p></p><h2>為什麼寫這份筆記?</h2><p>針對政府所提供或釋出的資料，民間若能細究其資料的品質、內容與適用性，應能擴大資料的使用效益。且本著政府與民間互助合作有益國家發展的精神，若有適合的管道進行滾動式的協作、討論，應可加速官民合作的腳步。而有測量方面的教授和從業人員曾跟筆者說過標示三角點可能會有問題，但筆者僅是在測量相關產業工作的從業人員，面對橫跨測量、法律、開放資料、國家安全、OpenStreetMap...等專業領域的問題一時難以消化，所幸秉持著大膽假設小心求證的精神，來研究開放資料三角點匯入 OSM 應該怎麼做比較適當，並把所瞭解內容集中於此供後續討論之用。</p><p></p><h2>先備知識</h2><p><b>法規</b></p><ol><li>國土測繪法 <a href="http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0060090"></a>http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=D0060090</li>
 <li>內政部基本測量成果供應要點 <a href="https://www.land.moi.gov.tw/law/pda/mainframe.asp?LCID=55&lawname=%A4%BA%ACF%B3%A1%B0%F2%A5%BB%B4%FA%B6q%A6%A8%AAG%A8%D1%C0%B3%ADn%C2I&lcmod=%A4%A4%B5%D8%A5%C1%B0%EA98%A6~12%A4%EB24%A4%E9%A4%BA%ACF%B3%A1%A5x%A4%BA%A6a%A6r%B2%C40980227447%B8%B9%A8%E7%AD%D7%A5%BF%A5%FE%A4%E5%A8%C3%A7%F3%A6W"></a>https://www.land.moi.gov.tw/law/pda/mainframe.asp?LCID=55&amp;lawname=%A4%BA%ACF%B3%A1%B0%F2%A5%BB%B4%FA%B6q%A6%A8%AAG%A8%D1%C0%B3%ADn%C2I&amp;lcmod=%A4%A4%B5%D8%A5%C1%B0%EA98%A6~12%A4%EB24%A4%E9%A4%BA%ACF%B3%A1%A5x%A4%BA%A6a%A6r%B2%C40980227447%B8%B9%A8%E7%AD%D7%A5%BF%A5%FE%A4%E5%A8%C3%A7%F3%A6W</li>
 <li>國土測繪法施行細則 <a href="https://www.land.moi.gov.tw/law/pda/mainframe.asp?LCID=388&lawname=%B0%EA%A4g%B4%FA%C3%B8%AAk%ACI%A6%E6%B2%D3%ABh&lcmod=%A4%A4%B5%D8%A5%C1%B0%EA96%A6~11%A4%EB30%A4%E9%A4%BA%ACF%B3%A1%A5x%A4%BA%A6a%A6r%B2%C40960181994%B8%B9%A5O%ADq%A9w"></a>https://www.land.moi.gov.tw/law/pda/mainframe.asp?LCID=388&amp;lawname=%B0%EA%A4g%B4%FA%C3%B8%AAk%ACI%A6%E6%B2%D3%ABh&amp;lcmod=%A4%A4%B5%D8%A5%C1%B0%EA96%A6~11%A4%EB30%A4%E9%A4%BA%ACF%B3%A1%A5x%A4%BA%A6a%A6r%B2%C40960181994%B8%B9%A5O%ADq%A9w</li>
 <li>政府資訊公開法 <a href="http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0020026"></a>http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=I0020026</li></ol>
+
+<p><b>資料</b></p><ol><li>data.gov.tw 三角點搜尋結果 <a href="http://data.gov.tw/wise_search?kw=%E4%B8%89%E8%A7%92%E9%BB%9E"></a>http://data.gov.tw/wise_search?kw=%E4%B8%89%E8%A7%92%E9%BB%9E</li>
+<li>臺灣地區一等三角點 <a href="http://data.gov.tw/node/26479"></a>http://data.gov.tw/node/26479</li>
+<li>臺灣地區二等三角點 <a href="http://data.gov.tw/node/26483"></a>http://data.gov.tw/node/26483</li>
+<li>臺灣地區三等三角點 <a href="http://data.gov.tw/node/26485"></a>http://data.gov.tw/node/26485</li></ol>
+
+<p><b>測量專業知識</b></p><ol><li>大地座標系統漫談 by 上河文化 <a href="http://www.sunriver.com.tw/grid_tm2.htm"></a>http://www.sunriver.com.tw/grid_tm2.htm</li></ol>
 
 </body>
 </html>
