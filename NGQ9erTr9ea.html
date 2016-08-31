@@ -3,10 +3,21 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="582"/>
+<meta name="version" content="669"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$NGQ9erTr9ea</title>
 </head>
-<body><h1>土地測量、基石、三角點等標注方式</h1><p></p><p><b>討論</b></p><ul class="comment"><li>&nbsp;Rex 個人偏向山頭基石分開標記，</li>
+<body><h1>土地測量、基石、三角點等標注方式</h1><p></p><p><b>標注方式</b></p><p>山頂與基石應該分別標注。</p><p></p><p>Pro</p><ul><li>山頭應標記在最高的那塊非人造非生物的物體座標 。</li>
+<li>因為一個山頭有時好幾個基石。</li>
+<li>不同命名方便用戶遍識，如石門山目前共用基石、山頭。山頭仍為「石門山」、基石改為「石門山三等三角點」容易遍識。 兩個獨立 &quot;object&quot; 讓搜尋引擎索引的時候可以列出兩筆結果。名稱不同，對使用者可用性比較高，否則就得在操作界面上提示不同的圖徵。&nbsp;</li>
+<li>由於 &quot;peak&quot; 不易精確，同一個山頂不應該超過一個 peak.&nbsp; 但 survey point 應該要能精確.&nbsp;&nbsp;</li>
+<li>peak 很容易被 mapper 移來移去, 但理論上 survey point 應該小心測量, 分成兩個比較不會被弄壞&nbsp;</li></ul>
+
+<p>Con</p><ul><li>直接利用三角點當作不同比例下的最高顯示點，可以免去程式計算的複雜度。 或者迫使現有地圖界面顯示出三角點</li>
+<li>在小畫面的導航器上，三角點或山點可能互相干擾覆蓋。&nbsp;</li></ul>
+
+<undefined><li><b>需求討論</b></li></undefined>
+<ul class="comment"><li><br/></li>
+<li>&nbsp;Rex 個人偏向山頭基石分開標記，</li>
 <li>附議</li>
 <li>分開標記，但是同座標點嗎？</li>
 <li>這樣在顯示，如何處理？</li>
@@ -26,9 +37,7 @@
 <li>ele 應該全數數字。</li>
 <li>有 name 的時候，搜尋工具比較容易會找到 index</li>
 <li>結論應該要翻譯成英文正式提交 proposal. 但是我們有點懶...</li>
-<li>至少要發到 osm 的 mailing list - <a href="https://lists.openstreetmap.org/listinfo/talk-tw"></a>https://lists.openstreetmap.org/listinfo/talk-tw</li></ul>
-<ol><li>&nbsp;因為一個山頭有時好幾個基石。</li>
-<li>不同命名方便用戶遍識，如石門山目前共用基石、山頭。山頭仍為「石門山」、基石改為「石門山三等三角點」容易遍識。</li></ol>
+<li>至少要發到 osm 的 mailing list - <a href="https://lists.openstreetmap.org/listinfo/talk-tw"></a><a href='https://lists.openstreetmap.org/listinfo/talk-tw'/>https://lists.openstreetmap.org/listinfo/talk-tw</a></li></ul>
 
 <p><b>標注需求</b></p><ul><li>區分基石類型</li>
 <li>需要提供基石編號</li></ul>
@@ -73,14 +82,144 @@
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;natural&quot;: &quot;peak&quot;,</li>
 <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &quot;ref:survey_point&quot;: &quot;二等三角點1064號&quot;</li></ul>
 
-<p><b>基石類型</b></p><p>一等三角點基線點</p><p>一等三角點本點</p><p>一等三角點補點</p><p>一等水準點</p><p>一等水準點(小)</p><p>三等三角點</p><p>不要存置林柱</p><p>中研院水準點</p><p>中研院衛星點</p><p>中科院三等三角點</p><p>二等三角點</p><p>交通局遞信部水準點</p><p>仿製三等三角點</p><p>內務局三角點</p><p>內務局補助三角點</p><p>內政部一等三角點補點</p><p>內政部一等水準點</p><p>內政部三等三角點補點</p><p>內政部三等衛星點</p><p>內政部二等三角點補點</p><p>內政部四等衛星點</p><p>內政部精密導線點</p><p>北市</p><p>北市三角點</p><p>北市地測精幹點</p><p>北市地測點</p><p>北市都市計畫處水準點</p><p>北市都市計畫點</p><p>北市養工處水準點</p><p>北水三角點</p><p>北縣三角點</p><p>北縣都市計畫點</p><p>千岳俱樂部仿製三等三角點</p><p>千岳俱樂部仿製二等三角點</p><p>千岳俱樂部圖根點</p><p>南化水庫三角點</p><p>南庄事業區林班柱</p><p>台北州稅務課</p><p>台北市四等衛星點</p><p>台北縣四等衛星點</p><p>台大林三角點</p><p>台大點</p><p>台演三角點</p><p>台電水準點</p><p>嘉南三角點</p><p>四等三角點</p><p>圖根補點</p><p>土地調查局三等三角點</p><p>土地調查局圖根點</p><p>土地調查局水準主線點</p><p>土地調查局水準副線點</p><p>土地調查局測量原點</p><p>土木局柱</p><p>土木局水準點</p><p>基隆</p><p>基隆港水準點</p><p>大正七年界標</p><p>大正水準點</p><p>專賣局境界標</p><p>專賣局山林班柱</p><p>專賣局造林地柱</p><p>山地農牧局三角補點</p><p>山字柱</p><p>山岳協會鋼柱</p><p>崇德水庫水準點</p><p>新竹州水利</p><p>方向碑</p><p>日蝕站三角點</p><p>曾文水庫三角點</p><p>曾文水庫水準點</p><p>林務局四等控制點</p><p>林務局控制點</p><p>林田山林補點</p><p>森林三角點</p><p>殖產局三角補點</p><p>殖產局圖根三角補點</p><p>殖產局圖根補點</p><p>殖產局柱</p><p>殖產局樟林地界柱</p><p>殖產局石</p><p>殖產局補點</p><p>民政廳平山界</p><p>水利局水準點</p><p>水利局點</p><p>水利署點</p><p>水建會三角點</p><p>水源保護區界</p><p>水準點</p><p>水資會三角點</p><p>水資會導線點</p><p>水資會水準點</p><p>水路部海軍水準點</p><p>水路部海軍測點</p><p>河川局點</p><p>海軍三角點</p><p>海軍海洋測量局三角點</p><p>海軍衛星點</p><p>海軍點</p><p>海道測量局三角點</p><p>澎湖三角點</p><p>澎湖要塞地界標</p><p>營林局官有林境界標</p><p>省地政處三角補點</p><p>省地政處精密導線點</p><p>省府三等衛星點</p><p>省府四等衛星點</p><p>省政府圖根補點</p><p>省政府精密導線點</p><p>磁針偏差修正站測點</p><p>礦務補點</p><p>總督府三角點</p><p>總督府圖根補點</p><p>總督府柱</p><p>總督府點</p><p>聯勤三等三角點補點</p><p>聯勤二等三角點補點</p><p>聯勤四等三角點</p><p>聯勤精密導線點</p><p>聯勤精密控制點</p><p>苗栗三角補點</p><p>規量隊三角點</p><p>農航隊補點</p><p>造林人柱</p><p>野牛隊</p><p>鑛務點</p><p>阿里山林補點</p><p>陸軍三等三角點補點</p><p>陽明山控制點</p><p>高楠水準點</p><p></p><p></p><p><b>參考資料</b></p><ul><li><a href='https://github.com/OsmHackTW/osmtw_trig'/>批次匯入 </a><a href="https://github.com/OsmHackTW/osmtw_trig"></a><a href='https://github.com/OsmHackTW/osmtw_trig'/>https://github.com/OsmHackTW/osmtw_trig</a></li>
+<p><b>基石類型</b></p><p></p><p>&nbsp;survey_point= ?&nbsp;</p><p></p><ul><li>一等三角點基線點</li>
+<li>一等三角點本點</li>
+<li>一等三角點補點</li>
+<li>一等水準點</li>
+<li>一等水準點(小)</li>
+<li>三等三角點</li>
+<li>不要存置林柱</li>
+<li>中研院水準點</li>
+<li>中研院衛星點</li>
+<li>中科院三等三角點</li>
+<li>二等三角點</li>
+<li>交通局遞信部水準點</li>
+<li>仿製三等三角點</li>
+<li>內務局三角點</li>
+<li>內務局補助三角點</li>
+<li>內政部一等三角點補點</li>
+<li>內政部一等水準點</li>
+<li>內政部三等三角點補點</li>
+<li>內政部三等衛星點</li>
+<li>內政部二等三角點補點</li>
+<li>內政部四等衛星點</li>
+<li>內政部精密導線點</li>
+<li>北市</li>
+<li>北市三角點</li>
+<li>北市地測精幹點</li>
+<li>北市地測點</li>
+<li>北市都市計畫處水準點</li>
+<li>北市都市計畫點</li>
+<li>北市養工處水準點</li>
+<li>北水三角點</li>
+<li>北縣三角點</li>
+<li>北縣都市計畫點</li>
+<li>千岳俱樂部仿製三等三角點</li>
+<li>千岳俱樂部仿製二等三角點</li>
+<li>千岳俱樂部圖根點</li>
+<li>南化水庫三角點</li>
+<li>南庄事業區林班柱</li>
+<li>台北州稅務課</li>
+<li>台北市四等衛星點</li>
+<li>台北縣四等衛星點</li>
+<li>台大林三角點</li>
+<li>台大點</li>
+<li>台演三角點</li>
+<li>台電水準點</li>
+<li>嘉南三角點</li>
+<li>四等三角點</li>
+<li>圖根補點</li>
+<li>土地調查局三等三角點</li>
+<li>土地調查局圖根點</li>
+<li>土地調查局水準主線點</li>
+<li>土地調查局水準副線點</li>
+<li>土地調查局測量原點</li>
+<li>土木局柱</li>
+<li>土木局水準點</li>
+<li>基隆</li>
+<li>基隆港水準點</li>
+<li>大正七年界標</li>
+<li>大正水準點</li>
+<li>專賣局境界標</li>
+<li>專賣局山林班柱</li>
+<li>專賣局造林地柱</li>
+<li>山地農牧局三角補點</li>
+<li>山字柱</li>
+<li>山岳協會鋼柱</li>
+<li>崇德水庫水準點</li>
+<li>新竹州水利</li>
+<li>方向碑</li>
+<li>日蝕站三角點</li>
+<li>曾文水庫三角點</li>
+<li>曾文水庫水準點</li>
+<li>林務局四等控制點</li>
+<li>林務局控制點</li>
+<li>林田山林補點</li>
+<li>森林三角點</li>
+<li>殖產局三角補點</li>
+<li>殖產局圖根三角補點</li>
+<li>殖產局圖根補點</li>
+<li>殖產局柱</li>
+<li>殖產局樟林地界柱</li>
+<li>殖產局石</li>
+<li>殖產局補點</li>
+<li>民政廳平山界</li>
+<li>水利局水準點</li>
+<li>水利局點</li>
+<li>水利署點</li>
+<li>水建會三角點</li>
+<li>水源保護區界</li>
+<li>水準點</li>
+<li>水資會三角點</li>
+<li>水資會導線點</li>
+<li>水資會水準點</li>
+<li>水路部海軍水準點</li>
+<li>水路部海軍測點</li>
+<li>河川局點</li>
+<li>海軍三角點</li>
+<li>海軍海洋測量局三角點</li>
+<li>海軍衛星點</li>
+<li>海軍點</li>
+<li>海道測量局三角點</li>
+<li>澎湖三角點</li>
+<li>澎湖要塞地界標</li>
+<li>營林局官有林境界標</li>
+<li>省地政處三角補點</li>
+<li>省地政處精密導線點</li>
+<li>省府三等衛星點</li>
+<li>省府四等衛星點</li>
+<li>省政府圖根補點</li>
+<li>省政府精密導線點</li>
+<li>磁針偏差修正站測點</li>
+<li>礦務補點</li>
+<li>總督府三角點</li>
+<li>總督府圖根補點</li>
+<li>總督府柱</li>
+<li>總督府點</li>
+<li>聯勤三等三角點補點</li>
+<li>聯勤二等三角點補點</li>
+<li>聯勤四等三角點</li>
+<li>聯勤精密導線點</li>
+<li>聯勤精密控制點</li>
+<li>苗栗三角補點</li>
+<li>規量隊三角點</li>
+<li>農航隊補點</li>
+<li>造林人柱</li>
+<li>野牛隊</li>
+<li>鑛務點</li>
+<li>阿里山林補點</li>
+<li>陸軍三等三角點補點</li>
+<li>陽明山控制點</li>
+<li>高楠水準點</li></ul>
+
+<p></p><p><b>參考資料</b></p><ul><li><a href='https://github.com/OsmHackTW/osmtw_trig'/>批次匯入 </a><a href="https://github.com/OsmHackTW/osmtw_trig"></a><a href='https://github.com/OsmHackTW/osmtw_trig'/>https://github.com/OsmHackTW/osmtw_trig</a></li>
 <li><a href='https://github.com/OsmHackTW/osmtw_trig/blob/master/stone.csv?raw=true'/>全台基石資料 - </a><a href="https://github.com/OsmHackTW/osmtw_trig/blob/master/stone.csv?raw=true"></a><a href='https://github.com/OsmHackTW/osmtw_trig/blob/master/stone.csv?raw=true'/>https://github.com/OsmHackTW/osmtw_trig/blob/master/stone.csv?raw=true</a></li>
 <li>2015-05-29 OSM 之全台三角點資料 <a href="https://gist.github.com/chihchun/74c6f2f9515598a16ef6"></a>https://gist.github.com/chihchun/74c6f2f9515598a16ef6</li>
 <li>man_made=survey_point | Tags | OpenStreetMap Taginfo for Taiwan <a href="http://taginfo.osm.kcwu.csie.org/tags/man_made=survey_point"></a>http://taginfo.osm.kcwu.csie.org/tags/man_made=survey_point</li>
 <li>Tag:man_made=survey_point - OpenStreetMap Wiki <a href="http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point"></a><a href='http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point'/>http://wiki.openstreetmap.org/wiki/Tag:man_made%3Dsurvey_point</a></li>
-<li>Key:checkpoint - OpenStreetMap Wiki <a href="http://wiki.openstreetmap.org/wiki/Key:checkpoint"></a><a href='http://wiki.openstreetmap.org/wiki/Key:checkpoint'/>http://wiki.openstreetmap.org/wiki/Key:checkpoint</a></li></ul>
-
-<ul><li>Rudy Chung 前輩批次的加入了台灣的三角點資料，看起來是把山頭跟一等、二等三角點合併紀錄。&nbsp; - <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1125344574197677/"></a><a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1125344574197677/'/>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1125344574197677/</a></li></ul>
+<li>Key:checkpoint - OpenStreetMap Wiki <a href="http://wiki.openstreetmap.org/wiki/Key:checkpoint"></a><a href='http://wiki.openstreetmap.org/wiki/Key:checkpoint'/>http://wiki.openstreetmap.org/wiki/Key:checkpoint</a></li>
+<li>Rudy Chung 前輩批次的加入了台灣的三角點資料，看起來是把山頭跟一等、二等三角點合併紀錄。&nbsp; - <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1125344574197677/"></a><a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1125344574197677/'/>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1125344574197677/</a></li>
+<li>三角點 tagging 的方式討論 - <a href="https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1127715753960559/"></a><a href='https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1127715753960559/'/>https://www.facebook.com/groups/OpenStreetMap.TW/permalink/1127715753960559/</a></li></ul>
 
 </body>
 </html>
