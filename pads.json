@@ -466,8 +466,8 @@
   "title": "\u8d0a\u52a9\u9080\u8acb\u51fd"
  }, 
  {
-  "last_backup_time": 1471888608.934267, 
-  "version": 3538, 
+  "last_backup_time": 1472752643.402133, 
+  "version": 3563, 
   "padid": "LKgdTOFMlpD", 
   "title": "\u9632\u707d\u958b\u653e\u8cc7\u6599\u61c9\u7528\u5178\u7bc4"
  }, 
@@ -604,8 +604,8 @@
   "title": "Mapping-Urban-Tree"
  }, 
  {
-  "last_backup_time": 1472493498.981005, 
-  "version": 2154, 
+  "last_backup_time": 1472752643.359242, 
+  "version": 2163, 
   "padid": "QIY8gphTFoM", 
   "title": "lowiki \u958b\u6703\u8a18\u9304"
  }, 
@@ -862,6 +862,12 @@
   "title": "COSCUP 2015 OSM Workshop"
  }, 
  {
+  "last_backup_time": 1472752643.442577, 
+  "version": 20, 
+  "padid": "c8d4GlNtpPV", 
+  "title": "2016M08 OSM Taiwan \u793e\u7fa4\u9032\u5c55"
+ }, 
+ {
   "last_backup_time": 1466704574.624731, 
   "version": 501, 
   "padid": "cM8b8JFcQux", 
@@ -1084,8 +1090,8 @@
   "title": "Crisis mapping - #1258 - Hurricane Patricia - Inland mapping&nbsp;&nbsp;&nbsp;"
  }, 
  {
-  "last_backup_time": 1470679033.1724, 
-  "version": 46, 
+  "last_backup_time": 1472752643.423566, 
+  "version": 56, 
   "padid": "nDp0KbtkAU8", 
   "title": "2016-08-08-OpenStreetMap-Taipei-Meetup-Note"
  }, 
@@ -1309,6 +1315,12 @@
   "version": 166, 
   "padid": "xnoby0UginG", 
   "title": "\u53f0\u5317\u5e02\u7acb\u52d5\u7269\u5712 Mapping Party"
+ }, 
+ {
+  "last_backup_time": 1472752643.461189, 
+  "version": 147, 
+  "padid": "y63iXb56cp2", 
+  "title": "2016-09-05-OpenStreetMap-Taipei-Meetup-Note"
  }, 
  {
   "last_backup_time": 1445968799.039328, 
