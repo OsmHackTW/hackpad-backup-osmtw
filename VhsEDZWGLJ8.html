@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="132"/>
+<meta name="version" content="133"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$VhsEDZWGLJ8</title>
 </head>
 <body><h1>經建版地形圖數值資料檔匯入工作</h1><p>內政部部國土測繪中心的「經建版地形圖數值資料檔(比例尺為二萬五千分之一、五萬分之一及十萬分之一)」前經「105年行政院資料開放諮詢小組第2次會議」列為甲類資料，並經內政部105年7月26日台內地字第1051306149號令修正發布「國土測繪成果資料收費標準」第2條附表附件2，開放資料供免費下載使用[1]，授權條款採用行政院「政府資料開放授權條款－第1版」[2]</p><p></p><p>這批 2016/07/28 釋出的圖檔包括二萬五千分之一經建版地形圖計262幅、五萬分之一經建版地形圖計80幅及十萬分之一經建版地形圖計7幅，共計349幅。</p><p></p><p>雖然不含等高線圖層，但是包含水系、道路、行政界線、鐵道、高壓線、建築區等圖層，及圖例、中文註記等向量圖層。以 QCad/LibreCAD 等開源軟體確認，</p><p></p><p>其格式為</p><ul><li>AC1027 - AutoCAD 2013/2014</li>
 <li>TWD67 二度分帶坐標</li></ul>
 
-<p>目前需要將其轉為 DXF，整理出可以匯入的資料後，再轉成 SHP/OSM 格式上傳。如能匯入資料，會大幅提供 OSM 在水系資訊、偏鄉道路的資訊量。由於資料龐大，需要志工來轉檔、整理這批資料。歡迎加入 Trello 工作事項[3]討論。</p><p></p><p>[1] <a href="http://www.moi.gov.tw/chi/chi_news/news_detail.aspx?sn=10850&type_code=01"></a>http://www.moi.gov.tw/chi/chi_news/news_detail.aspx?sn=10850&amp;type_code=01</p><p>[2] 政府資料開放授權條款－第1版 | 政府資料開放平臺 - <a href="http://data.gov.tw/node/18250"></a>http://data.gov.tw/node/18250</p><p>[3] OpenStreetMap Backlog 挖洞填坑的匯入國土測繪中心新增政府開放資料「經建版地形圖數值資料檔」 | Trello - <a href="https://trello.com/c/SEPcEDyM/196--"></a>https://trello.com/c/SEPcEDyM/196--</p><p></p><h2>技術進展</h2><p></p><p><b>圖檔格式轉換</b></p><p></p><p>QCad/LibreCad 可以轉換 AC1027 成 DXF，並從 QGIS 進行後續處理。</p><p></p><undefined><li><b>已知問題</b></li></undefined>
+<p>目前需要將其轉為 DXF，整理出可以匯入的資料後，再轉成 SHP/OSM 格式上傳。如能匯入資料，會大幅提供 OSM 在水系資訊、偏鄉道路的資訊量。由於資料龐大，需要志工來轉檔、整理這批資料。歡迎加入 Trello 工作事項[3]討論。</p><p></p><p>[1] <a href="http://www.moi.gov.tw/chi/chi_news/news_detail.aspx?sn=10850&type_code=01"></a>http://www.moi.gov.tw/chi/chi_news/news_detail.aspx?sn=10850&amp;type_code=01</p><p>[2] 政府資料開放授權條款－第1版 | 政府資料開放平臺 - <a href="http://data.gov.tw/node/18250"></a>http://data.gov.tw/node/18250</p><p>[3] OpenStreetMap Backlog 挖洞填坑的匯入國土測繪中心新增政府開放資料「經建版地形圖數值資料檔」 | Trello - <a href="https://trello.com/c/SEPcEDyM/196--"></a>https://trello.com/c/SEPcEDyM/196--</p><p></p><h2>技術進展</h2><p></p><p><b>圖檔格式轉換</b></p><p>QCad/LibreCad 可以轉換 AC1027 成 DXF，並從 QGIS 進行後續處理。</p><p></p><undefined><li><b>已知問題</b></li></undefined>
 <ul class="task"><li>&nbsp;QCad 點位資料的編碼錯誤，TEXT 變成亂碼。</li></ul>
 
 <p><b>座標系統轉換</b></p><p>請參考 psilotum (mutolisp) 的轉換參數</p><ul><li>&nbsp;台灣大地座標系統的轉換 « mutolisp 技術筆記 - <a href="http://mutolisp.logdown.com/posts/207563-taiwan-geodetic-coordinate-system-conversion"></a><a href='http://mutolisp.logdown.com/posts/207563-taiwan-geodetic-coordinate-system-conversion'/>http://mutolisp.logdown.com/posts/207563-taiwan-geodetic-coordinate-system-conversion</a></li></ul>
