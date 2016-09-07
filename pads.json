@@ -1245,6 +1245,12 @@
   "title": "Tag for crisis mapping"
  }, 
  {
+  "last_backup_time": 1473271042.392283, 
+  "version": 51, 
+  "padid": "swOBGmb1DLK", 
+  "title": "2016-10-03-OpenStreetMap-Taipei-Meetup-Note"
+ }, 
+ {
   "last_backup_time": 1465752979.813339, 
   "version": 250, 
   "padid": "tCJ08dcmlmZ", 
@@ -1329,8 +1335,8 @@
   "title": "\u53f0\u5317\u5e02\u7acb\u52d5\u7269\u5712 Mapping Party"
  }, 
  {
-  "last_backup_time": 1472752643.461189, 
-  "version": 147, 
+  "last_backup_time": 1473271042.366449, 
+  "version": 176, 
   "padid": "y63iXb56cp2", 
   "title": "2016-09-05-OpenStreetMap-Taipei-Meetup-Note"
  }, 
