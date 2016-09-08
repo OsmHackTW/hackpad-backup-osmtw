@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta name="version" content="611"/>
+<style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$lq9JVKQTH2j</title>
+</head>
+<body><h1>水系與相關設施標注研究</h1><h2>為什麼?(Why)</h2><ul class="comment"><li>這一段尚未完成...有錯請改...</li></ul>
+<p>在一般人的語言認知中，自然水系的名稱有江、河、川、溪...等，還有人造水系可能有溝、渠、路、道...等。而在 OSM 中，一部分地景的標注與描述人類對地景使用的標注是不同的。</p><p></p><p>例如，一條溪流從上游到出海口可能會經過：</p><ul><li>一腳可跨越的野溪「甲」、</li>
+<li>可以步行通過的溪流「乙」、</li>
+<li>兩岸都有整治無法直接穿越的河道「丙」、</li>
+<li>可以靠步行通過有設置橋梁的「丁」、</li>
+<li>河道寬上百公尺沒有橋梁要靠船支接駁的「戊」、</li>
+<li>河道寬好幾公里的「己」</li></ul>
+
+<p>而其中甲乙屬於「北勢溪」、甲乙丙丁屬於「新店溪」、甲乙丙丁戊己屬於「淡水河」，另外甲乙丙丁戊己加上隔壁的丁之一、丁之二戊、丁之二戊之一、丁之二戊之二、丁之三統稱為「淡水河(系)(流域)」。</p><p></p><p>但甲可能屬於 waterway=stream ，乙丙可能屬於 waterway=river ，而丁戊己和匯流的丁之二屬於 waterway=river ，但丁之二在 relation=waterway name=淡水河 中屬於 side_stream 而在 relation=waterway name=基隆河 中屬於 main_stream。</p><p></p><p>前述的情況顯然不是很直觀可以透過名稱標注圖徵，再加上 OSM 中用 tag 描述一段物件以及用 relation 囊誇多個物件的使用概念十分抽象，因此造成水系的標註有其困難性。更不用提臺灣地區豐枯期河道範圍差異極大與眾多排水路、灌溉水路或運河等要如何標注的問題，還有高灘地、河谷地、沖積平原...等。</p><p></p><p>所以針對水系與相關設施研究標注方法，並留下一份筆記供後續參考。</p><p></p><h2>參考(Ref)</h2><p><b>OSM tag</b></p><ul><li>waterway=* <a href="http://wiki.openstreetmap.org/wiki/Key:waterway"></a>http://wiki.openstreetmap.org/wiki/Key:waterway</li>
+<li>realation=waterway <a href="http://wiki.openstreetmap.org/wiki/Relation:waterway"></a>http://wiki.openstreetmap.org/wiki/Relation:waterway</li>
+<li>layer=* <a href="http://wiki.openstreetmap.org/wiki/Key:layer"></a>http://wiki.openstreetmap.org/wiki/Key:layer</li>
+<li>natural=water <a href="http://wiki.openstreetmap.org/wiki/Key:water"></a>http://wiki.openstreetmap.org/wiki/Key:water</li></ul>
+<p><b>水利法</b></p><ul><li>水利法及其子法規 <a href="http://wralaw.wra.gov.tw/wralawgip/lawCatalogue.jsp?lawClass=2&lawType=1"></a>http://wralaw.wra.gov.tw/wralawgip/lawCatalogue.jsp?lawClass=2&amp;lawType=1</li>
+<li>水利法 <a href="http://law.moj.gov.tw/LawClass/LawAllIf.aspx?PCode=J0110001"></a>http://law.moj.gov.tw/LawClass/LawAllIf.aspx?PCode=J0110001</li>
+<li>中央管、地方管河川公告 <a href="http://wralaw.wra.gov.tw/wralawgip/cp.jsp?lawId=4028868123dab07a0123eb5c2c490119"></a>http://wralaw.wra.gov.tw/wralawgip/cp.jsp?lawId=4028868123dab07a0123eb5c2c490119</li>
+<li>河川管理辦法 <a href="http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=J0110029"></a>http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=J0110029</li></ul>
+<p><b>農田水利相關法規</b></p><ul><li>農委會 <a href="http://law.coa.gov.tw/GLRSnewsout/LawCategoryContentList.aspx?id=06&CategoryList=06"></a><a href='http://law.coa.gov.tw/GLRSnewsout/LawCategoryContentList.aspx?id=06&amp;CategoryList=06'/>http://law.coa.gov.tw/GLRSnewsout/LawCategoryContentList.aspx?id=06&amp;CategoryList=06</a></li>
+<li>全國法規資料庫 <a href="http://law.moj.gov.tw/Law/LawSearchResult.aspx?p=A&t=A1A2E1F1&k1=%E8%BE%B2%E7%94%B0%E6%B0%B4%E5%88%A9"></a>http://law.moj.gov.tw/Law/LawSearchResult.aspx?p=A&amp;t=A1A2E1F1&amp;k1=%E8%BE%B2%E7%94%B0%E6%B0%B4%E5%88%A9</li>
+<li>農田水利會灌溉排水管理要點 <a href="http://law.coa.gov.tw/GLRSnewsout/LawContentDetails.aspx?id=GL000045&KeyWordHL="></a>http://law.coa.gov.tw/GLRSnewsout/LawContentDetails.aspx?id=GL000045&amp;KeyWordHL=</li></ul>
+<p><b>其他</b></p><ul><li>水利相關法規 <a href="http://wralaw.wra.gov.tw/wralawgip/lawCatalogue.jsp?lawClass=2"></a>http://wralaw.wra.gov.tw/wralawgip/lawCatalogue.jsp?lawClass=2</li></ul>
+
+</body>
+</html>
