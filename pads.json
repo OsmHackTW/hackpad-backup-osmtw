@@ -214,8 +214,8 @@
   "title": "Webinar \u8b70\u984c"
  }, 
  {
-  "last_backup_time": 1473098284.506352, 
-  "version": 15, 
+  "last_backup_time": 1475344593.363345, 
+  "version": 34, 
   "padid": "7EbytcynQrq", 
   "title": "2016M09 OSM Taiwan \u793e\u7fa4\u9032\u5c55"
  }, 
@@ -1303,6 +1303,12 @@
   "version": 109, 
   "padid": "ud5alUbAGsm", 
   "title": "Taiwan geodata extracts and mirrors"
+ }, 
+ {
+  "last_backup_time": 1475344593.438815, 
+  "version": 9, 
+  "padid": "uorlqRwh8hi", 
+  "title": "2016M10 OSM Taiwan \u793e\u7fa4\u9032\u5c55"
  }, 
  {
   "last_backup_time": 1447610385.954934, 
