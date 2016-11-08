@@ -220,8 +220,8 @@
   "title": "Webinar \u8b70\u984c"
  }, 
  {
-  "last_backup_time": 1476294986.948431, 
-  "version": 379, 
+  "last_backup_time": 1478627719.423847, 
+  "version": 384, 
   "padid": "7EbytcynQrq", 
   "title": "2016M09 OSM Taiwan \u793e\u7fa4\u9032\u5c55"
  }, 
@@ -1329,6 +1329,12 @@
   "title": "\u53f0\u7063 MapsForge \u5716\u8cc7\u6a94\u6848"
  }, 
  {
+  "last_backup_time": 1478627719.403168, 
+  "version": 18, 
+  "padid": "tedtbjkMZRO", 
+  "title": "2016M11 OSM Taiwan \u793e\u7fa4\u9032\u5c55"
+ }, 
+ {
   "last_backup_time": 1439661499.042924, 
   "version": 28, 
   "padid": "uKkx1uKkY2b", 
@@ -1341,8 +1347,8 @@
   "title": "Taiwan geodata extracts and mirrors"
  }, 
  {
-  "last_backup_time": 1478196111.010253, 
-  "version": 16, 
+  "last_backup_time": 1478627719.462842, 
+  "version": 230, 
   "padid": "uorlqRwh8hi", 
   "title": "2016M10 OSM Taiwan \u793e\u7fa4\u9032\u5c55"
  }, 
