@@ -3,10 +3,40 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="818"/>
+<meta name="version" content="964"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$0WDHc4HBSED</title>
 </head>
-<body><h1>步道系統/難度 標注方式</h1><p>許多單位(中央、地方政府或民間團體)會將步道分類或分級，應該設計一套 tag 來表示，或是套用到現有的 route relation, network, sac_scale 等等標籤。</p><p></p><p>另外，各地區有些步道會標示親子級、勇腳級、山友級的難度分類，有的地方則是登山口地圖會標紅線藍線等，不知是否有統一的標準，也許也可以設計或選用適合的標籤。</p><p></p><p>有共識後可以整理到 <a href="https://wiki.openstreetmap.org/wiki/Walking_Routes"></a>https://wiki.openstreetmap.org/wiki/Walking_Routes，仿其他國家把 Taiwan 的 tag 方式列上去。</p><p></p><h2>農委會林務局</h2><p>林務局有建制「<a href='http://www.coa.gov.tw/ws.php?id=10577'/>國家級步道系統」及「區域步道系統」</a>，並設計了<a href='http://recreation.forest.gov.tw/RT/RT_1_5.aspx'/>難度分級</a>(一到五級)。網站上也有列出<a href='http://recreation.forest.gov.tw/RT/RT_index.aspx'/>全部的步道資訊</a>。</p><p></p><p>除了林務局的網站，有也人將相關資料整理到 wikipedia 上了</p><ul><li>國家步道系統 <a href="http://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E6%AD%A5%E9%81%93%E7%B3%BB%E7%B5%B1"></a><a href='http://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E6%AD%A5%E9%81%93%E7%B3%BB%E7%B5%B1'/>http://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E6%AD%A5%E9%81%93%E7%B3%BB%E7%B5%B1</a></li>
+<body><h1>步道系統/難度 標注方式</h1><h2>說明</h2><p></p><ul><li>步道系統的難易可作為領隊與隊員的參考基準。但步道難度依照天氣、行程規劃變異，這些變數無法透過地圖告知，需要領隊與嚮導依據隊員能力判斷是否能夠安全行走<ul><li>例如武陵四秀正常三天行程，如果縮減成一日四秀，難度就會大幅提高。但行程延長時間，且聘請協作幫助背負相關裝備、食物等，難度就會大幅下降。</li>
+<li>同樣的路線，在天氣極差的狀況下，會造成危險度大幅上升。</li></ul>
+</li>
+<li>標示路線難易的用途在於中級山、郊山等路線，官方維護的步道系統跟叉路也會有相當巨大的差異。例如少人行經路線且與獸徑、乾溪溝等混雜在一起，容易走錯叉路。路線也可能經過瘦稜、或高度暴露感的斷崖路線，或是坡度極大的原始路線。如果在地圖上正確標示，則可提示使用者有心裡預備。</li></ul>
+
+<p>主要的困難度辨別方式</p><ul><li>路線鋪面 surface<ul><li>有鋪面 surface=paved<ul><li>水泥路 surface=concrete</li>
+<li>柏油路 surface=asphalt</li>
+<li>鵝卵石 surface=cobblestone</li></ul>
+</li>
+<li>未鋪面 surface=unpaved<ul><li>木頭 surface=wood</li>
+<li>細石 surface=fine_gravel</li>
+<li>有點小石 surface=pebblestone</li>
+<li>土面 surface=ground</li></ul>
+</li></ul>
+</li>
+<li>技術難度 scal_scale<ul><li>平易近人, 坡度和緩 sac_scale=hiking</li>
+<li>路徑連續, 小心落石 sac_scale=mountain_hiking</li>
+<li>部分路段暴露(有拉繩保護), 需用手平衡 sac_scale=demanding_mountain_hiking</li>
+<li>有些暴露,有時要手腳並用,土石不一定很穩 sac_scale=alpine_hiking</li>
+<li>暴露,可能要攀岩裝備 sac_scale=demanding_alpine_hiking</li>
+<li>很暴露, 地形危險, 要攀岩裝備 sac_scale=difficult_alpine_hiking</li></ul>
+</li>
+<li>可辨識度 trail_visibility<ul><li>良好, 指標明顯或沒有叉路, 不需地圖 trail_visibility=excellent</li>
+<li>好, 都有指標, 但有時要找一下 trail_visibility=good</li>
+<li>中等, 路跡大致上清楚, 帶地圖 trail_visibility=intermediate</li>
+<li>差, 有時沒路跡或沒明顯方向性 trail_visibility=bad</li>
+<li>常常沒路跡 trail_visibility=horrible</li>
+<li>基本上沒路跡可言 trail_visibility=no</li></ul>
+</ul>
+
+<p><b>設計</b></p><p>許多單位(中央、地方政府或民間團體)會將步道分類或分級，應該設計一套 tag 來表示，或是套用到現有的 route relation, network, sac_scale 等等標籤。</p><p></p><p>另外，各地區有些步道會標示親子級、勇腳級、山友級的難度分類，有的地方則是登山口地圖會標紅線藍線等，不知是否有統一的標準，也許也可以設計或選用適合的標籤。</p><p></p><p>有共識後可以整理到 <a href="https://wiki.openstreetmap.org/wiki/Walking_Routes"></a>https://wiki.openstreetmap.org/wiki/Walking_Routes，仿其他國家把 Taiwan 的 tag 方式列上去。</p><p></p><h2>農委會林務局</h2><p>林務局有建制「<a href='http://www.coa.gov.tw/ws.php?id=10577'/>國家級步道系統」及「區域步道系統」</a>，並設計了<a href='http://recreation.forest.gov.tw/RT/RT_1_5.aspx'/>難度分級</a>(一到五級)。網站上也有列出<a href='http://recreation.forest.gov.tw/RT/RT_index.aspx'/>全部的步道資訊</a>。</p><p></p><p>除了林務局的網站，有也人將相關資料整理到 wikipedia 上了</p><ul><li>國家步道系統 <a href="http://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E6%AD%A5%E9%81%93%E7%B3%BB%E7%B5%B1"></a><a href='http://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E6%AD%A5%E9%81%93%E7%B3%BB%E7%B5%B1'/>http://zh.wikipedia.org/wiki/%E5%9C%8B%E5%AE%B6%E6%AD%A5%E9%81%93%E7%B3%BB%E7%B5%B1</a></li>
 <li>模板:臺灣區域步道 <a href="http://zh.wikipedia.org/wiki/Template:%E8%87%BA%E7%81%A3%E5%8D%80%E5%9F%9F%E6%AD%A5%E9%81%93"></a><a href='http://zh.wikipedia.org/wiki/Template:%E8%87%BA%E7%81%A3%E5%8D%80%E5%9F%9F%E6%AD%A5%E9%81%93'/>http://zh.wikipedia.org/wiki/Template:%E8%87%BA%E7%81%A3%E5%8D%80%E5%9F%9F%E6%AD%A5%E9%81%93</a></li></ul>
 
 <p>步道列表已經放上政府開放資料平台。&nbsp;</p><ul><li>森林步道, 行政院農業委員會資料開放平台 - <a href="http://data.coa.gov.tw/Query/AdvSearch.aspx?id=102"></a>http://data.coa.gov.tw/Query/AdvSearch.aspx?id=102</li>
