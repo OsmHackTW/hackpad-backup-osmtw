@@ -322,8 +322,8 @@
   "title": "\u8981\u585e\u5821\u58d8\u5730\u5e36\u6cd5"
  }, 
  {
-  "last_backup_time": 1473098284.525166, 
-  "version": 458, 
+  "last_backup_time": 1479837537.058836, 
+  "version": 459, 
   "padid": "CC9Ua6NnPWE", 
   "title": "Facebook group community welcome kit"
  }, 
@@ -748,8 +748,8 @@
   "title": "\u81ea\u7d93\u5340\u5f71\u97ff\u5730\u5716"
  }, 
  {
-  "last_backup_time": 1479751045.279198, 
-  "version": 506, 
+  "last_backup_time": 1479837537.018939, 
+  "version": 521, 
   "padid": "UG3Ix1hJoTb", 
   "title": "2016-11-21-OpenStreetMap-Taipei-Meetup-Note"
  }, 
@@ -1293,8 +1293,8 @@
   "title": "\u7d00\u9304\u8207\u641c\u5947"
  }, 
  {
-  "last_backup_time": 1479664509.650273, 
-  "version": 607, 
+  "last_backup_time": 1479837537.09376, 
+  "version": 626, 
   "padid": "rlDYHlyUOpA", 
   "title": "2016-12-04 OSM TW Board meeting"
  }, 
@@ -1335,8 +1335,8 @@
   "title": "\u666f\u7f8e\u5973\u4e2d\u6c34\u9ede\u677e"
  }, 
  {
-  "last_backup_time": 1473962179.021183, 
-  "version": 105, 
+  "last_backup_time": 1479837537.112079, 
+  "version": 107, 
   "padid": "tcm2Owggcqb", 
   "title": "\u53f0\u7063 MapsForge \u5716\u8cc7\u6a94\u6848"
  }, 
@@ -1357,6 +1357,12 @@
   "version": 109, 
   "padid": "ud5alUbAGsm", 
   "title": "Taiwan geodata extracts and mirrors"
+ }, 
+ {
+  "last_backup_time": 1479837537.040297, 
+  "version": 500, 
+  "padid": "ufuQIllY8Et", 
+  "title": "Google \u5730\u5716\u3001Google \u5730\u7403 \u4f7f\u7528\u7684\u6388\u6b0a\u7591\u96e3\u96dc\u75c7"
  }, 
  {
   "last_backup_time": 1478627719.462842, 
