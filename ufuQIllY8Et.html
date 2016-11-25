@@ -3,22 +3,25 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="500"/>
+<meta name="version" content="719"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$ufuQIllY8Et</title>
 </head>
-<body><h1>Google 地圖、Google 地球 使用的授權疑難雜症</h1><h2>授權參考文件</h2><ol><li>Google 地圖/Google 地球附加服務條款 (上次修改日期：2015 年 12 月 17 日) <a href="https://www.google.com/intl/zh-TW_tw/help/terms_maps.html"></a>https://www.google.com/intl/zh-TW_tw/help/terms_maps.html</li>
+<body><h1>Google 地圖、Google 地球 使用的授權疑難雜症</h1><h2>寫在前面</h2><p>(因整體架構與大致內文尚未完成，未避免未完成之內容引起爭議，本頁目前開啟修改管理中。若對內容有異議請提出修改，但為確保各方的言論自由，除 comment 形式之內容外，其他修改以舊文加刪除線，新文後隨之形式進行。)</p><p></p><h2>授權參考文件</h2><ol><li>Google 地圖/Google 地球附加服務條款 (上次修改日期：2015 年 12 月 17 日) <a href="https://www.google.com/intl/zh-TW_tw/help/terms_maps.html"></a>https://www.google.com/intl/zh-TW_tw/help/terms_maps.html</li>
 <li>Google 服務條款 (上次修改日期： 2014年4月14日) <a href="https://www.google.com/intl/zh-TW/policies/terms/"></a>https://www.google.com/intl/zh-TW/policies/terms/</li>
 <li>Google 地圖、Google 地球和街景服務的使用方式 (上次修改日期：2015 年 12 月 17 日) <a href="https://www.google.com/permissions/geoguidelines.html"></a>https://www.google.com/permissions/geoguidelines.html</li>
-<li>Google Maps API 列表 (<i>上次更新：三月 24, 2016) </i><a href="https://developers.google.com/maps/documentation/api-picker?hl=zh-TW"></a>https://developers.google.com/maps/documentation/api-picker?hl=zh-TW</li></ol>
+<li>Google Maps API 列表 (<i>上次更新：三月 24, 2016) </i><a href="https://developers.google.com/maps/documentation/api-picker?hl=zh-TW"></a>https://developers.google.com/maps/documentation/api-picker?hl=zh-TW</li>
+<li>OpenStreetMap 版權與授權條款 <a href="http://www.openstreetmap.org/copyright"></a>http://www.openstreetmap.org/copyright (更新： <a href="https://github.com/openstreetmap/openstreetmap-website/blob/master/config/locales/zh-TW.yml)"></a>https://github.com/openstreetmap/openstreetmap-website/blob/master/config/locales/zh-TW.yml)</li>
+<li>OpenStreetMap Copyright and License <a href="http://www.openstreetmap.org/copyright/en"></a>http://www.openstreetmap.org/copyright/en (更新： <a href="https://github.com/openstreetmap/openstreetmap-website/blob/master/config/locales/en.yml)"></a>https://github.com/openstreetmap/openstreetmap-website/blob/master/config/locales/en.yml)</li></ol>
 
-<h2>簡寫</h2><ol><li>R1 =&gt; 「1. Google 地圖/Google 地球附加服務條款 (上次修改日期：2015 年 12 月 17 日) <a href="https://www.google.com/intl/zh-TW_tw/help/terms_maps.html"></a><a href='https://www.google.com/intl/zh-TW_tw/help/terms_maps.html'/>https://www.google.com/intl/zh-TW_tw/help/terms_maps.html</a>」</li>
+<h2>簡寫</h2><ol><li>R1 =&gt; R 指受權參考文件，1 指第一項，所以 R1 為「1. Google 地圖/Google 地球附加服務條款 (上次修改日期：2015 年 12 月 17 日) <a href="https://www.google.com/intl/zh-TW_tw/help/terms_maps.html"></a><a href='https://www.google.com/intl/zh-TW_tw/help/terms_maps.html'/>https://www.google.com/intl/zh-TW_tw/help/terms_maps.html</a>」</li>
 <li>GMEL =&gt; Google Maps, Google Earth License</li></ol>
 
-<h2>GMEL 適用情況</h2><p><b>只儲存在本機的檔案</b></p><p>依據 R1 內容：</p><p>「4. <b>您在 Google 地圖/Google 地球中的內容。</b>您透過 Google 地圖/Google 地球所上傳、提交、儲存、傳送或接收的內容都必須遵守 Google 的「<a href='https://www.google.com/intl/zh-TW/policies/terms/'/>通用條款</a>」，「<a href='https://www.google.com/intl/zh-TW/policies/terms/#toc-content'/>您在我們服務中的內容</a>」一節中的授權也包含在內。不過，只存放在您裝置上的本機內容 (例如儲存在本機的 KML 檔案) 不會上傳或提交至 Google，因此不受該授權規範。」</p><p>可以忽略 R2 的所有規範，但是依然必需遵守 R1 的規範。</p><p></p><h2>這樣做可以嗎?</h2><ol><li>透過 Google Earth 標示圖徵<ol><li>只儲存在本機<ol><li>上傳到 OSM</li>
-<li>上傳到 Umap<ol><li>公開展示</li>
-<li>提供下載</li></ol>
+<h2>GMEL 適用情境</h2><p><b>合理使用原則</b></p><p>依據 R3 內容：</p><p>「除了 Google 授予的任何權限外，我們也接受符合「合理使用原則」的「內容」使用方式。簡而言之，「合理使用原則」是美國著作權法下的一項觀念，允許您在未獲得版權所有人授權的情況下，以某些方式使用版權內容。</p><p>事實上，其他國家/地區的著作權法也採納相似理念 (但涵蓋範圍通常較狹隘)，當中包含在某些國家/地區稱為「合理運用」(Fair Dealing) 的概念。我們無法代您判斷您使用 Google 產品「內容」的方式是否合理；這屬於法律研究範疇，需根據您提出的使用方式相關事實加以評斷。如有版權作品合理使用原則相關疑問，建議您向律師諮詢。」</p><p></p><p><b>只儲存在本機的檔案</b></p><p>依據 R1 內容：</p><p>「4. <b>您在 Google 地圖/Google 地球中的內容。</b>您透過 Google 地圖/Google 地球所上傳、提交、儲存、傳送或接收的內容都必須遵守 Google 的「<a href='https://www.google.com/intl/zh-TW/policies/terms/'/>通用條款</a>」，「<a href='https://www.google.com/intl/zh-TW/policies/terms/#toc-content'/>您在我們服務中的內容</a>」一節中的授權也包含在內。不過，只存放在您裝置上的本機內容 (例如儲存在本機的 KML 檔案) 不會上傳或提交至 Google，因此不受該授權規範。」</p><p>如果檔案只儲存在本機上，則可以忽略 R2 的所有規範，但是依然必需遵守 R1 的規範。</p><p></p><p><b>OSM 的編輯</b></p><p>依據 R5 內容：</p><p>「OSM 的貢獻者會被提醒，絕不要在沒有版權所有人的明確淮許下，加入來自任何有版權的來源的資料 (如 Google 地圖或印刷地圖)。</p><p>如果你認為有版權的材料被不恰當地加入到 OpenStreetMap 資料庫或此網站，請請參考我們的<a href='http://www.osmfoundation.org/wiki/License/Takedown_procedure'/>撤除程序</a>，或直接在我們的<a href='http://dmca.openstreetmap.org/'/>網上申報頁面</a>提出。」</p><p></p><p></p><h2>這樣做可以嗎?</h2><ol><li>透過 Google Earth 標示圖徵<ol><li>只儲存在本機<ol><li><br/></li></ol>
 </li>
-<li><br/></li></ol>
+<li><br/><ol><li>上傳到 OSM</li>
+<li>上傳到 Umap 後<ol><li>公開展示</li>
+<li>提供下載</li></ol>
+</li></ol>
 </li></ol>
 </li>
 <li>使用 Google Maps<ol><li>圖磚<ol><li>描圖 =&gt; 不行</li></ol>
