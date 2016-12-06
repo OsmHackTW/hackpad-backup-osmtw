@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="219"/>
+<meta name="version" content="300"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$VhsEDZWGLJ8</title>
 </head>
 <body><h1>經建版地形圖數值資料檔匯入工作</h1><p>內政部部國土測繪中心的「經建版地形圖數值資料檔(比例尺為二萬五千分之一、五萬分之一及十萬分之一)」前經「105年行政院資料開放諮詢小組第2次會議」列為甲類資料，並經內政部105年7月26日台內地字第1051306149號令修正發布「國土測繪成果資料收費標準」第2條附表附件2，開放資料供免費下載使用[1]，授權條款採用行政院「政府資料開放授權條款－第1版」[2]</p><p></p><p>這批 2016/07/28 釋出的圖檔包括二萬五千分之一經建版地形圖計262幅、五萬分之一經建版地形圖計80幅及十萬分之一經建版地形圖計7幅，共計349幅。</p><p></p><p>雖然不含等高線圖層，但是包含水系、道路、行政界線、鐵道、高壓線、建築區等圖層，及圖例、中文註記等向量圖層。以 QCad/LibreCAD 等開源軟體確認，</p><p></p><p>其格式為</p><ul><li>AC1027 - AutoCAD 2013/2014</li>
@@ -22,9 +22,9 @@
 <p><b>基本地形圖資料庫圖層與定義</b></p><p></p><p>圖層編碼與圖示可以參考李萬凱先生的教材 - AutoCAD基礎_10_圖層管理(經建版地形圖) - <a href="http://blog.xuite.net/lwkntu/blog/443706365-%2812%29AutoCAD%E5%9F%BA%E7%A4%8E_10_%E5%9C%96%E5%B1%A4%E7%AE%A1%E7%90%86%28%E7%B6%93%E5%BB%BA%E7%89%88%E5%9C%B0%E5%BD%A2%E5%9C%96%29"></a><a href='http://blog.xuite.net/lwkntu/blog/443706365-%2812%29AutoCAD%E5%9F%BA%E7%A4%8E_10_%E5%9C%96%E5%B1%A4%E7%AE%A1%E7%90%86%28%E7%B6%93%E5%BB%BA%E7%89%88%E5%9C%B0%E5%BD%A2%E5%9C%96%29'/>http://blog.xuite.net/lwkntu/blog/443706365-%2812%29AutoCAD%E5%9F%BA%E7%A4%8E_10_%E5%9C%96%E5%B1%A4%E7%AE%A1%E7%90%86%28%E7%B6%93%E5%BB%BA%E7%89%88%E5%9C%B0%E5%BD%A2%E5%9C%96%29</a></p><p></p><ul><li>基本地形圖資料庫專有名詞定義 <a href="http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104857644.pdf"></a><a href='http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104857644.pdf'/>http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104857644.pdf</a></li>
 <li>基本地形圖資料庫地形資料分類編碼表 <a href="http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104618317.pdf"></a><a href='http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104618317.pdf'/>http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104618317.pdf</a></li></ul>
 
-<h2>資料爬梳</h2><p></p><p><b>山頂高度</b></p><p>happyman: 本想從裡面擷取山頭標高的點位資料，但事實上這個數值資料已經不是經建三版的，而且資料雜亂無章，我放棄~~~ 如果看紀錄會需要某某峰(沒山名,只有標高)的資料，還是自己去對照經建版地圖吧。&nbsp; - <a href="https://www.facebook.com/photo.php?fbid=10154799301732269&set=p.10154799301732269&type=3&theater"></a>https://www.facebook.com/photo.php?fbid=10154799301732269&amp;set=p.10154799301732269&amp;type=3&amp;theater</p><ul class="comment"><li>&nbsp;獨立標高點 - 9812</li>
+<h2>資料爬梳</h2><p></p><p><b>山頂高度</b></p><p>happyman: 本想從裡面擷取山頭標高的點位資料，但事實上這個數值資料已經不是經建三版的，而且資料雜亂無章，我放棄~~~ 如果看紀錄會需要某某峰(沒山名,只有標高)的資料，還是自己去對照經建版地圖吧。&nbsp; - <a href="https://www.facebook.com/photo.php?fbid=10154799301732269&set=p.10154799301732269&type=3&theater"></a>https://www.facebook.com/photo.php?fbid=10154799301732269&amp;set=p.10154799301732269&amp;type=3&amp;theater</p><p></p><p>查「<a href='http://ngis2.moi.gov.tw/Storage/MOI_NGIS/Files/20100825104618317.pdf'/>基本地形圖資料庫地形資料分類編碼表</a>」，</p><ul><li>獨立標高點 - 9812</li>
 <li>獨立標高點&nbsp; - 98120</li>
-<li>標高點註記 - 9036</li></ul>
+<li>標高點註記 - 90360</li></ul>
 
-</body>
+<p>以 Layer = &rsquo;98120_TXT&rsquo; 過濾「獨立標高點」可得無名山頭標高資料。須正確轉換 TWD67 TM2 121 座標。</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/osmtw.hackpad.com_VhsEDZWGLJ8_p.115270_1481010729970_2016-12-06 15-51-34 的螢幕擷圖.png'/></p><p></p></body>
 </html>
