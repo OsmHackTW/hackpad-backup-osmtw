@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<meta name="version" content="4467"/>
+<meta name="version" content="4500"/>
 <style>body {font-family:Helvetica}ul.comment{list-style-image:url('https://hackpad.com/static/img/comment.png');} ul.task{list-style-image:url('https://hackpad.com/static/img/unchecked.png');}ul.taskdone{list-style-image:url('https://hackpad.com/static/img/checked.png');} </style><title>/2865$FH8Jcnpt052</title>
 </head>
 <body><h1>Open Geo Data for Government - Cases of OSM and Gov collaboration mode</h1><p>政府與OSM的合作應該可以為二種模式，一是政府資料匯入OSM，經由Mappers修改、更新後，再被政府取回，另一種是OSM資料被政府資料庫吸收後，再釋出於社群，後者所收集到的案例，資訊都不是相當明確。以下案例的收集來自於下列幾個:</p><p>[1] <a href="http://wiki.openstreetmap.org/wiki/Contributors"></a>http://wiki.openstreetmap.org/wiki/Contributors</p><p>[2]<a href="http://wiki.openstreetmap.org/wiki/Importing_Government_Data"></a>http://wiki.openstreetmap.org/wiki/Importing_Government_Data</p><p>[3]<a href="http://crowdgov.wordpress.com/"></a>http://crowdgov.wordpress.com/&nbsp;</p><p></p><p></p><h2>1. Government to OSM (to Government)</h2><p><b>1.1 歐盟 Corine Land Cover 匯入OSM</b></p><ul><li>背景: Corine Land cover 資料是由歐盟環境局(European Environment Agency, EEA)匯集各國土地利用分析成果所建立，多數是根據衛星影像所製作，比例尺為1: 100,000，有3個土地使用等級中有44土地使用類型。</li>
@@ -31,7 +31,9 @@
 <li>匯入於OSM的NRCan資料，被修改後，是否能再度匯回NRCan的資料庫中，這問題<a href='http://www.isprs.org/proceedings/xxxviii/part1/10/10_01_Paper_163.pdf'/>涉及許多IP和釋權的問題，仍在討論中。</a></li></ul>
 </li>
 <li>運作方式: NRCan把CanVec的圖資轉成.osm格式，讓OSM Mappers可以利用OSM的地圖編輯器，如JOSM、Potlatch等，去輸入和修改資料，NRCan會定期比對OSM的資料，以偵測被修改的地方，使政府圖資保持最近的狀態，圖3為合作模式的示意圖。圖4是渥大方華地區NRCan和OSM地圖的一個比較。&nbsp;</li></ul>
-<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_FH8Jcnpt052_p.123117_1412479699353_Screenshot 2014-10-04 17.14.30.png'/></p><p>圖3: NRCan和OSM的合作模式</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_FH8Jcnpt052_p.123117_1412479986566_Screenshot 2014-10-05 11.29.12.png'/></p><p>圖4: CanVec和OSM的變遷偵測。灰色為OSM的道路圖，綠色為OSM中沒有的資料，紅色為CanVec沒有的資料</p><p><a href="http://wiki.openstreetmap.org/wiki/CanVec"></a>http://wiki.openstreetmap.org/wiki/CanVec</p><p><b>&nbsp;1.4. 紐西蘭土地資料(LINZ)匯入OSM</b></p><ul><li>背景: <a href='http://wiki.openstreetmap.org/wiki/New_Zealand_data_import_projects'/>紐西蘭政府開放資料政策推動下，釋放許多與地理空間相關的開放資料</a>。OSM NZ的社群常是紐西蘭資料開放政策的諮詢和研討對象，OSM NZ Mappers選了幾個圖資匯入OSM，LINZ是其中之一，他們並且開發匯入OSM的工具。</li>
+<p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_FH8Jcnpt052_p.123117_1412479699353_Screenshot 2014-10-04 17.14.30.png'/></p><p>圖3: NRCan和OSM的合作模式</p><p><img src='https://hackpad-attachments.s3.amazonaws.com/hackpad.com_FH8Jcnpt052_p.123117_1412479986566_Screenshot 2014-10-05 11.29.12.png'/></p><p>圖4: CanVec和OSM的變遷偵測。灰色為OSM的道路圖，綠色為OSM中沒有的資料，紅色為CanVec沒有的資料</p><p><a href="http://wiki.openstreetmap.org/wiki/CanVec"></a>http://wiki.openstreetmap.org/wiki/CanVec</p><p></p><p><b>1.4 加拿大統計部門和OSM合作編修建築物</b></p><ul><li>簡介: <a href="https://www.facebook.com/malone.hsu.9/posts/1551331551554536"></a>https://www.facebook.com/malone.hsu.9/posts/1551331551554536</li></ul>
+
+<p><b>1.5. 紐西蘭土地資料(LINZ)匯入OSM</b></p><ul><li>背景: <a href='http://wiki.openstreetmap.org/wiki/New_Zealand_data_import_projects'/>紐西蘭政府開放資料政策推動下，釋放許多與地理空間相關的開放資料</a>。OSM NZ的社群常是紐西蘭資料開放政策的諮詢和研討對象，OSM NZ Mappers選了幾個圖資匯入OSM，LINZ是其中之一，他們並且開發匯入OSM的工具。</li>
 <li>授權:&nbsp;<ul><li>LINZ的授權是 <a href='http://creativecommons.org/licenses/by/3.0/nz/'/>Creative Commons Attribution 3.0 New Zealand Crown Copyright</a>，OSM NZ Mappers認為可能和OSM不相容，因此有很長的一段時間在討論，並限制個人身份勿匯入，而是經由管制帳號匯入資料。後來，紐西蘭政府在免責聲明之下，正式許可LINZ資料匯入OSM，且基於姓名標示要求，<a href='http://wiki.openstreetmap.org/wiki/Contributors#LINZ'/>將LINZ列為contributor</a>。</li>
 <li>尚未找到紐西蘭政府要將匯入OSM的LINZ再取回的相關消息。</li></ul>
 </li>
