@@ -1,9 +1,9 @@
 <html>
-    <head>
-	<title>osmtw hackpad backup</title>
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
-
-	<script>
+<head>
+<title>osmtw hackpad backup</title>
+<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-blue.min.css">
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script>
 function load_pads() {
     $.ajax({
 	url: "pads.json",
@@ -33,21 +33,27 @@ function init() {
 }
 
 $(init);
-	</script>
-    </head>
-    <body>
-	<table id=padtable border=1>
-	    <thead>
-		<th>backup time</th>
-		<th>link</th>
-		<th>static</th>
-		<th>backup</th>
-		<th>version</th>
-		<th>title</th>
-	    </thead>
-	    <tbody>
+</script>
+</head>
+<body>
+<div class="mdl-grid ">
+	<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone">
+	<div class="mdl-cell mdl-cell--8-col mdl-card mdl-shadow--4dp">
+		<h3 class="mdl-typography--display-1 mdl-typography--text-uppercase mdl-typography--text-center">osmtw hackpad backup</h3>
+		<table id="padtable" class="mdl-data-table mdl-js-data-table" style="display: block;overflow-x: auto;white-space: nowrap;">
+			<thead>
+				<th>backup time</th>
+				<th class='mdl-data-table__cell--non-numeric'>link</th>
+				<th class='mdl-data-table__cell--non-numeric'>static</th>
+				<th class='mdl-data-table__cell--non-numeric'>backup</th>
+				<th>version</th>
+				<th class='mdl-data-table__cell--non-numeric'>title</th>
+			</thead>
+			<tbody>
 
-	    </tbody>
-	</table>
-    </body>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
 </html>
