@@ -21,7 +21,7 @@ function load_pads() {
 			    $('<td>').append($('<a>').text('link').attr('href', '//osmtw.hackpad.com/ep/pad/static/' + pad.padid)),
 			    $('<td>').append($('<a>').text('link').attr('href', pad.padid + '.html')),
 			    $('<td>').text(pad.version),
-			    $('<td class='mdl-data-table__cell--non-numeric'>').text(title)
+			    $('<td>').text(title)
 			    ));
 	    });
 	}
